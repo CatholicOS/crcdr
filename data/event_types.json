@@ -1,0 +1,52 @@
+{
+  "entries": [
+    {
+      "id": "rename",
+      "effect": "same"
+    },
+    {
+      "id": "rename-competence",
+      "effect": "same"
+    },
+    {
+      "id": "kind-change",
+      "effect": "same"
+    },
+    {
+      "id": "competence-transfer",
+      "effect": "same"
+    },
+    {
+      "id": "revival",
+      "effect": "same"
+    },
+    {
+      "id": "attachment",
+      "effect": "same"
+    },
+    {
+      "id": "foundation",
+      "effect": "new"
+    },
+    {
+      "id": "merger",
+      "effect": "new"
+    },
+    {
+      "id": "split",
+      "effect": "new"
+    },
+    {
+      "id": "re-foundation",
+      "effect": "new"
+    },
+    {
+      "id": "absorption",
+      "effect": "absorb"
+    },
+    {
+      "id": "suppression",
+      "effect": "end"
+    }
+  ]
+}
