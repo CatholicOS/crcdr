@@ -1,5 +1,7 @@
 # Lineages
 
+Current as of 2025-12-04.
+
 One table per living body, tracing its history back through the events that made it:
 renames and other same-identity changes, and the mergers, splits, absorptions and
 re-foundations that link it to its predecessors. Predecessors and successors are

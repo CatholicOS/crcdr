@@ -7,9 +7,9 @@ import unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ID_RE = re.compile(r"^cr:[a-z]+(?:-[a-z]+)*-\d{4}$")
+ID_RE = re.compile(r"^cr:[a-z]+(?:-[a-z]+)*-[0-9]{4}\Z")
 
-_DATE_RE = re.compile(r"^(\d{4})(?:-(\d{2})(?:-(\d{2}))?)?$")
+_DATE_RE = re.compile(r"^([0-9]{4})(?:-([0-9]{2})(?:-([0-9]{2}))?)?\Z")
 
 
 def parse_date(s):

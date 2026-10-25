@@ -1,5 +1,7 @@
 # Bodies of the Roman Curia
 
+Current as of 2025-12-04.
+
 64 canonical draft IDs for bodies of the Roman Curia (26 living, 38
 ended), in the form `cr:<latin-slug>-<founding-year>`. Living bodies are grouped by
 the section the *Praedicate Evangelium* regime places them in today, in the order that
@@ -141,7 +143,7 @@ consulted. Authority over the documents of these bodies belongs to CMDDR, not he
 
 ## Known gaps
 
-The validator reports these documented research gaps (128), grouped by rule.
+The validator reports these warnings (138), grouped by rule: R0 quotes every documented research gap (a `gap` note) not already reported by another rule; R7 lists operative clauses not yet transcribed; R8 lists dated facts with no source.
 
 ### R0 (14)
 
@@ -282,3 +284,16 @@ The validator reports these documented research gaps (128), grouped by rule.
 - [R7] ev115a: operative clause not yet transcribed
 - [R7] ev116a: operative clause not yet transcribed
 - [R7] ev121: operative clause not yet transcribed
+
+### R8 (10)
+
+- [R8] cr:tutela-minorum-2014: names[0]: dated fact has no source
+- [R8] cr:communicationes-sociales-1948: names[0]: dated fact has no source
+- [R8] cr:indulgentiae-et-sacrae-reliquiae-1669: names[0]: dated fact has no source
+- [R8] ev009: dated fact has no source
+- [R8] ev013: dated fact has no source
+- [R8] ev033: dated fact has no source
+- [R8] ev036: dated fact has no source
+- [R8] ev037: dated fact has no source
+- [R8] ev060: dated fact has no source
+- [R8] ev094: dated fact has no source

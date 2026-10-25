@@ -1,11 +1,12 @@
 import copy
+import inspect
 import io
 import json
 import os
 import sys
 import tempfile
 import unittest
-from contextlib import redirect_stderr
+from contextlib import redirect_stderr, redirect_stdout
 from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -139,12 +140,49 @@ class GeneratorTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             err = io.StringIO()
             with mock.patch.object(g, "OUT_DIR", d), \
+                    mock.patch.object(g, "IDS_PATH", os.path.join(d, "identifiers.json")), \
                     mock.patch.object(g, "load_data", return_value=(bodies, events)), \
                     redirect_stderr(err):
-                rc = g.main()
+                rc = g.main([])
             self.assertNotEqual(rc, 0)
             self.assertIn("error", err.getvalue().lower())
             self.assertEqual(os.listdir(d), [])
+
+    def _run_main(self, argv):
+        bodies, events = fixtures.make_fixture()
+        with tempfile.TemporaryDirectory() as d:
+            with mock.patch.object(g, "OUT_DIR", d), \
+                    mock.patch.object(g, "IDS_PATH", os.path.join(d, "identifiers.json")), \
+                    mock.patch.object(g, "load_data", return_value=(bodies, events)), \
+                    redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                rc = g.main(argv)
+            out = {}
+            for n in sorted(os.listdir(d)):
+                with open(os.path.join(d, n), encoding="utf-8") as f:
+                    out[n] = f.read()
+            return rc, out
+
+    def test_as_of_defaults_to_latest_data_date(self):
+        bodies, events = fixtures.make_fixture()
+        vocab = validate.load_vocab()
+        latest = g.latest_date(bodies, events, vocab["sections"], vocab["kinds"],
+                               vocab["event_types"])
+        self.assertEqual(latest, "2022-06-05")
+        self.assertEqual(g.latest_date({"a": ["1900", {"b": "1950-03"}, "note 1999"]}),
+                         "1950-03")
+        rc, out = self._run_main([])
+        self.assertEqual(rc, 0)
+        self.assertIn("Current as of 2022-06-05.", out["bodies.md"])
+        self.assertEqual(self._run_main([])[1], out)  # deterministic
+        self.assertNotIn("today()", inspect.getsource(g))
+
+    def test_as_of_option(self):
+        rc, out = self._run_main(["--as-of", "1950-01-01"])
+        self.assertEqual(rc, 0)
+        self.assertIn("Current as of 1950-01-01.", out["bodies.md"])
+        with self.assertRaises(SystemExit):
+            with redirect_stderr(io.StringIO()):
+                g.main(["--as-of", "1950/01/01"])
 
     def test_lineage_rows_marked(self):
         bodies, events = _merger_fixture()

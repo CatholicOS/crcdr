@@ -273,6 +273,18 @@ class ValidateTests(unittest.TestCase):
             del ev[1]["clause_status"]
         self.assertEqual(counts(run(d)), (1, 0))
 
+    def test_r8_dated_fact_without_source(self):
+        def m(body, _b, ev, doc):
+            body["names"][0]["source"] = None
+            del body["kind"][0]["source"]
+            ev[1]["source"] = ""
+        r = run(m)
+        self.assertEqual(r.errors, [])
+        self.assertEqual(sorted(r.warnings), [
+            f"[R8] {ID}: kind[0]: dated fact has no source",
+            f"[R8] {ID}: names[0]: dated fact has no source",
+            "[R8] ev002: dated fact has no source"])
+
     def test_bad_vocab_value(self):
         def m(body, *_):
             body["kind"][0]["kind"] = "bureau"

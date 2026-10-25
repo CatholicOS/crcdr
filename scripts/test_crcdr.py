@@ -27,6 +27,14 @@ class T(unittest.TestCase):
             with self.assertRaises(ValueError):
                 parse_date(s)
 
+    def test_patterns_reject_newline_and_non_ascii_digits(self):
+        for s in ("1588\n", "1588-01-22\n", "\u0661\u0665\u0688\u0668", "15\u0668\u0668"):
+            with self.assertRaises(ValueError, msg=repr(s)):
+                parse_date(s)
+        self.assertTrue(crcdr.ID_RE.match("cr:index-1571"))
+        for s in ("cr:index-1571\n", "cr:index-15\u0667\u0661", "cr:index-\uff11\uff15\uff17\uff11"):
+            self.assertIsNone(crcdr.ID_RE.match(s), repr(s))
+
     def test_in_interval(self):
         self.assertTrue(in_interval("1900", None, "1901"))
         self.assertFalse(in_interval("1901", None, "1901"))

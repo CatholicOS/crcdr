@@ -350,6 +350,18 @@ def _r0(bodies, events, rep):
             rep.add(0, ident, f"{where}documented gap: {f['gap']}", True, path)
 
 
+def _r8(bodies, events, rep):
+    """A dated fact with no source is a warning (no source is ever invented)."""
+    found = [(b.get("id"), path, f) for b in bodies.get("entries", []) for path, f in _facts(b)
+             if path]
+    found += [(ev.get("id"), "", ev) for ev in events.get("entries", [])]
+    for ident, path, f in found:
+        dated = f.get("date") is not None or f.get("from") is not None
+        if dated and not f.get("source"):
+            where = f"{path}: " if path else ""
+            rep.add(8, ident, f"{where}dated fact has no source", True)
+
+
 def validate(bodies, events, vocab):
     rep = Report()
     _r1(bodies, rep)
@@ -359,6 +371,7 @@ def validate(bodies, events, vocab):
     _r5(bodies, events, vocab, rep)
     _r6(bodies, events, vocab, rep)
     _r7(events, rep)
+    _r8(bodies, events, rep)
     _r0(bodies, events, rep)
     return rep
 
