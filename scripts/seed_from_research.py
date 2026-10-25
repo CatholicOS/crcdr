@@ -3,7 +3,7 @@
 Run from the repo root: python3 -I scripts/seed_from_research.py
 
 Inputs: seed/research/{bodies,events}.json and seed/*.json (key_map, kind_map,
-event_map, clauses, part_of, section_overrides, founding_years).
+event_map, clauses, part_of, section_overrides, founding_years, name_fixes).
 Outputs: data/bodies.json, data/events.json, seed/seed-report.md.
 
 Integrity rules: no date or fact is invented and no provenance is upgraded.
@@ -22,7 +22,7 @@ import validate  # noqa: E402
 
 SOURCE_RANK = {"inferred": 0, "secondary": 1, "official-secondary": 2, "primary": 3}
 MAP_NAMES = ("key_map", "kind_map", "event_map", "clauses", "part_of",
-             "section_overrides", "founding_years")
+             "section_overrides", "founding_years", "name_fixes")
 DERIVED_NOTE = "derived from kind and regime"
 LETTERS = "abcdefghijklmnopqrstuvwxyz"
 
@@ -99,9 +99,12 @@ class _Ctx:
         self.fy = {e["research_key"]: e for e in maps["founding_years"]["entries"]
                    if e["status"] == "dated"}
         self.effects = {t["id"]: t["effect"] for t in vocab["event_types"]["entries"]}
+        self.name_fixes = {(e["research_key"], e["index"]): e
+                           for e in maps.get("name_fixes", {}).get("entries", [])}
         self.report = {k: [] for k in (
             "dropped_bodies", "dropped_events", "normalized", "date_changes",
-            "gaps", "map_choices", "clauses", "renames_without_event", "lineage")}
+            "gaps", "map_choices", "clauses", "renames_without_event", "lineage",
+            "name_fixes")}
 
     def cid(self, key):
         return self.km[key]["id"]
@@ -395,10 +398,11 @@ def _names(ctx, rbody, founded, events_by_body):
     names = rbody["names"]
     for n, src in enumerate(names):
         e = {"name_la": src["name_la"], "name_it": src.get("name_it"),
-             "name_en": src.get("name_en"), "from": src["from"], "to": src["to"],
-             "act": src.get("act"), "verified": src["verified"],
+             "name_en": src.get("name_en"), "aliases": [], "from": src["from"],
+             "to": src["to"], "act": src.get("act"), "verified": src["verified"],
              "source_type": src["source_type"], "source": src.get("act_source_url"),
              "note": src.get("note")}
+        _fix_name(ctx, ident, rbody["key"], n, src, e)
         gaps = []
         all_gaps.append(gaps)
         if e["from"] is None or not _iso(e["from"]):
@@ -457,6 +461,42 @@ def _names(ctx, rbody, founded, events_by_body):
         if e.get("gap"):
             ctx.gap(f"{ident}.names[{n}]", e["gap"])
     return out
+
+
+def _fix_name(ctx, ident, key, n, src, e):
+    """Apply seed/name_fixes.json: clean name_la/name_en, variants to aliases,
+    remarks to the note, verified only ever downgraded."""
+    fix = ctx.name_fixes.get((key, n))
+    if fix is None:
+        return
+    where = f"{ident} names[{n}] (seed/name_fixes.json {key}[{n}])"
+    if fix["research_name_la"] != src["name_la"]:
+        raise SeedError(f"{where}: research name_la is {src['name_la']!r}, "
+                        f"not {fix['research_name_la']!r}")
+    if "name_en" in fix and fix["research_name_en"] != src.get("name_en"):
+        raise SeedError(f"{where}: research name_en is {src.get('name_en')!r}, "
+                        f"not {fix['research_name_en']!r}")
+    if fix.get("verified") is True and not src["verified"]:
+        raise SeedError(f"{where}: name_fixes would upgrade verified")
+    if "source_type" in fix and SOURCE_RANK[fix["source_type"]] > SOURCE_RANK[src["source_type"]]:
+        raise SeedError(f"{where}: name_fixes would upgrade source_type")
+    for a in fix.get("aliases", []):
+        if set(a) != {"name", "lang"} or a["lang"] not in ("la", "en"):
+            raise SeedError(f"{where}: alias {a!r} must be {{name, lang: la|en}}")
+    e["name_la"] = fix["name_la"]
+    if "name_en" in fix:
+        e["name_en"] = fix["name_en"]
+    e["aliases"] = [dict(a) for a in fix.get("aliases", [])]
+    for k in ("verified", "source_type"):
+        if k in fix:
+            e[k] = fix[k]
+    e["note"] = _join(e["note"], fix["note"])
+    ctx.report["name_fixes"].append(
+        f"`{ident}` names[{n}]: {src['name_la']!r} -> {fix['name_la']!r}"
+        + (f"; name_en {src.get('name_en')!r} -> {fix['name_en']!r}" if "name_en" in fix else "")
+        + (f"; aliases {', '.join(a['name'] for a in fix['aliases'])}" if fix.get("aliases") else "")
+        + ("; verified -> false" if fix.get("verified") is False and src["verified"] else "")
+        + ".")
 
 
 def _unverify_substituted_names(ctx, ident, founded, research, out, sub_from, sub_to):
@@ -791,6 +831,9 @@ def _report(ctx, bodies, events, vocab, bodies_doc, events_doc):
     section("Date changes", r["date_changes"])
     section("Gap notes added", r["gaps"])
     section("Editorial kind choices", r["map_choices"])
+    section("Name fixes", r["name_fixes"],
+            "Research names whose name_la or name_en carried editorial text, corrected by "
+            "`seed/name_fixes.json` (variants to aliases, remarks to the note).")
     section("Operative clauses", r["clauses"])
     section("Renames with no event in the research", r["renames_without_event"],
             "Dated name changes that no rename event records. The name entry carries a "

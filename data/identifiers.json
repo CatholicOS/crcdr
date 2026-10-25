@@ -42,7 +42,8 @@
         "Pontificia Commissio de Patrimonio Artis et Historiae conservando",
         "Pontifical Commission for Preserving the Patrimony of Art and History",
         "Pontificia Commissio de Bonis Culturalibus Ecclesiae",
-        "Pontifical Commission for the Cultural Heritage (Patrimony) of the Church"
+        "Pontifical Commission for the Cultural Heritage of the Church",
+        "Pontifical Commission for the Cultural Patrimony of the Church"
       ],
       "predecessors": [],
       "successors": [
@@ -69,8 +70,10 @@
     {
       "id": "cr:clerici-1564",
       "aliases": [
-        "Congregatio Cardinalium Concilii Tridentini interpretum (Sacra Congregatio Concilii)",
-        "Congregation of the Council (of Trent)",
+        "Congregatio Cardinalium Concilii Tridentini interpretum",
+        "Congregation of the Council",
+        "Sacra Congregatio Concilii",
+        "Congregation of the Council of Trent",
         "Sacra Congregatio pro Clericis",
         "Sacred Congregation for the Clergy",
         "Congregatio pro Clericis",
@@ -124,9 +127,9 @@
     {
       "id": "cr:communicationes-sociales-1948",
       "aliases": [
-        "(Pontifical Commission for didactic and religious cinema; later for cinema, radio and television)",
-        "Pontifical Commission for Cinema / Cinema, Radio and Television",
-        "Pontificium Consilium (de re cinematographica, radiophonica ac televisifica)",
+        "Pontifical Commission for Cinema",
+        "Pontifical Commission for didactic and religious cinema",
+        "Pontificium Consilium de re cinematographica, radiophonica ac televisifica",
         "Pontifical Commission for Cinema, Radio and Television",
         "Pontificium Consilium instrumentis communicationis socialis praepositum",
         "Pontifical Commission for Social Communications",
@@ -143,7 +146,8 @@
       "id": "cr:conciliorum-revisio-1849",
       "aliases": [
         "Congregatio specialis pro Conciliorum revisione",
-        "Special Congregation for the Revision of (Provincial) Councils"
+        "Special Congregation for the Revision of Councils",
+        "Special Congregation for the Revision of Provincial Councils"
       ],
       "predecessors": [],
       "successors": [
@@ -287,8 +291,9 @@
     {
       "id": "cr:dialogus-interreligiosus-1964",
       "aliases": [
-        "Secretariatus de non Christianis / pro non christianis",
+        "Secretariatus de non Christianis",
         "Secretariat for Non-Christians",
+        "Secretariatus pro non christianis",
         "Pontificium Consilium pro Dialogo inter Religiones",
         "Pontifical Council for Interreligious Dialogue",
         "Dicasterium pro Dialogo Interreligioso",
@@ -327,10 +332,13 @@
       "aliases": [
         "Sacra Congregatio Romanae et Universalis Inquisitionis",
         "Congregation of the Roman and Universal Inquisition",
-        "Congregatio Sancti Officii (Suprema Sacra Congregatio S. Officii)",
-        "Congregation of the Holy Office (Supreme Sacred Congregation of the Holy Office)",
-        "Congregatio pro doctrina fidei / Sacra Congregatio pro Doctrina Fidei",
-        "Congregation for the Doctrine of the Faith (Sacred Congregation ...)",
+        "Congregatio Sancti Officii",
+        "Congregation of the Holy Office",
+        "Suprema Sacra Congregatio S. Officii",
+        "Supreme Sacred Congregation of the Holy Office",
+        "Congregatio pro doctrina fidei",
+        "Congregation for the Doctrine of the Faith",
+        "Sacra Congregatio pro Doctrina Fidei",
         "Dicasterium pro Doctrina Fidei",
         "Dicastery for the Doctrine of the Faith"
       ],
@@ -439,8 +447,9 @@
     {
       "id": "cr:familia-1973",
       "aliases": [
-        "Consilium de Familia (Comitatus pro Familia)",
-        "Committee for the Family"
+        "Consilium de Familia",
+        "Committee for the Family",
+        "Comitatus pro Familia"
       ],
       "predecessors": [],
       "successors": [
@@ -505,8 +514,9 @@
     {
       "id": "cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908",
       "aliases": [
-        "Sacra Congregatio Negotiis religiosorum sodalium praeposita (de Religiosis)",
+        "Sacra Congregatio Negotiis religiosorum sodalium praeposita",
         "Sacred Congregation of Religious",
+        "S. Congregatio de Religiosis",
         "Sacra Congregatio pro Religiosis et Institutis saecularibus",
         "Sacred Congregation for Religious and Secular Institutes",
         "Congregatio pro Institutis Vitae Consecratae et Societatibus Vitae Apostolicae",
@@ -521,7 +531,7 @@
     {
       "id": "cr:integra-humana-progressio-fovenda-2017",
       "aliases": [
-        "Dicasterium pro Integra Humana Progressione Fovenda (Latin unverified)",
+        "Dicasterium pro Integra Humana Progressione Fovenda",
         "Dicastery for Promoting Integral Human Development"
       ],
       "predecessors": [
@@ -641,8 +651,9 @@
     {
       "id": "cr:paenitentiaria-apostolica-1256",
       "aliases": [
-        "Sacra Paenitentiaria (Poenitentiaria) Apostolica",
-        "Apostolic Penitentiary"
+        "Sacra Paenitentiaria Apostolica",
+        "Apostolic Penitentiary",
+        "Sacra Poenitentiaria Apostolica"
       ],
       "predecessors": [],
       "successors": [],
@@ -687,7 +698,7 @@
     {
       "id": "cr:revisor-generalis-2014",
       "aliases": [
-        "Revisor Generalis (Officium)",
+        "Revisor Generalis",
         "Office of the Auditor General"
       ],
       "predecessors": [],
@@ -699,8 +710,9 @@
       "aliases": [
         "Congregatio pro sacris ritibus et caeremoniis",
         "Congregation for Sacred Rites and Ceremonies",
-        "Sacra Congregatio Rituum / Congregatio sacrorum Rituum",
-        "Sacred Congregation of Rites"
+        "Sacra Congregatio Rituum",
+        "Sacred Congregation of Rites",
+        "Congregatio sacrorum Rituum"
       ],
       "predecessors": [
         "cr:indulgentiae-et-sacrae-reliquiae-1669"
@@ -768,12 +780,15 @@
       "aliases": [
         "Sacra Congregatio Studiorum",
         "Sacred Congregation of Studies",
-        "Sacra Congregatio de Seminariis et (de) Studiorum Universitatibus",
+        "Sacra Congregatio de Seminariis et Studiorum Universitatibus",
         "Sacred Congregation of Seminaries and Universities",
+        "Sacra Congregatio de Seminariis et de Studiorum Universitatibus",
         "Sacra Congregatio pro Institutione catholica",
         "Sacred Congregation for Catholic Education",
-        "Congregatio de Seminariis atque Studiorum Institutis / de Institutione Catholica",
-        "Congregation for Catholic Education (for Seminaries and Educational Institutions)"
+        "Congregatio de Seminariis atque Studiorum Institutis",
+        "Congregation for Catholic Education",
+        "Congregatio de Institutione Catholica",
+        "Congregation of Seminaries and Educational Institutions"
       ],
       "predecessors": [
         "cr:universitas-studii-romani-1588"
@@ -786,8 +801,9 @@
     {
       "id": "cr:signatura-apostolica-1908",
       "aliases": [
-        "Signatura Apostolica / Supremum Signaturae Apostolicae Tribunal",
-        "Supreme Tribunal of the Apostolic Signatura"
+        "Supremum Signaturae Apostolicae Tribunal",
+        "Supreme Tribunal of the Apostolic Signatura",
+        "Signatura Apostolica"
       ],
       "predecessors": [],
       "successors": [],
@@ -835,7 +851,7 @@
       "id": "cr:universitas-studii-romani-1588",
       "aliases": [
         "Congregatio pro universitate studii Romani",
-        "Congregation for the University of the Roman Study (Sapienza)"
+        "Congregation for the University of the Roman Study"
       ],
       "predecessors": [],
       "successors": [

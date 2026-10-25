@@ -176,7 +176,7 @@ are drafts pending CETF review; the *Annuario Pontificio* has not been consulted
 | 1989-03-01 | ev073 | rename | John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989 | `cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908` | `cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908` |
 | 2022-06-05 | ev113a | rename | Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250) | `cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908` | `cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908` |
 
-## `cr:integra-humana-progressio-fovenda-2017` Dicasterium pro Integra Humana Progressione Fovenda (Latin unverified)
+## `cr:integra-humana-progressio-fovenda-2017` Dicasterium pro Integra Humana Progressione Fovenda †
 
 | Date | Event | Type | Act | Before | After |
 |---|---|---|---|---|---|
@@ -216,7 +216,7 @@ are drafts pending CETF review; the *Annuario Pontificio* has not been consulted
 |---|---|---|---|---|---|
 | 1989-03-01 | ev084b | foundation | John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989 | - | `cr:liturgicae-celebrationes-summi-pontificis-1989` |
 
-## `cr:paenitentiaria-apostolica-1256` Sacra Paenitentiaria (Poenitentiaria) Apostolica †‡
+## `cr:paenitentiaria-apostolica-1256` Sacra Paenitentiaria Apostolica †‡
 
 No events recorded.
 
@@ -226,7 +226,7 @@ No events recorded.
 |---|---|---|---|---|---|
 | 1968-01-01 | ev052c | foundation | Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968 | - | `cr:pontificalis-domus-1968` |
 
-## `cr:revisor-generalis-2014` Revisor Generalis (Officium)
+## `cr:revisor-generalis-2014` Revisor Generalis
 
 | Date | Event | Type | Act | Before | After |
 |---|---|---|---|---|---|
@@ -246,7 +246,7 @@ No events recorded.
 |---|---|---|---|---|---|
 | 2014-02-24 | ev093 | foundation | Francis, m.p. Fidelis dispensator et prudens, 24 Feb 2014 | - | `cr:secretaria-res-oeconomica-2014`, `cr:consilium-res-oeconomica-2014`, `cr:revisor-generalis-2014` |
 
-## `cr:signatura-apostolica-1908` Signatura Apostolica / Supremum Signaturae Apostolicae Tribunal
+## `cr:signatura-apostolica-1908` Supremum Signaturae Apostolicae Tribunal
 
 | Date | Event | Type | Act | Before | After |
 |---|---|---|---|---|---|

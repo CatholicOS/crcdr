@@ -196,6 +196,49 @@ class TestSeed(unittest.TestCase):
         self.assertFalse(vis[0]["verified"])
         self.assertIn("gap", vis[0])
 
+    def test_names_carry_no_editorial_text(self):
+        import re
+        c = seeded()
+        english = re.compile(r"\b(for|of|the|and|later|office)\b", re.I)
+        for b in c["bodies"]["entries"]:
+            for n in b["names"]:
+                where = f"{b['id']} {n['from']}"
+                la = n["name_la"]
+                if la is not None:
+                    for bad in ("(", ")", " / ", "unverified"):
+                        self.assertNotIn(bad, la.lower(), where)
+                    self.assertIsNone(english.search(la), where)
+                for bad in ("(", ")", " / "):
+                    self.assertNotIn(bad, n["name_en"] or "", where)
+                for a in n["aliases"]:
+                    self.assertEqual(set(a), {"name", "lang"}, where)
+                    self.assertIn(a["lang"], ("la", "en"), where)
+                    self.assertNotIn(a["name"], (la, n["name_en"]), where)
+
+    def test_name_fixes_resolve_the_research_cases(self):
+        c = seeded()
+        km = {e["research_key"]: e["id"] for e in c["maps"]["key_map"]["entries"]}
+        rb = {b["key"]: b for b in c["rb"]["bodies"]}
+        fixes = name_fixes(c)
+        dirty = {(k, n) for k, b in rb.items() if k in km
+                 for n, x in enumerate(b["names"])
+                 if any(t in (x["name_la"] or "") for t in ("(", " / ", "unverified"))}
+        self.assertEqual(len(dirty), 15)
+        self.assertLessEqual(dirty, set(fixes))
+        for (key, n), f in fixes.items():
+            src = rb[key]["names"][n]
+            self.assertEqual(f["research_name_la"], src["name_la"], (key, n))
+            got = name_groups(body(c, km[key])["names"])[n][0]
+            self.assertEqual(got["name_la"], f["name_la"], (key, n))
+            self.assertIn(f["note"], got["note"], (key, n))
+        social = name_groups(body(c, "cr:communicationes-sociales-1948")["names"])[0][0]
+        self.assertIsNone(social["name_la"])
+        ihd = body(c, "cr:integra-humana-progressio-fovenda-2017")["names"][0]
+        self.assertEqual(ihd["name_la"], "Dicasterium pro Integra Humana Progressione Fovenda")
+        self.assertFalse(ihd["verified"])
+        rites = body(c, "cr:ritus-1588")["names"][1]
+        self.assertEqual(rites["aliases"], [{"name": "Congregatio sacrorum Rituum", "lang": "la"}])
+
     def test_substituted_name_spans_unverified(self):
         c = seeded()
         rota = body(c, "cr:rota-romana-1323")["names"]

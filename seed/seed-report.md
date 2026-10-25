@@ -72,7 +72,7 @@ Shape changes only: same-effect types get identical before/after; an absorption 
 - `cr:conciliorum-revisio-1849` kind 'congregation': undated research entry extended to 1849, unverified/secondary.
 - `cr:episcopi-1588.names[0..1]`: undated rename bounded by terminus ante quem 1908-11-03 (sapienti-consilio-1908).
 - `cr:paenitentiaria-apostolica-1256` kind 'tribunal': undated research entry split at 1908-11-03; 1256-1908-11-03 unverified/secondary, from 1908-11-03 as in the research.
-- `cr:paenitentiaria-apostolica-1256` names[0] 'Sacra Paenitentiaria (Poenitentiaria) Apostolica': substituted bound; whole entry unverified/secondary.
+- `cr:paenitentiaria-apostolica-1256` names[0] 'Sacra Paenitentiaria Apostolica': substituted bound; whole entry unverified/secondary.
 - `cr:rota-romana-1323` kind 'tribunal': undated research entry split at 1908-11-03; 1323-1908-11-03 unverified/secondary, from 1908-11-03 as in the research.
 - `cr:rota-romana-1323` names[0] 'Sacra Romana Rota': undated research entry split at 1908-11-03; 1323-1908-11-03 unverified/secondary, from 1908-11-03 as in the research.
 - `cr:pontificalis-domus-1968.names[0..1]`: undated rename bounded by terminus ante quem 1989-03-01 (pastor-bonus-1989).
@@ -163,6 +163,29 @@ Shape changes only: same-effect types get identical before/after; an absorption 
 - `cr:familia-1973` kind council from 1973-01-11: by_body editorial (research 'committee') -> inferred/false.
 - `cr:communicationes-sociales-1948` kind pontifical-council from 1959-02-22: by_body editorial (research 'commission') -> inferred/false.
 
+## Name fixes
+
+Research names whose name_la or name_en carried editorial text, corrected by `seed/name_fixes.json` (variants to aliases, remarks to the note).
+
+- `cr:doctrina-fidei-1542` names[1]: 'Congregatio Sancti Officii (Suprema Sacra Congregatio S. Officii)' -> 'Congregatio Sancti Officii'; name_en 'Congregation of the Holy Office (Supreme Sacred Congregation of the Holy Office)' -> 'Congregation of the Holy Office'; aliases Suprema Sacra Congregatio S. Officii, Supreme Sacred Congregation of the Holy Office.
+- `cr:doctrina-fidei-1542` names[2]: 'Congregatio pro doctrina fidei / Sacra Congregatio pro Doctrina Fidei' -> 'Congregatio pro doctrina fidei'; name_en 'Congregation for the Doctrine of the Faith (Sacred Congregation ...)' -> 'Congregation for the Doctrine of the Faith'; aliases Sacra Congregatio pro Doctrina Fidei.
+- `cr:ritus-1588` names[1]: 'Sacra Congregatio Rituum / Congregatio sacrorum Rituum' -> 'Sacra Congregatio Rituum'; aliases Congregatio sacrorum Rituum.
+- `cr:clerici-1564` names[0]: 'Congregatio Cardinalium Concilii Tridentini interpretum (Sacra Congregatio Concilii)' -> 'Congregatio Cardinalium Concilii Tridentini interpretum'; name_en 'Congregation of the Council (of Trent)' -> 'Congregation of the Council'; aliases Sacra Congregatio Concilii, Congregation of the Council of Trent.
+- `cr:conciliorum-revisio-1849` names[0]: 'Congregatio specialis pro Conciliorum revisione' -> 'Congregatio specialis pro Conciliorum revisione'; name_en 'Special Congregation for the Revision of (Provincial) Councils' -> 'Special Congregation for the Revision of Councils'; aliases Special Congregation for the Revision of Provincial Councils.
+- `cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908` names[0]: 'Sacra Congregatio Negotiis religiosorum sodalium praeposita (de Religiosis)' -> 'Sacra Congregatio Negotiis religiosorum sodalium praeposita'; aliases S. Congregatio de Religiosis.
+- `cr:universitas-studii-romani-1588` names[0]: 'Congregatio pro universitate studii Romani' -> 'Congregatio pro universitate studii Romani'; name_en 'Congregation for the University of the Roman Study (Sapienza)' -> 'Congregation for the University of the Roman Study'.
+- `cr:seminaria-atque-studiorum-instituta-1824` names[1]: 'Sacra Congregatio de Seminariis et (de) Studiorum Universitatibus' -> 'Sacra Congregatio de Seminariis et Studiorum Universitatibus'; aliases Sacra Congregatio de Seminariis et de Studiorum Universitatibus.
+- `cr:seminaria-atque-studiorum-instituta-1824` names[3]: 'Congregatio de Seminariis atque Studiorum Institutis / de Institutione Catholica' -> 'Congregatio de Seminariis atque Studiorum Institutis'; name_en 'Congregation for Catholic Education (for Seminaries and Educational Institutions)' -> 'Congregation for Catholic Education'; aliases Congregatio de Institutione Catholica, Congregation of Seminaries and Educational Institutions.
+- `cr:bona-culturalia-ecclesiae-1989` names[1]: 'Pontificia Commissio de Bonis Culturalibus Ecclesiae' -> 'Pontificia Commissio de Bonis Culturalibus Ecclesiae'; name_en 'Pontifical Commission for the Cultural Heritage (Patrimony) of the Church' -> 'Pontifical Commission for the Cultural Heritage of the Church'; aliases Pontifical Commission for the Cultural Patrimony of the Church.
+- `cr:dialogus-interreligiosus-1964` names[0]: 'Secretariatus de non Christianis / pro non christianis' -> 'Secretariatus de non Christianis'; aliases Secretariatus pro non christianis.
+- `cr:familia-1973` names[0]: 'Consilium de Familia (Comitatus pro Familia)' -> 'Consilium de Familia'; aliases Comitatus pro Familia.
+- `cr:integra-humana-progressio-fovenda-2017` names[0]: 'Dicasterium pro Integra Humana Progressione Fovenda (Latin unverified)' -> 'Dicasterium pro Integra Humana Progressione Fovenda'; verified -> false.
+- `cr:communicationes-sociales-1948` names[0]: '(Pontifical Commission for didactic and religious cinema; later for cinema, radio and television)' -> None; name_en 'Pontifical Commission for Cinema / Cinema, Radio and Television' -> 'Pontifical Commission for Cinema'; aliases Pontifical Commission for didactic and religious cinema.
+- `cr:communicationes-sociales-1948` names[1]: 'Pontificium Consilium (de re cinematographica, radiophonica ac televisifica)' -> 'Pontificium Consilium de re cinematographica, radiophonica ac televisifica'.
+- `cr:revisor-generalis-2014` names[0]: 'Revisor Generalis (Officium)' -> 'Revisor Generalis'.
+- `cr:paenitentiaria-apostolica-1256` names[0]: 'Sacra Paenitentiaria (Poenitentiaria) Apostolica' -> 'Sacra Paenitentiaria Apostolica'; aliases Sacra Poenitentiaria Apostolica.
+- `cr:signatura-apostolica-1908` names[0]: 'Signatura Apostolica / Supremum Signaturae Apostolicae Tribunal' -> 'Supremum Signaturae Apostolicae Tribunal'; aliases Signatura Apostolica.
+
 ## Operative clauses
 
 - `ev018` -> `ev018`
@@ -189,7 +212,7 @@ Shape changes only: same-effect types get identical before/after; an absorption 
 
 Dated name changes that no rename event records. The name entry carries a `gap` note; no event was invented.
 
-- `cr:communicationes-sociales-1948` names[1] from 1959-02-22 ('Pontificium Consilium (de re cinematographica, radiophonica ac televisifica)'): No rename event in the research records this change of name; the research records ev034 (kind-change) on the same date. No event was invented.
+- `cr:communicationes-sociales-1948` names[1] from 1959-02-22 ('Pontificium Consilium de re cinematographica, radiophonica ac televisifica'): No rename event in the research records this change of name; the research records ev034 (kind-change) on the same date. No event was invented.
 - `cr:publica-ecclesiae-negotia-1793` names[1] from 1814 ('Sacra Congregatio pro Negotiis ecclesiasticis extraordinariis'): No rename event in the research records this change of name; no event of any type on this date. No event was invented.
 
 ## Predecessor/successor links: events vs the research

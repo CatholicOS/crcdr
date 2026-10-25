@@ -87,7 +87,7 @@ def identifiers(bodies, events, effects=None):
             for k in ("name_la", "name_en"):
                 if n.get(k):
                     al.append(n[k])
-            al.extend(n.get("aliases") or [])
+            al.extend(a["name"] if isinstance(a, dict) else a for a in n.get("aliases") or [])
         al.extend(b.get("aliases") or [])
         entries.append({
             "id": b["id"],

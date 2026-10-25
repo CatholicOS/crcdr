@@ -19,6 +19,7 @@
           "name_la": "Sacra Congregatio Romanae et Universalis Inquisitionis",
           "name_it": null,
           "name_en": "Congregation of the Roman and Universal Inquisition",
+          "aliases": [],
           "from": "1542-07-21",
           "to": "1908-11-03",
           "act": "Paul III, ap. const. Licet ab initio, 21 Jul 1542",
@@ -28,33 +29,50 @@
           "note": "Founding act and date as stated in Integrae servandae, AAS 57 (1965) 953; Licet ab initio itself not read."
         },
         {
-          "name_la": "Congregatio Sancti Officii (Suprema Sacra Congregatio S. Officii)",
+          "name_la": "Congregatio Sancti Officii",
           "name_it": null,
-          "name_en": "Congregation of the Holy Office (Supreme Sacred Congregation of the Holy Office)",
+          "name_en": "Congregation of the Holy Office",
+          "aliases": [
+            {
+              "name": "Suprema Sacra Congregatio S. Officii",
+              "lang": "la"
+            },
+            {
+              "name": "Supreme Sacred Congregation of the Holy Office",
+              "lang": "en"
+            }
+          ],
           "from": "1908-11-03",
           "to": "1965-12-07",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
-          "note": "Sapienti consilio heading reads 'Congregatio Sancti Officii'; AAS headings of 1915 use 'Suprema Sacra Congregatio S. Officii'. Integrae servandae states that Sapienti consilio changed the name."
+          "note": "Sapienti consilio heading reads 'Congregatio Sancti Officii'; AAS headings of 1915 use 'Suprema Sacra Congregatio S. Officii'. Integrae servandae states that Sapienti consilio changed the name. Seeding (seed/name_fixes.json): the research gives the name with its AAS-heading form in parentheses ('Congregatio Sancti Officii (Suprema Sacra Congregatio S. Officii)'; English 'Congregation of the Holy Office (Supreme Sacred Congregation of the Holy Office)'). The parenthesised forms are aliases."
         },
         {
-          "name_la": "Congregatio pro doctrina fidei / Sacra Congregatio pro Doctrina Fidei",
+          "name_la": "Congregatio pro doctrina fidei",
           "name_it": null,
-          "name_en": "Congregation for the Doctrine of the Faith (Sacred Congregation ...)",
+          "name_en": "Congregation for the Doctrine of the Faith",
+          "aliases": [
+            {
+              "name": "Sacra Congregatio pro Doctrina Fidei",
+              "lang": "la"
+            }
+          ],
           "from": "1965-12-07",
           "to": "2022-06-05",
           "act": "Paul VI, m.p. Integrae servandae, 7 Dec 1965, AAS 57 (1965) 952-955",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-57-1965-ocr.pdf",
-          "note": "Integrae servandae n.1: 'Quae hactenus appellata est Sacra Congregatio Sancti Officii, in posterum appellabitur Congregatio pro doctrina fidei'. REU (1967) n.29: 'Sacra Congregatio pro Doctrina Fidei'. The Latin text of Pastor bonus online reads 'Congregatio de Doctrina Fidei' (pro -> de); the dropping of 'Sacra' and the pro/de variation are not tied to a located act."
+          "note": "Integrae servandae n.1: 'Quae hactenus appellata est Sacra Congregatio Sancti Officii, in posterum appellabitur Congregatio pro doctrina fidei'. REU (1967) n.29: 'Sacra Congregatio pro Doctrina Fidei'. The Latin text of Pastor bonus online reads 'Congregatio de Doctrina Fidei' (pro -> de); the dropping of 'Sacra' and the pro/de variation are not tied to a located act. Seeding (seed/name_fixes.json): the research gives two forms ('Congregatio pro doctrina fidei / Sacra Congregatio pro Doctrina Fidei'): the first is the form of Integrae servandae, the second (REU) is an alias. The research's English adds an incomplete '(Sacred Congregation ...)', which is not carried."
         },
         {
           "name_la": "Dicasterium pro Doctrina Fidei",
           "name_it": null,
           "name_en": "Dicastery for the Doctrine of the Faith",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -191,6 +209,7 @@
           "name_la": "Sacra Congregatio Indicis",
           "name_it": null,
           "name_en": "Congregation of the Index",
+          "aliases": [],
           "from": "1571",
           "to": "1917-03-25",
           "act": "Pius V, 1571 (Congregation for the Reform of the Index); confirmed by Immensa aeterni Dei 1588",
@@ -278,6 +297,7 @@
           "name_la": "Pontificia Commissio «Ecclesia Dei»",
           "name_it": null,
           "name_en": "Pontifical Commission Ecclesia Dei",
+          "aliases": [],
           "from": "1988-07-02",
           "to": "2019-01-17",
           "act": "John Paul II, m.p. Ecclesia Dei adflicta, 2 Jul 1988",
@@ -347,6 +367,7 @@
           "name_la": "Pontificia Commissio pro Tutela Minorum",
           "name_it": null,
           "name_en": "Pontifical Commission for the Protection of Minors",
+          "aliases": [],
           "from": "2014-03-22",
           "to": null,
           "act": "Francis, chirograph of 22 Mar 2014 (not read)",
@@ -437,6 +458,7 @@
           "name_la": "Sacra Congregatio de Propaganda Fide",
           "name_it": null,
           "name_en": "Sacred Congregation for the Propagation of the Faith",
+          "aliases": [],
           "from": "1622-06-22",
           "to": "1968-01-01",
           "act": "Gregory XV, bull Inscrutabili divinae, 22 Jun 1622",
@@ -449,6 +471,7 @@
           "name_la": "Sacra Congregatio pro Gentium Evangelizatione seu de Propaganda Fide",
           "name_it": null,
           "name_en": "Sacred Congregation for the Evangelization of Peoples, or 'de Propaganda Fide'",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -461,6 +484,7 @@
           "name_la": "Congregatio pro Gentium Evangelizatione",
           "name_it": null,
           "name_en": "Congregation for the Evangelization of Peoples",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -568,6 +592,7 @@
           "name_la": "Pontificium Consilium ad Novam Evangelizationem Promovendam",
           "name_it": null,
           "name_en": "Pontifical Council for Promoting the New Evangelization",
+          "aliases": [],
           "from": "2010-09-21",
           "to": "2022-06-05",
           "act": "Benedict XVI, m.p. Ubicumque et semper, 21 Sep 2010",
@@ -623,6 +648,7 @@
           "name_la": "Dicasterium pro Evangelizatione",
           "name_it": null,
           "name_en": "Dicastery for Evangelization",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -688,6 +714,7 @@
           "name_la": "Sacra Congregatio de Propaganda Fide pro negotiis ritus orientalis",
           "name_it": null,
           "name_en": "Congregation of Propaganda for Affairs of the Oriental Rite",
+          "aliases": [],
           "from": "1862-01-06",
           "to": "1917-11-30",
           "act": "Pius IX, ap. const. Romani Pontifices, 6 Jan 1862",
@@ -769,6 +796,7 @@
           "name_la": "Sacra Congregatio pro Ecclesia Orientali",
           "name_it": null,
           "name_en": "Sacred Congregation for the Oriental Church",
+          "aliases": [],
           "from": "1917-12-01",
           "to": "1968-01-01",
           "act": "Benedict XV, m.p. Dei providentis, 1 May 1917, AAS 9-I (1917) 529-531",
@@ -781,6 +809,7 @@
           "name_la": "Sacra Congregatio pro Ecclesiis Orientalibus",
           "name_it": null,
           "name_en": "Sacred Congregation for the Oriental Churches",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "2022-06-05",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -793,6 +822,7 @@
           "name_la": "Dicasterium pro Ecclesiis Orientalibus",
           "name_it": null,
           "name_en": "Dicastery for the Eastern Churches",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -909,6 +939,7 @@
           "name_la": "Congregatio pro sacris ritibus et caeremoniis",
           "name_it": null,
           "name_en": "Congregation for Sacred Rites and Ceremonies",
+          "aliases": [],
           "from": "1588-01-22",
           "to": "1908-11-03",
           "act": "Sixtus V, bull Immensa aeterni Dei, 22 Jan 1588 (dated 'xxii Ianuarii MDLXXXVII' in the Florentine/Incarnation style, as cited by Sapienti consilio)",
@@ -918,16 +949,22 @@
           "note": "Sixtine title per Catholic Encyclopedia / Wikipedia; bull not read."
         },
         {
-          "name_la": "Sacra Congregatio Rituum / Congregatio sacrorum Rituum",
+          "name_la": "Sacra Congregatio Rituum",
           "name_it": null,
           "name_en": "Sacred Congregation of Rites",
+          "aliases": [
+            {
+              "name": "Congregatio sacrorum Rituum",
+              "lang": "la"
+            }
+          ],
           "from": "1908-11-03",
           "to": "1969-05-08",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
-          "note": "Sapienti consilio 8°; REU n.58 'Sacra Congregatio Rituum'."
+          "note": "Sapienti consilio 8°; REU n.58 'Sacra Congregatio Rituum'. Seeding (seed/name_fixes.json): the research gives two forms ('Sacra Congregatio Rituum / Congregatio sacrorum Rituum'); the REU form, from which the key was minted, is the name, the other an alias."
         }
       ],
       "kind": [
@@ -1016,6 +1053,7 @@
           "name_la": "Sacra Congregatio pro Cultu Divino",
           "name_it": null,
           "name_en": "Sacred Congregation for Divine Worship",
+          "aliases": [],
           "from": "1969-05-08",
           "to": "1975-07-11",
           "act": "Paul VI, ap. const. Sacra Rituum Congregatio, 8 May 1969, AAS 61 (1969) 297-305",
@@ -1081,6 +1119,7 @@
           "name_la": "Consilium ad exsequendam Constitutionem de Sacra Liturgia",
           "name_it": null,
           "name_en": "Consilium for the Implementation of the Constitution on the Sacred Liturgy",
+          "aliases": [],
           "from": "1964",
           "to": "1969-05-08",
           "act": "Paul VI, m.p. Sacram Liturgiam, 25 Jan 1964 (not read)",
@@ -1148,6 +1187,7 @@
           "name_la": "Sacra Congregatio pro Causis Sanctorum",
           "name_it": null,
           "name_en": "Sacred Congregation for the Causes of Saints",
+          "aliases": [],
           "from": "1969-05-08",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Sacra Rituum Congregatio, 8 May 1969, AAS 61 (1969) 297-305",
@@ -1160,6 +1200,7 @@
           "name_la": "Congregatio de Causis Sanctorum",
           "name_it": null,
           "name_en": "Congregation for the Causes of Saints",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -1172,6 +1213,7 @@
           "name_la": "Dicasterium de Causis Sanctorum",
           "name_it": null,
           "name_en": "Dicastery for the Causes of Saints",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -1266,6 +1308,7 @@
           "name_la": "Sacra Congregatio de disciplina Sacramentorum",
           "name_it": null,
           "name_en": "Sacred Congregation for the Discipline of the Sacraments",
+          "aliases": [],
           "from": "1908-11-03",
           "to": "1975-07-11",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
@@ -1351,6 +1394,7 @@
           "name_la": "Sacra Congregatio pro Sacramentis et Cultu Divino",
           "name_it": null,
           "name_en": "Sacred Congregation for the Sacraments and Divine Worship",
+          "aliases": [],
           "from": "1975-07-11",
           "to": "1984-04-05",
           "act": "Paul VI, ap. const. Constans nobis, 11 Jul 1975, AAS 67 (1975) 417-420",
@@ -1416,6 +1460,7 @@
           "name_la": "Sacra Congregatio pro Sacramentis",
           "name_it": null,
           "name_en": "Sacred Congregation for the Sacraments",
+          "aliases": [],
           "from": "1984-04-05",
           "to": "1989-03-01",
           "act": "John Paul II, chirograph Quoniam in celeri, 5 Apr 1984, AAS 76 (1984) 494-495",
@@ -1481,6 +1526,7 @@
           "name_la": "Sacra Congregatio pro Cultu Divino",
           "name_it": null,
           "name_en": "Sacred Congregation for Divine Worship",
+          "aliases": [],
           "from": "1984-04-05",
           "to": "1989-03-01",
           "act": "John Paul II, chirograph Quoniam in celeri, 5 Apr 1984, AAS 76 (1984) 494-495",
@@ -1536,6 +1582,7 @@
           "name_la": "Congregatio de Cultu Divino et Disciplina Sacramentorum",
           "name_it": null,
           "name_en": "Congregation for Divine Worship and the Discipline of the Sacraments",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -1548,6 +1595,7 @@
           "name_la": "Dicasterium de Cultu Divino et Disciplina Sacramentorum",
           "name_it": null,
           "name_en": "Dicastery for Divine Worship and the Discipline of the Sacraments",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -1619,21 +1667,32 @@
       "ended": null,
       "names": [
         {
-          "name_la": "Congregatio Cardinalium Concilii Tridentini interpretum (Sacra Congregatio Concilii)",
+          "name_la": "Congregatio Cardinalium Concilii Tridentini interpretum",
           "name_it": null,
-          "name_en": "Congregation of the Council (of Trent)",
+          "name_en": "Congregation of the Council",
+          "aliases": [
+            {
+              "name": "Sacra Congregatio Concilii",
+              "lang": "la"
+            },
+            {
+              "name": "Congregation of the Council of Trent",
+              "lang": "en"
+            }
+          ],
           "from": "1564-08-02",
           "to": "1968-01-01",
           "act": "Pius IV, m.p. Alias nos nonnullas, 2 Aug 1564",
           "verified": false,
           "source_type": "secondary",
           "source": "https://www.newadvent.org/cathen/13136a.htm",
-          "note": "Founding date per Catholic Encyclopedia; the incipit 'Alias nos nonnullas' is from memory and unverified. Name 'Congregatio Concilii' verified in Sapienti consilio 4°."
+          "note": "Founding date per Catholic Encyclopedia; the incipit 'Alias nos nonnullas' is from memory and unverified. Name 'Congregatio Concilii' verified in Sapienti consilio 4°. Seeding (seed/name_fixes.json): the research gives the short form in parentheses ('Congregatio Cardinalium Concilii Tridentini interpretum (Sacra Congregatio Concilii)'; English 'Congregation of the Council (of Trent)'). The short form and the expanded English are aliases."
         },
         {
           "name_la": "Sacra Congregatio pro Clericis",
           "name_it": null,
           "name_en": "Sacred Congregation for the Clergy",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -1646,6 +1705,7 @@
           "name_la": "Congregatio pro Clericis",
           "name_it": null,
           "name_en": "Congregation for the Clergy",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -1658,6 +1718,7 @@
           "name_la": "Dicasterium pro Clericis",
           "name_it": null,
           "name_en": "Dicastery for the Clergy",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -1794,6 +1855,7 @@
           "name_la": "Congregatio Lauretana",
           "name_it": null,
           "name_en": "Congregation of Loreto",
+          "aliases": [],
           "from": "1698",
           "to": "1908-11-03",
           "act": "Innocent XII, 1698 (CE)",
@@ -1860,14 +1922,20 @@
         {
           "name_la": "Congregatio specialis pro Conciliorum revisione",
           "name_it": null,
-          "name_en": "Special Congregation for the Revision of (Provincial) Councils",
+          "name_en": "Special Congregation for the Revision of Councils",
+          "aliases": [
+            {
+              "name": "Special Congregation for the Revision of Provincial Councils",
+              "lang": "en"
+            }
+          ],
           "from": "1849",
           "to": "1908-11-03",
           "act": "Pius IX (CE: consultors from 1849)",
           "verified": false,
           "source_type": "secondary",
           "source": "https://www.newadvent.org/cathen/13136a.htm",
-          "note": null,
+          "note": "Seeding (seed/name_fixes.json): the research's English marks 'Provincial' as optional ('Special Congregation for the Revision of (Provincial) Councils'); the form with it is an alias.",
           "gap": "The research gives no date for this name ('from': null); 'from' is set to founded.date 1849."
         }
       ],
@@ -1920,6 +1988,7 @@
           "name_la": "Congregatio pro erectione ecclesiarum et provisionibus consistorialibus",
           "name_it": null,
           "name_en": "Congregation for the Erection of Churches and Consistorial Provisions",
+          "aliases": [],
           "from": "1588-01-22",
           "to": "1908-11-03",
           "act": "Sixtus V, bull Immensa aeterni Dei, 22 Jan 1588 (dated 'xxii Ianuarii MDLXXXVII' in the Florentine/Incarnation style, as cited by Sapienti consilio)",
@@ -1933,6 +2002,7 @@
           "name_la": "Sacra Congregatio Consistorialis",
           "name_it": null,
           "name_en": "Sacred Consistorial Congregation",
+          "aliases": [],
           "from": "1908-11-03",
           "to": "1968-01-01",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
@@ -1946,6 +2016,7 @@
           "name_la": "Sacra Congregatio pro Episcopis",
           "name_it": null,
           "name_en": "Sacred Congregation for Bishops",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -1958,6 +2029,7 @@
           "name_la": "Congregatio pro Episcopis",
           "name_it": null,
           "name_en": "Congregation for Bishops",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -1970,6 +2042,7 @@
           "name_la": "Dicasterium pro Episcopis",
           "name_it": null,
           "name_en": "Dicastery for Bishops",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -2094,6 +2167,7 @@
           "name_la": "Congregatio pro consultationibus Episcoporum et aliorum praelatorum",
           "name_it": null,
           "name_en": "Congregation for Consultations of Bishops and other Prelates",
+          "aliases": [],
           "from": "1588-01-22",
           "to": "1601",
           "act": "Sixtus V, bull Immensa aeterni Dei, 22 Jan 1588 (dated 'xxii Ianuarii MDLXXXVII' in the Florentine/Incarnation style, as cited by Sapienti consilio)",
@@ -2159,6 +2233,7 @@
           "name_la": "Congregatio super consultationibus regularium",
           "name_it": null,
           "name_en": "Congregation for Consultations of Regulars",
+          "aliases": [],
           "from": "1586-05-17",
           "to": "1601",
           "act": "Sixtus V, brief of 17 May 1586; confirmed by Immensa aeterni Dei",
@@ -2236,6 +2311,7 @@
           "name_la": "Sacra Congregatio Episcoporum et Regularium",
           "name_it": null,
           "name_en": "Congregation of Bishops and Regulars",
+          "aliases": [],
           "from": "1601",
           "to": "1908-11-03",
           "act": "Clement VIII, 1601 (CE)",
@@ -2303,6 +2379,7 @@
           "name_la": "Congregatio super disciplina Regulari",
           "name_it": null,
           "name_en": "Congregation on Regular Discipline",
+          "aliases": [],
           "from": "1695-07-18",
           "to": "1906-05-26",
           "act": "Innocent XII (CE)",
@@ -2357,21 +2434,28 @@
       "ended": null,
       "names": [
         {
-          "name_la": "Sacra Congregatio Negotiis religiosorum sodalium praeposita (de Religiosis)",
+          "name_la": "Sacra Congregatio Negotiis religiosorum sodalium praeposita",
           "name_it": null,
           "name_en": "Sacred Congregation of Religious",
+          "aliases": [
+            {
+              "name": "S. Congregatio de Religiosis",
+              "lang": "la"
+            }
+          ],
           "from": "1908-11-03",
           "to": "1968-01-01",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
-          "note": "AAS 1909 page headings use 'S. Congregatio de Religiosis'."
+          "note": "AAS 1909 page headings use 'S. Congregatio de Religiosis'. Seeding (seed/name_fixes.json): the research adds '(de Religiosis)' to the name; the alias is the AAS 1909 heading form the research quotes in its note."
         },
         {
           "name_la": "Sacra Congregatio pro Religiosis et Institutis saecularibus",
           "name_it": null,
           "name_en": "Sacred Congregation for Religious and Secular Institutes",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -2384,6 +2468,7 @@
           "name_la": "Congregatio pro Institutis Vitae Consecratae et Societatibus Vitae Apostolicae",
           "name_it": null,
           "name_en": "Congregation for Institutes of Consecrated Life and Societies of Apostolic Life",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -2396,6 +2481,7 @@
           "name_la": "Dicasterium pro Institutis Vitae Consecratae et Societatibus Vitae Apostolicae",
           "name_it": null,
           "name_en": "Dicastery for Institutes of Consecrated Life and Societies of Apostolic Life",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -2509,14 +2595,15 @@
         {
           "name_la": "Congregatio pro universitate studii Romani",
           "name_it": null,
-          "name_en": "Congregation for the University of the Roman Study (Sapienza)",
+          "name_en": "Congregation for the University of the Roman Study",
+          "aliases": [],
           "from": "1588-01-22",
           "to": "1824-08-28",
           "act": "Sixtus V, bull Immensa aeterni Dei, 22 Jan 1588 (dated 'xxii Ianuarii MDLXXXVII' in the Florentine/Incarnation style, as cited by Sapienti consilio)",
           "verified": false,
           "source_type": "secondary",
           "source": "https://www.newadvent.org/cathen/13136a.htm",
-          "note": null
+          "note": "Seeding (seed/name_fixes.json): the research's English adds the remark '(Sapienza)', the later name of the university ('Congregation for the University of the Roman Study (Sapienza)')."
         }
       ],
       "kind": [
@@ -2575,6 +2662,7 @@
           "name_la": "Sacra Congregatio Studiorum",
           "name_it": null,
           "name_en": "Sacred Congregation of Studies",
+          "aliases": [],
           "from": "1824-08-28",
           "to": "1915-11-04",
           "act": "Leo XII, Quod divina sapientia (secondary)",
@@ -2584,21 +2672,28 @@
           "note": "Existence and 1908 remit verified (Sapienti consilio 11°); founding act secondary."
         },
         {
-          "name_la": "Sacra Congregatio de Seminariis et (de) Studiorum Universitatibus",
+          "name_la": "Sacra Congregatio de Seminariis et Studiorum Universitatibus",
           "name_it": null,
           "name_en": "Sacred Congregation of Seminaries and Universities",
+          "aliases": [
+            {
+              "name": "Sacra Congregatio de Seminariis et de Studiorum Universitatibus",
+              "lang": "la"
+            }
+          ],
           "from": "1915-11-04",
           "to": "1968-01-01",
           "act": "Benedict XV, m.p. Seminaria clericorum, 4 Nov 1915, AAS 7 (1915) 493-495",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-07-1915-ocr.pdf",
-          "note": "CIC 1917 can. 256 has 'de Seminariis et Universitatibus studiorum'."
+          "note": "CIC 1917 can. 256 has 'de Seminariis et Universitatibus studiorum'. Seeding (seed/name_fixes.json): the research marks the second 'de' as optional ('Sacra Congregatio de Seminariis et (de) Studiorum Universitatibus'); the form with it is an alias."
         },
         {
           "name_la": "Sacra Congregatio pro Institutione catholica",
           "name_it": null,
           "name_en": "Sacred Congregation for Catholic Education",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -2608,16 +2703,26 @@
           "note": "REU n.75: 'Quae hactenus ... de Seminariis et Studiorum Universitatibus nuncupata est, ... nomen sumit Sacrae Congregationis pro Institutione catholica'."
         },
         {
-          "name_la": "Congregatio de Seminariis atque Studiorum Institutis / de Institutione Catholica",
+          "name_la": "Congregatio de Seminariis atque Studiorum Institutis",
           "name_it": null,
-          "name_en": "Congregation for Catholic Education (for Seminaries and Educational Institutions)",
+          "name_en": "Congregation for Catholic Education",
+          "aliases": [
+            {
+              "name": "Congregatio de Institutione Catholica",
+              "lang": "la"
+            },
+            {
+              "name": "Congregation of Seminaries and Educational Institutions",
+              "lang": "en"
+            }
+          ],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
-          "note": "vatican.va Latin PB heading: 'Congregatio de Seminariis atque Studiorum Institutis'; English page: 'Congregation of Seminaries and Educational Institutions'; common usage 'Congregation for Catholic Education'. Official form needs the Annuario."
+          "note": "vatican.va Latin PB heading: 'Congregatio de Seminariis atque Studiorum Institutis'; English page: 'Congregation of Seminaries and Educational Institutions'; common usage 'Congregation for Catholic Education'. Official form needs the Annuario. Seeding (seed/name_fixes.json): the research gives two forms ('Congregatio de Seminariis atque Studiorum Institutis / de Institutione Catholica'); the PB heading, from which the key was minted, is the name, the other an alias. Research English: 'Congregation for Catholic Education (for Seminaries and Educational Institutions)'; the English of the PB page, quoted in the research note, is an alias."
         }
       ],
       "kind": [
@@ -2718,6 +2823,7 @@
           "name_la": "Pontificium Consilium pro hominum Cultura",
           "name_it": null,
           "name_en": "Pontifical Council for Culture",
+          "aliases": [],
           "from": "1982-05-20",
           "to": "1989-03-01",
           "act": "John Paul II, letter to Card. Casaroli instituting the Pontificium Consilium pro hominum Cultura, 20 May 1982, AAS 74 (1982) 683",
@@ -2730,6 +2836,7 @@
           "name_la": "Pontificium Consilium de Cultura",
           "name_it": null,
           "name_en": "Pontifical Council for Culture",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -2807,6 +2914,7 @@
           "name_la": "Secretariatus pro non credentibus",
           "name_it": null,
           "name_en": "Secretariat for Non-Believers",
+          "aliases": [],
           "from": "1965-04-09",
           "to": "1989-03-01",
           "act": "Paul VI (founded 1965; act not located in AAS 57)",
@@ -2819,6 +2927,7 @@
           "name_la": "Pontificium Consilium pro Dialogo cum Non Credentibus",
           "name_it": null,
           "name_en": "Pontifical Council for Dialogue with Non-Believers",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "1993-03-25",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -2915,6 +3024,7 @@
           "name_la": "Pontificia Commissio de Patrimonio Artis et Historiae conservando",
           "name_it": null,
           "name_en": "Pontifical Commission for Preserving the Patrimony of Art and History",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "1993-03-25",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -2926,14 +3036,20 @@
         {
           "name_la": "Pontificia Commissio de Bonis Culturalibus Ecclesiae",
           "name_it": null,
-          "name_en": "Pontifical Commission for the Cultural Heritage (Patrimony) of the Church",
+          "name_en": "Pontifical Commission for the Cultural Heritage of the Church",
+          "aliases": [
+            {
+              "name": "Pontifical Commission for the Cultural Patrimony of the Church",
+              "lang": "en"
+            }
+          ],
           "from": "1993-03-25",
           "to": "2012-07-30",
           "act": "John Paul II, m.p. Inde a Pontificatus, 25 Mar 1993",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_25031993_inde-a-pontificatus.html",
-          "note": "English text of Inde a Pontificatus: 'Pontifical Commission for the Cultural Patrimony of the Church'; Latin from the title of Pulchritudinis fidei."
+          "note": "English text of Inde a Pontificatus: 'Pontifical Commission for the Cultural Patrimony of the Church'; Latin from the title of Pulchritudinis fidei. Seeding (seed/name_fixes.json): the research's English gives a variant in parentheses ('Pontifical Commission for the Cultural Heritage (Patrimony) of the Church'); the English text of Inde a Pontificatus, quoted in the research note, is an alias."
         }
       ],
       "kind": [
@@ -2995,6 +3111,7 @@
           "name_la": "Dicasterium de Cultura et Educatione",
           "name_it": null,
           "name_en": "Dicastery for Culture and Education",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -3050,6 +3167,7 @@
           "name_la": "Secretariatus ad Christianorum unitatem fovendam",
           "name_it": null,
           "name_en": "Secretariat for Promoting Christian Unity",
+          "aliases": [],
           "from": "1960-06-05",
           "to": "1989-03-01",
           "act": "John XXIII, m.p. Superno Dei nutu, 5 Jun 1960, AAS 52 (1960) 433-437 (n. 9)",
@@ -3062,6 +3180,7 @@
           "name_la": "Pontificium Consilium ad Unitatem Christianorum Fovendam",
           "name_it": null,
           "name_en": "Pontifical Council for Promoting Christian Unity",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -3074,6 +3193,7 @@
           "name_la": "Dicasterium ad Unitatem Christianorum Fovendam",
           "name_it": null,
           "name_en": "Dicastery for Promoting Christian Unity",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -3185,21 +3305,28 @@
       "ended": null,
       "names": [
         {
-          "name_la": "Secretariatus de non Christianis / pro non christianis",
+          "name_la": "Secretariatus de non Christianis",
           "name_it": null,
           "name_en": "Secretariat for Non-Christians",
+          "aliases": [
+            {
+              "name": "Secretariatus pro non christianis",
+              "lang": "la"
+            }
+          ],
           "from": "1964-05-19",
           "to": "1989-03-01",
           "act": "Paul VI, ap. letter Progrediente Concilio, 19 May 1964, AAS 56 (1964) 560",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-56-1964-ocr.pdf",
-          "note": "1964 act: 'Secretariatum de non Christianis'; REU n.96: 'Secretariatus pro non christianis'."
+          "note": "1964 act: 'Secretariatum de non Christianis'; REU n.96: 'Secretariatus pro non christianis'. Seeding (seed/name_fixes.json): the research gives two forms ('Secretariatus de non Christianis / pro non christianis'): the first is the 1964 act's, the second (REU n.96) an alias."
         },
         {
           "name_la": "Pontificium Consilium pro Dialogo inter Religiones",
           "name_it": null,
           "name_en": "Pontifical Council for Interreligious Dialogue",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2022-06-05",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -3212,6 +3339,7 @@
           "name_la": "Dicasterium pro Dialogo Interreligioso",
           "name_it": null,
           "name_en": "Dicastery for Interreligious Dialogue",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -3327,6 +3455,7 @@
           "name_la": "Consilium de Laicis",
           "name_it": null,
           "name_en": "Council of the Laity",
+          "aliases": [],
           "from": "1967-01-06",
           "to": "1976-12-10",
           "act": "Paul VI, m.p. Catholicam Christi Ecclesiam, 6 Jan 1967, AAS 59 (1967) 25-28",
@@ -3339,6 +3468,7 @@
           "name_la": "Pontificium Consilium pro Laicis",
           "name_it": null,
           "name_en": "Pontifical Council for the Laity",
+          "aliases": [],
           "from": "1976-12-10",
           "to": "2016-09-01",
           "act": "Paul VI, m.p. Apostolatus peragendi, 10 Dec 1976, AAS 68 (1976) 696ff",
@@ -3432,16 +3562,22 @@
       },
       "names": [
         {
-          "name_la": "Consilium de Familia (Comitatus pro Familia)",
+          "name_la": "Consilium de Familia",
           "name_it": null,
           "name_en": "Committee for the Family",
+          "aliases": [
+            {
+              "name": "Comitatus pro Familia",
+              "lang": "la"
+            }
+          ],
           "from": "1973-01-11",
           "to": "1981-05-09",
           "act": "Paul VI, 11 Jan 1973 (act not read)",
           "verified": false,
           "source_type": "secondary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-73-1981-ocr.pdf",
-          "note": "Its name 'Consilium de Familia' and its cessation verified in Familia a Deo instituta; founding date secondary."
+          "note": "Its name 'Consilium de Familia' and its cessation verified in Familia a Deo instituta; founding date secondary. Seeding (seed/name_fixes.json): the research gives a second form in parentheses ('Consilium de Familia (Comitatus pro Familia)'); the form verified in Familia a Deo instituta, from which the key was minted, is the name, the other an alias."
         }
       ],
       "kind": [
@@ -3513,6 +3649,7 @@
           "name_la": "Pontificium Consilium pro Familia",
           "name_it": null,
           "name_en": "Pontifical Council for the Family",
+          "aliases": [],
           "from": "1981-05-09",
           "to": "2016-09-01",
           "act": "John Paul II, m.p. Familia a Deo instituta, 9 May 1981, AAS 73 (1981) 441-445",
@@ -3580,6 +3717,7 @@
           "name_la": "Dicasterium pro Laicis, Familia et Vita",
           "name_it": null,
           "name_en": "Dicastery for the Laity, the Family and Life",
+          "aliases": [],
           "from": "2016-09-01",
           "to": null,
           "act": "Francis, ap. letter m.p. Sedula Mater, 15 Aug 2016 (effective 1 Sep 2016)",
@@ -3656,6 +3794,7 @@
           "name_la": "Pontificia Commissio Studiosorum a «Iustitia et Pace»",
           "name_it": null,
           "name_en": "Pontifical Commission 'Justice and Peace'",
+          "aliases": [],
           "from": "1967-01-06",
           "to": "1989-03-01",
           "act": "Paul VI, m.p. Catholicam Christi Ecclesiam, 6 Jan 1967, AAS 59 (1967) 25-28",
@@ -3668,6 +3807,7 @@
           "name_la": "Pontificium Consilium de Iustitia et Pace",
           "name_it": null,
           "name_en": "Pontifical Council for Justice and Peace",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2017-01-01",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -3764,6 +3904,7 @@
           "name_la": "Pontificium Consilium «Cor Unum» de humana et christiana progressione fovenda",
           "name_it": null,
           "name_en": "Pontifical Council Cor Unum",
+          "aliases": [],
           "from": "1971-07-15",
           "to": "2017-01-01",
           "act": "Paul VI, letter Amoris officio to Card. Villot, 15 Jul 1971, AAS 63 (1971) 669",
@@ -3841,6 +3982,7 @@
           "name_la": "Pontificia Commissio de spirituali migratorum atque itinerantium cura",
           "name_it": null,
           "name_en": "Pontifical Commission for the Spiritual Care of Migrants and Itinerant People",
+          "aliases": [],
           "from": "1970-03-19",
           "to": "1989-03-01",
           "act": "Paul VI, m.p. Apostolicae caritatis, 19 Mar 1970, AAS 62 (1970) 193ff",
@@ -3853,6 +3995,7 @@
           "name_la": "Pontificium Consilium de Spirituali Migrantium atque Itinerantium Cura",
           "name_it": null,
           "name_en": "Pontifical Council for the Pastoral Care of Migrants and Itinerant People",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2017-01-01",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -3950,6 +4093,7 @@
           "name_la": "Pontificia Commissio de Apostolatu pro Valetudinis Administris",
           "name_it": null,
           "name_en": "Pontifical Commission for the Apostolate of Health Care Workers",
+          "aliases": [],
           "from": "1985-02-11",
           "to": "1989-03-01",
           "act": "John Paul II, m.p. Dolentium hominum, 11 Feb 1985, AAS 77 (1985) 457ff",
@@ -3962,6 +4106,7 @@
           "name_la": "Pontificium Consilium de Apostolatu pro Valetudinis Administris",
           "name_it": null,
           "name_en": "Pontifical Council for Pastoral Assistance to Health Care Workers",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2017-01-01",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -4046,16 +4191,17 @@
       "ended": null,
       "names": [
         {
-          "name_la": "Dicasterium pro Integra Humana Progressione Fovenda (Latin unverified)",
+          "name_la": "Dicasterium pro Integra Humana Progressione Fovenda",
           "name_it": null,
           "name_en": "Dicastery for Promoting Integral Human Development",
+          "aliases": [],
           "from": "2017-01-01",
           "to": null,
           "act": "Francis, m.p. Humanam progressionem, 17 Aug 2016 (effective 1 Jan 2017)",
-          "verified": true,
+          "verified": false,
           "source_type": "primary",
           "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/papa-francesco-motu-proprio_20160817_humanam-progressionem.html",
-          "note": "Italian/Spanish titles say 'servizio dello sviluppo umano integrale' rather than 'promoting'; name confirmed in PE Arts. 163-174."
+          "note": "Italian/Spanish titles say 'servizio dello sviluppo umano integrale' rather than 'promoting'; name confirmed in PE Arts. 163-174. Seeding (seed/name_fixes.json): the research marks this Latin form '(Latin unverified)': only the English name was checked (PE Arts. 163-174). The name is therefore recorded as unverified."
         }
       ],
       "kind": [
@@ -4125,6 +4271,7 @@
           "name_la": "Pontificia Commissio ad Codicis canones authentice interpretandos",
           "name_it": null,
           "name_en": "Pontifical Commission for the Authentic Interpretation of the Code of Canon Law",
+          "aliases": [],
           "from": "1917-09-15",
           "to": "1984-01-02",
           "act": "Benedict XV, m.p. Cum iuris canonici Codicem, 15 Sep 1917 (AAS 9-I index)",
@@ -4217,6 +4364,7 @@
           "name_la": "Pontificia Commissio Codici Iuris Canonici Recognoscendo",
           "name_it": null,
           "name_en": "Pontifical Commission for the Revision of the Code of Canon Law",
+          "aliases": [],
           "from": "1963-03-28",
           "to": "1983",
           "act": "John XXIII, 28 Mar 1963 (not read)",
@@ -4286,6 +4434,7 @@
           "name_la": "Pontificia Commissio Codici Iuris Canonici authentice interpretando",
           "name_it": null,
           "name_en": "Pontifical Commission for the Authentic Interpretation of the Code of Canon Law",
+          "aliases": [],
           "from": "1984-01-02",
           "to": "1989-03-01",
           "act": "John Paul II, m.p. Recognito Iuris Canonici Codice, 2 Jan 1984, AAS 76 (1984) 433-434",
@@ -4298,6 +4447,7 @@
           "name_la": "Pontificium Consilium de Legum Textibus Interpretandis",
           "name_it": null,
           "name_en": "Pontifical Council for the Interpretation of Legislative Texts",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "1999",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -4310,6 +4460,7 @@
           "name_la": "Pontificium Consilium de Legum Textibus",
           "name_it": null,
           "name_en": "Pontifical Council for Legislative Texts",
+          "aliases": [],
           "from": "1999",
           "to": "2022-06-05",
           "act": "act not identified",
@@ -4322,6 +4473,7 @@
           "name_la": "Dicasterium de Legum Textibus",
           "name_it": null,
           "name_en": "Dicastery for Legislative Texts",
+          "aliases": [],
           "from": "2022-06-05",
           "to": null,
           "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
@@ -4425,34 +4577,42 @@
       },
       "names": [
         {
-          "name_la": "(Pontifical Commission for didactic and religious cinema; later for cinema, radio and television)",
+          "name_la": null,
           "name_it": null,
-          "name_en": "Pontifical Commission for Cinema / Cinema, Radio and Television",
+          "name_en": "Pontifical Commission for Cinema",
+          "aliases": [
+            {
+              "name": "Pontifical Commission for didactic and religious cinema",
+              "lang": "en"
+            }
+          ],
           "from": "1948",
           "to": "1959-02-22",
           "act": "Pius XII (acts not read)",
           "verified": false,
           "source_type": "secondary",
           "source": null,
-          "note": null
+          "note": "Seeding (seed/name_fixes.json): no Latin name is attested; the research's name_la holds English prose ('(Pontifical Commission for didactic and religious cinema; later for cinema, radio and television)'). Research English: 'Pontifical Commission for Cinema / Cinema, Radio and Television'; the second form is the later name (names[1]) and is not repeated here."
         },
         {
-          "name_la": "Pontificium Consilium (de re cinematographica, radiophonica ac televisifica)",
+          "name_la": "Pontificium Consilium de re cinematographica, radiophonica ac televisifica",
           "name_it": null,
           "name_en": "Pontifical Commission for Cinema, Radio and Television",
+          "aliases": [],
           "from": "1959-02-22",
           "to": "1964-04-02",
           "act": "John XXIII, m.p. Boni Pastoris, 22 Feb 1959, AAS 51 (1959) 183-187 (cited in In fructibus multis; date secondary)",
           "verified": false,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-56-1964-ocr.pdf",
-          "note": "In fructibus multis says Boni Pastoris made it 'firmum ac stabile' and that it was aggregated to the Office for Public Affairs of the Church.",
+          "note": "In fructibus multis says Boni Pastoris made it 'firmum ac stabile' and that it was aggregated to the Office for Public Affairs of the Church. Seeding (seed/name_fixes.json): the research puts the complement in parentheses ('Pontificium Consilium (de re cinematographica, radiophonica ac televisifica)'); whether the complement is part of the official title is not established (act not read).",
           "gap": "No rename event in the research records this change of name; the research records ev034 (kind-change) on the same date. No event was invented."
         },
         {
           "name_la": "Pontificium Consilium instrumentis communicationis socialis praepositum",
           "name_it": null,
           "name_en": "Pontifical Commission for Social Communications",
+          "aliases": [],
           "from": "1964-04-02",
           "to": "1989-03-01",
           "act": "Paul VI, m.p. In fructibus multis, 2 Apr 1964, AAS 56 (1964) 289-292",
@@ -4465,6 +4625,7 @@
           "name_la": "Pontificium Consilium de Communicationibus Socialibus",
           "name_it": null,
           "name_en": "Pontifical Council for Social Communications",
+          "aliases": [],
           "from": "1989-03-01",
           "to": "2016",
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -4574,6 +4735,7 @@
           "name_la": "Secretaria pro Communicatione",
           "name_it": null,
           "name_en": "Secretariat for Communication",
+          "aliases": [],
           "from": "2015-06-29",
           "to": "2018-06-23",
           "act": "Francis, m.p. L'attuale contesto comunicativo, 27 Jun 2015",
@@ -4586,6 +4748,7 @@
           "name_la": "Dicasterium pro Communicatione",
           "name_it": null,
           "name_en": "Dicastery for Communication",
+          "aliases": [],
           "from": "2018-06-23",
           "to": null,
           "act": "Rescript ex audientia (audience of 27 Feb 2018), published 23 Jun 2018",
@@ -4671,6 +4834,7 @@
           "name_la": "Congregatio super negotiis ecclesiasticis regni Galliarum",
           "name_it": null,
           "name_en": "Congregation for the Ecclesiastical Affairs of the Kingdom of France",
+          "aliases": [],
           "from": "1793",
           "to": "1814",
           "act": "Pius VI (CE)",
@@ -4683,6 +4847,7 @@
           "name_la": "Sacra Congregatio pro Negotiis ecclesiasticis extraordinariis",
           "name_it": null,
           "name_en": "Sacred Congregation for Extraordinary Ecclesiastical Affairs",
+          "aliases": [],
           "from": "1814",
           "to": "1968-01-01",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
@@ -4696,6 +4861,7 @@
           "name_la": "Sacrum Consilium pro Publicis Ecclesiae negotiis",
           "name_it": null,
           "name_en": "Council for the Public Affairs of the Church",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -4792,6 +4958,7 @@
           "name_la": "Administratio Patrimonii Sedis Apostolicae",
           "name_it": null,
           "name_en": "Administration of the Patrimony of the Apostolic See",
+          "aliases": [],
           "from": "1968-01-01",
           "to": null,
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -4877,6 +5044,7 @@
           "name_la": "Praefectura rerum oeconomicarum Sanctae Sedis",
           "name_it": null,
           "name_en": "Prefecture for the Economic Affairs of the Holy See",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "2016-12-30",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -4942,6 +5110,7 @@
           "name_la": "Secretaria pro Re Oeconomica",
           "name_it": null,
           "name_en": "Secretariat for the Economy",
+          "aliases": [],
           "from": "2014-02-24",
           "to": null,
           "act": "Francis, m.p. Fidelis dispensator et prudens, 24 Feb 2014",
@@ -5008,6 +5177,7 @@
           "name_la": "Consilium pro Re Oeconomica",
           "name_it": null,
           "name_en": "Council for the Economy",
+          "aliases": [],
           "from": "2014-02-24",
           "to": null,
           "act": "Francis, m.p. Fidelis dispensator et prudens, 24 Feb 2014",
@@ -5072,16 +5242,17 @@
       "ended": null,
       "names": [
         {
-          "name_la": "Revisor Generalis (Officium)",
+          "name_la": "Revisor Generalis",
           "name_it": null,
           "name_en": "Office of the Auditor General",
+          "aliases": [],
           "from": "2014-02-24",
           "to": null,
           "act": "Francis, m.p. Fidelis dispensator et prudens, 24 Feb 2014",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/papa-francesco-motu-proprio_20140224_fidelis-dispensator-et-prudens.html",
-          "note": "FDP creates the post of Auditor General; 'Office' wording verified in PE."
+          "note": "FDP creates the post of Auditor General; 'Office' wording verified in PE. Seeding (seed/name_fixes.json): the research gives the officeholder's title with the kind word in parentheses ('Revisor Generalis (Officium)'). The office's own Latin name is not attested; none is reconstructed."
         }
       ],
       "kind": [
@@ -5152,6 +5323,7 @@
           "name_la": "Commissio de donationibus pro Sancta Sede",
           "name_it": null,
           "name_en": "Commission for Donations for the Holy See",
+          "aliases": [],
           "from": "2025-02-11",
           "to": "2025-12-04",
           "act": "Francis, chirograph Vinculum unitatis et caritatis, 11 Feb 2025",
@@ -5206,16 +5378,22 @@
       "ended": null,
       "names": [
         {
-          "name_la": "Sacra Paenitentiaria (Poenitentiaria) Apostolica",
+          "name_la": "Sacra Paenitentiaria Apostolica",
           "name_it": null,
           "name_en": "Apostolic Penitentiary",
+          "aliases": [
+            {
+              "name": "Sacra Poenitentiaria Apostolica",
+              "lang": "la"
+            }
+          ],
           "from": "1256",
           "to": null,
           "act": "no founding act",
           "verified": false,
           "source_type": "secondary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
-          "note": null,
+          "note": "Seeding (seed/name_fixes.json): the research gives a spelling variant in parentheses ('Sacra Paenitentiaria (Poenitentiaria) Apostolica'); the variant is an alias.",
           "gap": "The research gives no date for this name ('from': \"medieval\"); 'from' is set to founded.date 1256. Unverified because its start was substituted and the research cites no act attesting the name from that date (research: verified true, primary)."
         }
       ],
@@ -5339,6 +5517,7 @@
           "name_la": "Sacra Romana Rota",
           "name_it": null,
           "name_en": "Sacred Roman Rota",
+          "aliases": [],
           "from": "1323",
           "to": "1908-11-03",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
@@ -5352,6 +5531,7 @@
           "name_la": "Sacra Romana Rota",
           "name_it": null,
           "name_en": "Sacred Roman Rota",
+          "aliases": [],
           "from": "1908-11-03",
           "to": "1989-03-01",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
@@ -5364,6 +5544,7 @@
           "name_la": "Tribunal Rotae Romanae",
           "name_it": null,
           "name_en": "Tribunal of the Roman Rota",
+          "aliases": [],
           "from": "1989-03-01",
           "to": null,
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -5490,16 +5671,22 @@
       "ended": null,
       "names": [
         {
-          "name_la": "Signatura Apostolica / Supremum Signaturae Apostolicae Tribunal",
+          "name_la": "Supremum Signaturae Apostolicae Tribunal",
           "name_it": null,
           "name_en": "Supreme Tribunal of the Apostolic Signatura",
+          "aliases": [
+            {
+              "name": "Signatura Apostolica",
+              "lang": "la"
+            }
+          ],
           "from": "1908-11-03",
           "to": null,
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
-          "note": null
+          "note": "Seeding (seed/name_fixes.json): the research gives two forms for the whole span ('Signatura Apostolica / Supremum Signaturae Apostolicae Tribunal') without dating either; the PB form, from which the key was minted, is the name, the other an alias."
         }
       ],
       "kind": [
@@ -5588,6 +5775,7 @@
           "name_la": "Apostolici Palatii Praefectura",
           "name_it": null,
           "name_en": "Prefecture of the Apostolic Palace",
+          "aliases": [],
           "from": "1968-01-01",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
@@ -5601,6 +5789,7 @@
           "name_la": "Praefectura Pontificalis Domus",
           "name_it": null,
           "name_en": "Prefecture of the Papal Household",
+          "aliases": [],
           "from": "1989-03-01",
           "to": null,
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -5677,6 +5866,7 @@
           "name_la": "Officium de Liturgicis Celebrationibus Summi Pontificis",
           "name_it": null,
           "name_en": "Office for the Liturgical Celebrations of the Supreme Pontiff",
+          "aliases": [],
           "from": "1989-03-01",
           "to": null,
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
@@ -5752,6 +5942,7 @@
           "name_la": "Congregatio Visitationis Apostolicae Urbis",
           "name_it": null,
           "name_en": "Congregation of the Apostolic Visitation of Rome",
+          "aliases": [],
           "from": "1637",
           "to": "1908-11-03",
           "act": null,
@@ -5821,6 +6012,7 @@
           "name_la": "Congregatio Indulgentiarum et Sacrarum Reliquiarum",
           "name_it": null,
           "name_en": "Congregation of Indulgences and Relics",
+          "aliases": [],
           "from": "1669",
           "to": "1904-01-28",
           "act": "Clement IX (secondary)",
@@ -5878,6 +6070,7 @@
           "name_la": "Pontificia Commissio pro America Latina",
           "name_it": null,
           "name_en": "Pontifical Commission for Latin America",
+          "aliases": [],
           "from": "1958-04-19",
           "to": null,
           "act": "Pius XII, 1958 (not read)",

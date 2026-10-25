@@ -52,6 +52,12 @@ class GeneratorTests(unittest.TestCase):
             "Sacra Congregatio Sancti Officii", "Sanctum Officium"])
         self.assertIsNone(e["founding_act_mag"])
 
+    def test_name_alias_objects_accepted(self):
+        bodies, events = fixtures.make_fixture()
+        bodies["entries"][0]["names"][1]["aliases"] = [{"name": "Suprema", "lang": "la"}]
+        doc = g.identifiers(bodies, events)
+        self.assertIn("Suprema", json.dumps(doc))
+
     def test_lineage_derived_from_events(self):
         bodies, events = _merger_fixture()
         e = {x["id"]: x for x in g.identifiers(bodies, events)["entries"]}
