@@ -37,14 +37,16 @@ class FoundingYears(unittest.TestCase):
             self.assertIsInstance(e["verified"], bool, k)
             if e["status"] == "dated":
                 parse_date(e["date"])
-                self.assertIn(e["precision"], ("year", "month", "day"), k)
+                expected = {4: "year", 7: "month", 10: "day"}[len(e["date"])]
+                self.assertEqual(e["precision"], expected, k)
                 self.assertTrue(e["source"].strip(), k)
                 self.assertTrue(e["act_or_attestation"].strip(), k)
                 self.assertIn(e["basis"], ("attested", "act"), k)
                 if e["basis"] == "act":
                     self.assertTrue(e["verified"], k)
             else:
-                self.assertIsNone(e["date"], k)
+                for f in ("date", "precision", "basis", "act_or_attestation"):
+                    self.assertIsNone(e[f], f"{k}.{f}")
                 self.assertTrue(e["note"].strip(), k)
 
 

@@ -2,7 +2,7 @@
   "_meta": {
     "description": "Founding-year research for the 13 bodies that seed/research/bodies.json leaves undated (design §4 rule 4; plan Task 4). 'dated' = earliest year that a cited document securely supports; 'held-out' = no year can be secured, or the body's identity must be decided first. Earlier attestations that cannot be pinned to a year are recorded in 'note'.",
     "researched": "2026-10-25",
-    "verified_convention": "verified=true only where the attesting document itself was read; a secondary source that was read but whose underlying document was not seen is verified=false."
+    "verified_convention": "verified=true only where the attesting document itself was read; a secondary source that was read but whose underlying document was not seen is verified=false. source_type is 'primary' only if every claim in the note rests on a primary text that was read."
   },
   "entries": [
     {
@@ -37,9 +37,9 @@
       "basis": null,
       "act_or_attestation": null,
       "source": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 113-116 (read); Holy See, Secretariat of State profile, https://www.vatican.va/roman_curia/secretariat_state/documents/rc_seg-st_12101998_profile_en.html",
-      "source_type": "primary",
-      "verified": true,
-      "note": "IDENTITY DECISION NEEDED. Quo aptius (read, AAS 65 p.114) gives only a century: 'Secretaria Status, cuius initium saeculo xv tribuitur — Camera Secreta tunc dicebatur'. The vatican.va profile says 'The Apostolic Constitution Non Debet Reprehensibile of 31 December 1487 established the Secretaria Apostolica', with a Secretarius Domesticus, and that 'One can also trace to this Secretaria Apostolica the Chancery of Briefs, the Secretariat of Briefs to Princes and the Secretariat of Latin Letters'. Leo X later added a Secretarius Intimus, from whom the Secretary of State developed; no year is given. So 1487 is the founding act of a common ancestor of four research bodies. Whether the Secretariat of State continues the 1487 Secretaria Apostolica (giving 1487, basis act) or emerges later as a distinct office (with no year found) is an identity question under §5 (split, rule 5), not a dating question. Held out until the owner decides."
+      "source_type": "secondary",
+      "verified": false,
+      "note": "IDENTITY DECISION NEEDED. Quo aptius (read, AAS 65 p.114) gives only a century: 'Secretaria Status, cuius initium saeculo xv tribuitur — Camera Secreta tunc dicebatur'. The vatican.va profile says 'The Apostolic Constitution Non Debet Reprehensibile of 31 December 1487 established the Secretaria Apostolica', with a Secretarius Domesticus, and that 'One can also trace to this Secretaria Apostolica the Chancery of Briefs, the Secretariat of Briefs to Princes and the Secretariat of Latin Letters'. Leo X later added a Secretarius Intimus, from whom the Secretary of State developed; no year is given. So 1487 is the founding act of a common ancestor of four research bodies. Whether the Secretariat of State continues the 1487 Secretaria Apostolica (giving 1487, basis act) or emerges later as a distinct office (with no year found) is an identity question under §5 (split, rule 5), not a dating question. Held out until the owner decides. Flags: secondary / unverified, because the note also rests on the vatican.va profile and on CE. Only the Quo aptius passage was read in the primary text (AAS 65, 1973, 114)."
     },
     {
       "research_key": "apostolic-briefs-secretariat",
@@ -49,9 +49,9 @@
       "basis": null,
       "act_or_attestation": null,
       "source": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 113-116 (read); Holy See, Secretariat of State profile (vatican.va, 1998)",
-      "source_type": "primary",
-      "verified": true,
-      "note": "Sources conflict, and none gives a year. Quo aptius (read): 'Secretaria Brevium Apostolicorum, quae ... ab exeunte saeculo xiv epistulas forma minus insigni concinnatas expediebat' (late 14th century). The vatican.va Secretariat of State profile instead traces the 'Chancery of Briefs' to the Secretaria Apostolica of 1487 (Non debet reprehensibile). That depends on the same identity question as secretariat-of-state. No document naming the Secretaria Brevium as such in a specific year was found."
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Sources conflict, and none gives a year. Quo aptius (read): 'Secretaria Brevium Apostolicorum, quae ... ab exeunte saeculo xiv epistulas forma minus insigni concinnatas expediebat' (late 14th century). The vatican.va Secretariat of State profile instead traces the 'Chancery of Briefs' to the Secretaria Apostolica of 1487 (Non debet reprehensibile). That depends on the same identity question as secretariat-of-state. No document naming the Secretaria Brevium as such in a specific year was found. Flags: secondary / unverified, because the note also rests on the vatican.va profile and on CE. Only the Quo aptius passage was read in the primary text (AAS 65, 1973, 114)."
     },
     {
       "research_key": "briefs-to-princes",
@@ -61,9 +61,9 @@
       "basis": null,
       "act_or_attestation": null,
       "source": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 114 (read); Catholic Encyclopedia (1912), 'Roman Curia', https://www.newadvent.org/cathen/13147a.htm",
-      "source_type": "primary",
-      "verified": true,
-      "note": "No year found. Quo aptius (read) says only that the Secretaria Brevium ad Principes and the Secretaria Litterarum Latinarum 'Ex eadem [Secretaria Status] originem traxerunt ... quae propria Officia postea evaserunt'. It gives no date. The vatican.va profile traces it to the 1487 Secretaria Apostolica (see secretariat-of-state). CE describes its duties but gives no origin. Separately, the research record treats two offices (Briefs to Princes; Latin Letters, a 'duplex Officium' in 1908) as one body."
+      "source_type": "secondary",
+      "verified": false,
+      "note": "No year found. Quo aptius (read) says only that the Secretaria Brevium ad Principes and the Secretaria Litterarum Latinarum 'Ex eadem [Secretaria Status] originem traxerunt ... quae propria Officia postea evaserunt'. It gives no date. The vatican.va profile traces it to the 1487 Secretaria Apostolica (see secretariat-of-state). CE describes its duties but gives no origin. Separately, the research record treats two offices (Briefs to Princes; Latin Letters, a 'duplex Officium' in 1908) as one body. Flags: secondary / unverified, because the note also rests on the vatican.va profile and on CE. Only the Quo aptius passage was read in the primary text (AAS 65, 1973, 114)."
     },
     {
       "research_key": "apostolic-chancery",
@@ -73,9 +73,9 @@
       "basis": null,
       "act_or_attestation": null,
       "source": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 114 (read); Catholic Encyclopedia (1912), 'Roman Curia', https://www.newadvent.org/cathen/13147a.htm",
-      "source_type": "primary",
-      "verified": true,
-      "note": "Only a century can be secured. Quo aptius (read): 'inde a saeculo xi Officium, ab aliis seiunctum, est constitutum, cui praepositus, nomine Bibliothecarii, Cancellarii, Vicecancellarii appellatus ... Huius Officii, quod Cancellaria Apostolica nuncupabatur'. CE: 'certainly of very ancient origin in its essence', with no year. The first dated attestation of a 'cancellarius' of the Roman Church was found only in Wikipedia (Silvester II), which is not admissible. Next step: Poole, Lectures on the History of the Papal Chancery (1915), or Bresslau."
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Only a century can be secured. Quo aptius (read): 'inde a saeculo xi Officium, ab aliis seiunctum, est constitutum, cui praepositus, nomine Bibliothecarii, Cancellarii, Vicecancellarii appellatus ... Huius Officii, quod Cancellaria Apostolica nuncupabatur'. CE: 'certainly of very ancient origin in its essence', with no year. The first dated attestation of a 'cancellarius' of the Roman Church was found only in Wikipedia (Silvester II), which is not admissible. Next step: Poole, Lectures on the History of the Papal Chancery (1915), or Bresslau. Flags: secondary / unverified, because the note also rests on CE. Only the Quo aptius passage was read in the primary text (AAS 65, 1973, 114)."
     },
     {
       "research_key": "apostolic-datary",
@@ -91,15 +91,15 @@
     },
     {
       "research_key": "apostolic-camera",
-      "status": "dated",
-      "date": "1192",
-      "precision": "year",
-      "basis": "attested",
-      "act_or_attestation": "Liber Censuum Romanae Ecclesiae, compiled in 1192 by Cencius, papal camerarius (later Honorius III), as the Camera's inventory of papal revenues.",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
       "source": "Catholic Encyclopedia (1907), J.P. Kirsch, 'Apostolic Camera', https://www.newadvent.org/cathen/01633b.htm",
       "source_type": "secondary",
       "verified": false,
-      "note": "CE: 'Since the middle of the twelfth century we find a papal chamberlain (camerarius domini papae) as a regular member of the Curia' (no year), and 'Cencius Camerarius ... made in 1192 a new inventory of all these sources of papal revenue, known as the \"Liber Censuum\"'. 1192 is the earliest specific year the cited source supports. An earlier, unpinned mid-12th-century origin is acknowledged. The Liber Censuum itself (ed. Fabre-Duchesne) was not read."
+      "note": "No year can be secured for the Camera AS A BODY. The only dated evidence found is officer-level, the same kind rejected for the Penitentiary's 1193 confessor-cardinal. CE (Kirsch 1907) says: 'Since the middle of the twelfth century we find a papal chamberlain (camerarius domini papae) as a regular member of the Curia' (no year), and 'Cencius Camerarius ... made in 1192 a new inventory ... known as the \"Liber Censuum\"'. That is an act of the camerarius, and it is very likely not the earliest attestation. 1192 was therefore rejected as the key year. The tradition that Urban II (1088-1099) created the camerarius on a Cluniac model was found only in Wikipedia and an encyclopedia summary, which are inadmissible, and it gives no year. No specific year that attests the camera / cameraria as an office was found. Next sources: N. Del Re, La Curia Romana (LEV 1998); K. Jordan, 'Die Entstehung der römischen Kurie' (ZRG KA 28, 1939); Fabre-Duchesne, Le Liber censuum (for any earlier references to the camera)."
     },
     {
       "research_key": "apostolic-penitentiary",
@@ -152,14 +152,14 @@
     {
       "research_key": "apostolic-visitation-urbis",
       "status": "dated",
-      "date": "1637-08-29",
-      "precision": "day",
+      "date": "1637",
+      "precision": "year",
       "basis": "attested",
       "act_or_attestation": "Decretum Sacrae Congregationis Visitationis Apostolicae S.D.N. Urbani divina providentia Papae VIII. constitutae, contra Religiosos, & Ecclesiasticos quoscumque quaestuosas artes exercentes pro saecularibus; 'Datum Romae die 29. Augusti 1637'; Romae, ex typographia Rev. Camerae Apostolicae, 1637.",
       "source": "Printed decree, Biblioteca de la Universidad de Granada, DIGIBUG http://hdl.handle.net/10481/12321 (scan read)",
       "source_type": "primary",
       "verified": true,
-      "note": "The scan of the printed broadside was read. It names the 'Sacra Congregatio Visitationis Apostolicae' and says it was 'constituted' by Urban VIII ('Urbani ... Papae VIII. constitutae'), so the founding act is Urban VIII's and falls between 1623 and 1637. That act was not found. If it is found, the year will be earlier than 1637 and founded.basis becomes 'act'. Under design §4 rule 4, a key frozen at 1637 would then keep its year. The 'Urbis' scope is supported by the decree's subject (monasteries and religious 'in Urbe'). No earlier dated document naming the body was found."
+      "note": "The scan of the printed broadside was read. It names the 'Sacra Congregatio Visitationis Apostolicae' and says it was 'constituted' by Urban VIII ('Urbani ... Papae VIII. constitutae'), so the founding act is Urban VIII's and falls between 1623 and 1637. That act was not found. If it is found, the year will be earlier than 1637 and founded.basis becomes 'act'. Under design §4 rule 4, a key frozen at 1637 would then keep its year. The 'Urbis' scope is supported by the decree's subject (monasteries and religious 'in Urbe'). No earlier dated document naming the body was found. The date field holds the year only: 29 Aug 1637 is the date of an attestation (the body already existed), not a founding date. The full date is kept in act_or_attestation."
     }
   ]
 }
