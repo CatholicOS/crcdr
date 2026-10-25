@@ -216,7 +216,7 @@ are drafts pending CETF review; the *Annuario Pontificio* has not been consulted
 |---|---|---|---|---|---|
 | 1989-03-01 | ev084b | foundation | John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989 | - | `cr:liturgicae-celebrationes-summi-pontificis-1989` |
 
-## `cr:paenitentiaria-apostolica-1256` Sacra Paenitentiaria (Poenitentiaria) Apostolica ‡
+## `cr:paenitentiaria-apostolica-1256` Sacra Paenitentiaria (Poenitentiaria) Apostolica †‡
 
 No events recorded.
 

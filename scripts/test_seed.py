@@ -23,6 +23,25 @@ def body(c, ident):
     return next(b for b in c["bodies"]["entries"] if b["id"] == ident)
 
 
+def name_groups(names):
+    """Seeded names grouped into the research entries they came from: a split
+    piece repeats its predecessor's names and starts where it ends."""
+    groups = []
+    for e in names:
+        p = groups[-1][-1] if groups else None
+        if p and (p["name_la"], p["name_en"]) == (e["name_la"], e["name_en"]) \
+                and p["to"] == e["from"]:
+            groups[-1].append(e)
+        else:
+            groups.append([e])
+    return groups
+
+
+def name_fixes(c):
+    return {(f["research_key"], f["index"]): f
+            for f in c["maps"].get("name_fixes", {}).get("entries", [])}
+
+
 class TestSeed(unittest.TestCase):
     def test_seed_validates(self):
         c = seeded()
@@ -84,13 +103,33 @@ class TestSeed(unittest.TestCase):
         c = seeded()
         km = {e["id"]: e["research_key"] for e in c["maps"]["key_map"]["entries"]}
         rb = {b["key"]: b for b in c["rb"]["bodies"]}
+        fixes = name_fixes(c)
         for b in c["bodies"]["entries"]:
-            research = rb[km[b["id"]]]["names"]
-            self.assertEqual(len(b["names"]), len(research), b["id"])
-            for got, src in zip(b["names"], research):
-                self.assertEqual(got["name_la"], src["name_la"])
-                self.assertEqual(got["verified"], src["verified"], b["id"])
-                self.assertEqual(got["source_type"], src["source_type"], b["id"])
+            key = km[b["id"]]
+            research = rb[key]["names"]
+            groups = name_groups(b["names"])
+            self.assertEqual(len(groups), len(research), b["id"])
+            for n, (pieces, src) in enumerate(zip(groups, research)):
+                fix = fixes.get((key, n), {})
+                want_la = fix["name_la"] if "name_la" in fix else src["name_la"]
+                fixed_down = fix.get("verified") is False
+                for got in pieces:
+                    where = f"{b['id']} names[{n}] {got['from']}"
+                    self.assertEqual(got["name_la"], want_la, where)
+                    # never upgraded
+                    self.assertLessEqual(got["verified"], src["verified"], where)
+                    self.assertLessEqual(SOURCE_RANK[got["source_type"]],
+                                         SOURCE_RANK[src["source_type"]], where)
+                    down = (got["verified"] != src["verified"]
+                            or got["source_type"] != src["source_type"])
+                    if down and not fixed_down:
+                        # downgraded only on a span whose bound the seeder substituted
+                        substituted = got["from"] != src["from"] or got["to"] != src["to"]
+                        self.assertTrue(substituted, where)
+                        self.assertIn("gap", got, where)
+                        self.assertFalse(got["verified"], where)
+                        self.assertLessEqual(SOURCE_RANK[got["source_type"]],
+                                             SOURCE_RANK["secondary"], where)
         rev = {e["id"]: e for e in c["re"]["events"]}
         for ev in c["events"]["entries"]:
             src = rev[ev["research_id"]]
@@ -156,6 +195,26 @@ class TestSeed(unittest.TestCase):
         self.assertEqual(len(vis), 1)
         self.assertFalse(vis[0]["verified"])
         self.assertIn("gap", vis[0])
+
+    def test_substituted_name_spans_unverified(self):
+        c = seeded()
+        rota = body(c, "cr:rota-romana-1323")["names"]
+        self.assertEqual([(n["from"], n["to"], n["verified"]) for n in rota[:2]],
+                         [("1323", "1908-11-03", False), ("1908-11-03", "1989-03-01", True)])
+        self.assertEqual(rota[0]["source_type"], "secondary")
+        self.assertIn("gap", rota[0])
+        self.assertNotIn("gap", rota[1])
+        self.assertEqual(rota[1]["source_type"], "primary")
+        for ident in ("cr:paenitentiaria-apostolica-1256", "cr:visitatio-apostolica-urbis-1637"):
+            n0 = body(c, ident)["names"][0]
+            self.assertFalse(n0["verified"], ident)
+            self.assertLessEqual(SOURCE_RANK[n0["source_type"]], SOURCE_RANK["secondary"])
+            self.assertIn("gap", n0)
+        # terminus ante quem: the old name's end is substituted, so it is unverified;
+        # the new name is attested from that date, so it keeps the research's verification
+        pd = body(c, "cr:pontificalis-domus-1968")["names"]
+        self.assertEqual((pd[0]["verified"], pd[0]["source_type"]), (False, "secondary"))
+        self.assertEqual((pd[1]["verified"], pd[1]["source_type"]), (True, "primary"))
 
     def test_name_lookup_bounded(self):
         from crcdr import at

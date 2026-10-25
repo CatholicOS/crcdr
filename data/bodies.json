@@ -5212,11 +5212,11 @@
           "from": "1256",
           "to": null,
           "act": "no founding act",
-          "verified": true,
-          "source_type": "primary",
+          "verified": false,
+          "source_type": "secondary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
           "note": null,
-          "gap": "The research gives no date for this name ('from': \"medieval\"); 'from' is set to founded.date 1256."
+          "gap": "The research gives no date for this name ('from': \"medieval\"); 'from' is set to founded.date 1256. Unverified because its start was substituted and the research cites no act attesting the name from that date (research: verified true, primary)."
         }
       ],
       "kind": [
@@ -5340,13 +5340,25 @@
           "name_it": null,
           "name_en": "Sacred Roman Rota",
           "from": "1323",
+          "to": "1908-11-03",
+          "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+          "verified": false,
+          "source_type": "secondary",
+          "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+          "note": null,
+          "gap": "The research gives no date for this name ('from': \"medieval\"); 'from' is set to founded.date 1323. The name's act ('Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19') attests it only from 1908-11-03 (Pius X, Const. Apost. Sapienti consilio, 29 Jun 1908, AAS 1 (1909) 7-19); the span before that is unverified."
+        },
+        {
+          "name_la": "Sacra Romana Rota",
+          "name_it": null,
+          "name_en": "Sacred Roman Rota",
+          "from": "1908-11-03",
           "to": "1989-03-01",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
-          "note": null,
-          "gap": "The research gives no date for this name ('from': \"medieval\"); 'from' is set to founded.date 1323."
+          "note": null
         },
         {
           "name_la": "Tribunal Rotae Romanae",
@@ -5579,11 +5591,11 @@
           "from": "1968-01-01",
           "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
-          "verified": true,
-          "source_type": "primary",
+          "verified": false,
+          "source_type": "secondary",
           "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
           "note": "Still 'Praefectus Palatii Apostolici' in Pontificalis Domus (1968).",
-          "gap": "'to' 1989-03-01 is a terminus ante quem (the next name is attested in John Paul II, Const. Apost. Pastor Bonus, 28 Jun 1988, in force 1989-03-01), NOT the date of the rename, which the research does not give."
+          "gap": "'to' 1989-03-01 is a terminus ante quem (the next name is attested in John Paul II, Const. Apost. Pastor Bonus, 28 Jun 1988, in force 1989-03-01), NOT the date of the rename, which the research does not give. Unverified because its end is a terminus ante quem, not the rename date (research: verified true, primary)."
         },
         {
           "name_la": "Praefectura Pontificalis Domus",
@@ -5743,11 +5755,11 @@
           "from": "1637",
           "to": "1908-11-03",
           "act": null,
-          "verified": true,
-          "source_type": "primary",
+          "verified": false,
+          "source_type": "secondary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
           "note": null,
-          "gap": "The research gives no date for this name ('from': null); 'from' is set to founded.date 1637."
+          "gap": "The research gives no date for this name ('from': null); 'from' is set to founded.date 1637. Unverified because its start was substituted and the research cites no act attesting the name from that date (research: verified true, primary)."
         }
       ],
       "kind": [

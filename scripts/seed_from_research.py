@@ -391,7 +391,7 @@ def _regime_by_act(ctx, text):
 
 def _names(ctx, rbody, founded, events_by_body):
     ident, lo = ctx.cid(rbody["key"]), founded["date"]
-    out, all_gaps, terminus = [], [], set()
+    out, all_gaps, terminus, sub_from, sub_to = [], [], set(), set(), set()
     names = rbody["names"]
     for n, src in enumerate(names):
         e = {"name_la": src["name_la"], "name_it": src.get("name_it"),
@@ -406,6 +406,7 @@ def _names(ctx, rbody, founded, events_by_body):
                 gaps.append(f"The research gives no date for this name ('from': "
                             f"{json.dumps(src['from'])}); 'from' is set to founded.date {lo}.")
                 e["from"] = lo
+                sub_from.add(n)
             else:
                 # R19: bound the unknown rename by the research's terminus ante quem,
                 # the act in which the research attests the new name in use.
@@ -417,6 +418,7 @@ def _names(ctx, rbody, founded, events_by_body):
                 tq = reg["effective"]
                 e["from"] = prev["to"] = tq
                 terminus.add(n)
+                sub_to.add(n - 1)
                 gaps.append(
                     f"Terminus ante quem, NOT the rename date: the research does not date "
                     f"this rename ('from': {json.dumps(src['from'])}) but attests the name "
@@ -449,8 +451,57 @@ def _names(ctx, rbody, founded, events_by_body):
         if e["to"] is None and n + 1 < len(out):
             raise SeedError(f"{ident}: names[{n}] open although a later name follows")
         if gaps:
-            e["gap"] = ctx.gap(f"{ident}.names[{n}]", " ".join(gaps))
+            e["gap"] = " ".join(gaps)
+    out = _unverify_substituted_names(ctx, ident, founded, names, out, sub_from, sub_to)
+    for n, e in enumerate(out):
+        if e.get("gap"):
+            ctx.gap(f"{ident}.names[{n}]", e["gap"])
     return out
+
+
+def _unverify_substituted_names(ctx, ident, founded, research, out, sub_from, sub_to):
+    """R20 for names: a span whose `from` or `to` the seeder substituted is never verified.
+
+    A substituted start (the research gives no date, so `from` = founded.date) is
+    split off at the effective date of the constitution the name's act cites, if
+    that falls inside the entry: before it the span is unverified, from it on the
+    research's own verification stands. If the act names no such constitution, the
+    whole entry is unverified. A substituted end (a terminus ante quem) cannot be
+    split, because the rename date is unknown, so the whole entry is unverified.
+    Unverified spans take source_type at most secondary (and at most founded's)."""
+    cap = min(founded["source_type"], "secondary", key=SOURCE_RANK.__getitem__)
+    res = []
+    for n, e in enumerate(out):
+        if n not in sub_from and n not in sub_to:
+            res.append(e)
+            continue
+        st = min(e["source_type"], cap, key=SOURCE_RANK.__getitem__)
+        down = {"verified": False, "source_type": st}
+        reg = _regime_by_act(ctx, research[n].get("act")) if n in sub_from else None
+        cov = reg["effective"] if reg else None
+        if n not in sub_to and cov and _lt(e["from"], cov) and _lt(cov, e["to"]):
+            res.append(dict(e, to=cov, **down, gap=_join(
+                e.get("gap"), f"The name's act ('{research[n].get('act')}') attests it only "
+                f"from {cov} ({reg['act']}); the span before that is unverified.")))
+            rest = {k: v for k, v in e.items() if k != "gap"}
+            rest["from"] = cov
+            res.append(rest)
+            ctx.report["normalized"].append(
+                f"`{ident}` names[{n}] '{e['name_la']}': undated research entry split at "
+                f"{cov}; {e['from']}-{cov} unverified/{st}, from {cov} as in the research.")
+            continue
+        if (e["verified"], e["source_type"]) != (False, st):
+            why = ("its end is a terminus ante quem, not the rename date" if n in sub_to
+                   else "its start was substituted and the research cites no act attesting the name "
+                   "from that date")
+            e = dict(e, **down, gap=_join(e.get("gap"), f"Unverified because {why} "
+                     f"(research: verified {str(e['verified']).lower()}, "
+                     f"{e['source_type']})."))
+            ctx.report["normalized"].append(
+                f"`{ident}` names[{n}] '{e['name_la']}': substituted bound; whole entry "
+                f"unverified/{st}.")
+        res.append(e)
+    return res
 
 
 def _kind_source_type(rbody, verified, frm):
