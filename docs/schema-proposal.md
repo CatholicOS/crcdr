@@ -12,8 +12,10 @@ Long form `curia-romana:`; the short form is canonical (see [CatholicOS/cdcf-uri
 
 ```abnf
 cr-key     = latin-slug HYPHEN year
-latin-slug = 1*ALPHA *(HYPHEN 1*ALPHA)   ; no digits, so the year split is unambiguous
+latin-slug = 1*lower *(HYPHEN 1*lower)   ; no digits, so the year split is unambiguous
+lower      = %x61-7A                     ; a-z only (RFC 5234 ALPHA also admits A-Z)
 year       = 4DIGIT
+HYPHEN     = %x2D                        ; "-"
 ```
 
 Rules for forming a key:
@@ -49,12 +51,23 @@ These rules were tested against the research (`docs/curia-history-report.md`, ha
 
 ## Data model
 
-All dates are ISO 8601 at the precision known (`YYYY`, `YYYY-MM`, `YYYY-MM-DD`); a partial date compares as its first day. Every interval is `from` inclusive, `to` exclusive, with `to: null` meaning still open. Each dated fact carries `verified` (bool), `source_type` (`primary` | `official-secondary` | `secondary` | `inferred`), a source, an optional `note`, and an optional `gap` (a documented research gap, which turns a validation error into a warning).
+All dates are ISO 8601 at the precision known (`YYYY`, `YYYY-MM`, `YYYY-MM-DD`); a partial date compares as its first day. Every interval is `from` inclusive, `to` exclusive, with `to: null` meaning still open. Each dated fact carries `verified` (bool), `source_type` (`primary` | `official-secondary` | `secondary` | `inferred`), a `source`, an optional `note`, and an optional `gap` (a documented research gap, which turns a validation error into a warning). Seeding never upgrades `verified` or `source_type`; where the seeder substitutes a bound the research did not give (a start set to the founding date, an end that is only a terminus ante quem), that span is recorded `verified: false`, at most `secondary`, with a `gap`.
 
-- **`data/bodies.json`**: one entry per body: `id`; `founded` (`date`, `precision`, `basis` `act`|`attested`, `act`, `event`); `ended` (same shape, or `null`); dated `names[]` (`name_la` required, `name_it`, `name_en`, `from`, `to`, `act`); dated `kind[]`; dated `section[]` (`regime`, `section`); dated `part_of[]` (`body`, `relation`, `from`, `to`); `aliases`; `note`. Predecessors and successors are derived from events, not stored on bodies.
-- **`data/events.json`**: one entry per change, chronologically: `id`, `date` (effective date, with precision), `signed`, `act`, `mag` (the CMDDR `mag:` id, or `null`), `event_type`, `before[]`, `after[]`, `operative_clause`, `clause_status` (`transcribed` | `not-transcribed` | `silent`; `silent` requires `inferred: true`), `inferred`, and provenance.
+- **`data/bodies.json`**: `{"entries": [...]}`, one entry per body:
+  - `id`;
+  - `founded` (`date`, `precision`, `basis` `act`|`attested`, `act`, `event`, provenance) and `ended` (same shape, or `null`);
+  - dated `names[]`: `name_la` (the Latin name, or `null` where no Latin name is attested; never reconstructed), `name_it`, `name_en`, `aliases` (`[{name, lang: "la"|"en"}]`, other attested forms of this name, such as spelling variants), `from`, `to`, `act`, provenance. Editorial text in the research's names (variants, remarks) is moved out by `seed/name_fixes.json`: variants to `aliases`, remarks to `note`;
+  - dated `kind[]`;
+  - dated `section[]` (`regime`, `section`; a `not-listed` entry also carries `in_curia`: `true`, `false`, or `null` with a `gap` when the research does not establish it);
+  - dated `part_of[]` (`body`, `relation`, `from`, `to`);
+  - `aliases` (body-level `[{name, lang}]`, dated by the body's lifespan); `note`.
+
+  Predecessors and successors are derived from events, not stored on bodies.
+- **`data/events.json`**: `{"entries": [...]}`, one entry per change, chronologically: `id`, `date` (effective date) and `date_precision`, `signed`, `act`, `mag` (the CMDDR `mag:` id, or `null`), `event_type`, `before[]`, `after[]`, `operative_clause`, `clause_status` (`transcribed` | `not-transcribed` | `silent`; `silent` requires `inferred: true`), `inferred`, provenance, and `research_id` (the research event it was seeded from; one research event may yield several, suffixed `a`, `b`, …). An event of a same-identity type (`rename`, `competence-transfer`, …) has `before == after`; for a transfer between two bodies both are listed in both sets, and the direction (from which body to which) is given in the `note`.
+- **`data/identifiers.json`** (generated, CC0): `{"$comment", "license", "entries": [...]}`; each entry has `id`, `names` (`[{name, lang, from, to}]`, one per name and language, dated from the body's names), `aliases` (the same shape, for the other attested forms), `predecessors`, `successors` and `founding_act_mag`. Lookup is by (name, date): a string denotes an id only within its interval, and no (name, date) pair matches two ids (the Congregation for Divine Worship of 1969 and of 1984 share their names but not their dates).
 - **Vocabularies:** `data/kinds.json` (what the act calls the body), `data/sections.json` (where the governing constitution places it, by regime, each value declaring `in_curia`), `data/event_types.json` (`foundation`, `rename`, `rename-competence`, `kind-change`, `competence-transfer`, `absorption`, `merger`, `split`, `re-foundation`, `revival`, `suppression`, `attachment`, each declaring its identity effect).
 - **Part-of relations** (`within`, `subject-to`, `section-of`, `complement-of`) are dated placements and never change identity.
+- **Validation** (`scripts/validate.py`): rules R1–R7 of design §7, plus R0 (every fact carrying a `gap` is a warning quoting it, unless another rule already reported that gap) and R8 (a dated fact with no `source` is a warning; no source is invented). The generated registry lists every warning under "Known gaps", and marks facts † (`verified: false`), ‡ (`gap`) and ⁱ (event `inferred: true`).
 - **Authority is not recorded.** It belongs to CMDDR.
 
 ## Open questions for the committee (design section 12)
@@ -92,7 +105,7 @@ Each item below was decided provisionally during the build, or held out. Each ne
 ### Provisional decisions to confirm
 
 - **Penitentiary key year 1256** (`cr:paenitentiaria-apostolica-1256`): is Pius V's 1569 suppression and reconstitution a re-foundation (identity rule 6)? If it is, the key year becomes 1569.
-- **Medieval years from secondary sources only:** Penitentiary 1256, Rota 1323 (`cr:rota-romana-1323`), Revision of Councils 1849 (`cr:conciliorum-revisio-1849`). Check them against Del Re before freezing.
+- **Early years to check against Del Re before freezing:** the medieval Penitentiary 1256 and Rota 1323 (`cr:rota-romana-1323`), both from secondary sources only; Visitation 1637 (`cr:visitatio-apostolica-urbis-1637`), an attested year, not a founding act; and Revision of Councils 1849 (`cr:conciliorum-revisio-1849`), from one secondary sentence.
 - **Rota:** the year 1245 (Lyon I) given on vatican.va was rejected in favour of 1323, which a document supports.
 - **Key years follow the effective date, not the signing date:**
   - `cr:administratio-patrimonii-sedis-apostolicae-1968`;

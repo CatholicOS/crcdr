@@ -20,17 +20,17 @@ CRCDR gives each body one identifier, and records enough history that for any (n
 cr:<latin-slug>-<founding-year>
 ```
 
-The long form is `curia-romana:`; the short form is canonical. The slug follows the Latin name in the nominative, with the generic kind words (*Dicasterium*, *Congregatio*, *Sacra*, …) and the governing *pro*/*de* dropped. The year is the year the founding act took effect, always present, because two different bodies have borne the same name. The key is minted once, from the name in use when it is minted; later renames go only into the dated `names` list. As a regex: `^cr:[a-z]+(?:-[a-z]+)*-\d{4}$`.
+The long form is `curia-romana:`; the short form is canonical. The slug follows the Latin name in the nominative, with the generic kind words (*Dicasterium*, *Congregatio*, *Sacra*, …) and the governing *pro*/*de* dropped. The year is the year the founding act took effect, always present, because two different bodies have borne the same name. The key is minted once, from the name in use when it is minted; later renames go only into the dated `names` list. As a regex: `^cr:[a-z]+(?:-[a-z]+)*-[0-9]{4}$` (lower-case ASCII letters, ASCII digits).
 
 Examples, taken from the data:
 
 | Body | Identifier |
 |---|---|
 | Inquisition → Holy Office → CDF → DDF | `cr:doctrina-fidei-1542` |
-| Congregation for Divine Worship, 1969–1975 | `cr:cultus-divinus-1969` |
-| Congregation for Divine Worship, created 1984 | `cr:cultus-divinus-1984` |
-| Apostolic Penitentiary | `cr:paenitentiaria-apostolica-1256` |
-| Index of Forbidden Books (ended 1917) | `cr:index-1571` |
+| Sacred Congregation for Divine Worship, 1969–1975 | `cr:cultus-divinus-1969` |
+| Sacred Congregation for Divine Worship, created 1984 | `cr:cultus-divinus-1984` |
+| Apostolic Penitentiary (year provisional) | `cr:paenitentiaria-apostolica-1256` |
+| Index of Forbidden Books, ended 1917 (year provisional) | `cr:index-1571` |
 
 The identity rules (what keeps an identifier, what mints a new one) and the full data model are in [docs/schema-proposal.md](docs/schema-proposal.md). **All IDs are drafts pending committee review.**
 
@@ -62,11 +62,11 @@ Whether a body's documents bind, and how much, belongs to CMDDR, where authority
 - [`data/bodies.json`](data/bodies.json): the bodies, with dated names, kinds, sections and part-of relations, each fact carrying `verified`, `source_type` and a source.
 - [`data/events.json`](data/events.json): the events that changed them, each tied to its act, with the operative clause where transcribed.
 - [`data/kinds.json`](data/kinds.json), [`data/sections.json`](data/sections.json), [`data/event_types.json`](data/event_types.json): the controlled vocabularies.
-- [`data/identifiers.json`](data/identifiers.json): generated; ids, aliases, predecessor/successor links and `mag:` references.
+- [`data/identifiers.json`](data/identifiers.json): generated; ids, dated names and aliases (lookup is by name *and* date), predecessor/successor links and `mag:` references.
 - [`registry/bodies.md`](registry/bodies.md) and [`registry/lineages.md`](registry/lineages.md): the human-readable registry and per-lineage tables. Generated, never hand-edited.
 - [`docs/schema-proposal.md`](docs/schema-proposal.md): identity rules, data model, open questions and the Latinist review list.
 - [`docs/curia-history-report.md`](docs/curia-history-report.md): the research report behind the seed.
-- [`seed/`](seed/): the research files and the curated maps (keys, events, kinds, founding years) used to seed the data.
+- [`seed/`](seed/): the research files and the curated maps (keys, events, kinds, founding years, name fixes) used to seed the data.
 - [`scripts/`](scripts/): `crcdr.py` (shared helpers), `validate.py`, `generate_registry.py`, `seed_from_research.py` and their tests. Python 3, standard library only; run every script from the repository root with `python3 -I`.
 
 ```sh
@@ -77,14 +77,14 @@ python3 -I scripts/generate_registry.py
 
 ## Sources and verification
 
-**The *Annuario Pontificio* is the authority for the content of this registry, and it has not been consulted**: it is not published online. The seed comes from the research in [`docs/curia-history-report.md`](docs/curia-history-report.md), with founding years researched separately. Every fact carries `verified` and `source_type` (`primary`, `official-secondary`, `secondary` or `inferred`), and seeding never upgrades either. Facts marked `verified: false` are marked † in the registry. Medieval years from secondary sources (Penitentiary 1256, Rota 1323, Revision of Councils 1849) in particular need checking.
+**The *Annuario Pontificio* is the authority for the content of this registry, and it has not been consulted**: it is not published online. The seed comes from the research in [`docs/curia-history-report.md`](docs/curia-history-report.md), with founding years researched separately. Every fact carries `verified` and `source_type` (`primary`, `official-secondary`, `secondary` or `inferred`), and seeding never upgrades either. In the registry, † marks a fact recorded `verified: false`, ‡ a fact carrying a documented research gap, and ⁱ an event (or a founding or ending) recorded `inferred: true`. The early years in particular need checking: the medieval Penitentiary 1256 and Rota 1323, both from secondary sources; Visitation 1637, an attested year rather than a founding act; and Revision of Councils 1849, from one secondary sentence.
 
-The validator reports **errors** (inconsistencies; must be zero) and **warnings** (documented research gaps, each carrying a `gap` note, or operative clauses not yet transcribed). The warnings are documented gaps, not defects, and are listed in [`registry/bodies.md`](registry/bodies.md).
+The validator reports **errors** (inconsistencies; must be zero) and **warnings**: every documented research gap (each fact carrying a `gap` note), dated facts with no source, and operative clauses not yet transcribed. The warnings are documented gaps, not defects, and are listed in [`registry/bodies.md`](registry/bodies.md).
 
 Corrections against the *Annuario* and against the acts themselves are the most useful contribution this repository can receive.
 
 ## License
 
 - [`data/identifiers.json`](data/identifiers.json) is licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). See [`LICENSE-CC0`](LICENSE-CC0).
-- The rest of the data, the registry and the documentation are licensed under the [Creative Commons Attribution-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nd/4.0/) (CC BY-ND 4.0). See [`LICENSE`](LICENSE).
-- The source code in [`scripts/`](scripts/) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). See [`scripts/LICENSE`](scripts/LICENSE).
+- The rest of the data, the registry, the documentation and [`seed/`](seed/) (the research data and curated maps) are licensed under the [Creative Commons Attribution-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nd/4.0/) (CC BY-ND 4.0). See [`LICENSE`](LICENSE).
+- The source code in [`scripts/`](scripts/) and [`seed/research/build_curia.py`](seed/research/build_curia.py) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). See [`scripts/LICENSE`](scripts/LICENSE).
