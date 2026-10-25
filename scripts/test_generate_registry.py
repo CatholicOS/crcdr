@@ -146,9 +146,35 @@ class GeneratorTests(unittest.TestCase):
             self.assertIn("error", err.getvalue().lower())
             self.assertEqual(os.listdir(d), [])
 
+    def test_lineage_rows_marked(self):
+        bodies, events = _merger_fixture()
+        ev = events["entries"][-1]
+        ev.update(inferred=True, verified=False, act="Actum")
+        out = g.render_lineages(bodies, events, TODAY)
+        legend = out.split("\n## ")[0]
+        for m in (g.MARK, g.INF_MARK, g.GAP_MARK):
+            self.assertIn(m, legend)
+        row = next(x for x in out.splitlines() if "ev900" in x)
+        cells = [c.strip() for c in row.strip("|").split("|")]
+        self.assertEqual(cells[0], f"1700-01-01 {g.MARK}")
+        self.assertEqual(cells[1], f"ev900 {g.INF_MARK}")
+        self.assertEqual(cells[3], f"Actum {g.MARK}")
+        self.assertTrue(cells[4].endswith(g.MARK) and cells[5].endswith(g.MARK), cells)
+        # a verified, non-inferred event carries no marker
+        plain = next(x for x in out.splitlines() if "| ev002 |" in x or "ev001" in x)
+        self.assertNotIn(g.MARK, plain)
+        self.assertNotIn(g.INF_MARK, plain)
+
+    def test_founded_cell_marks_inferred_event(self):
+        bodies, events = fixtures.make_fixture()
+        events["entries"][0]["inferred"] = True
+        out = g.render_bodies(bodies, events, validate.load_vocab(), today=TODAY)
+        self.assertIn(f"1542-07-21 {g.INF_MARK} (Licet ab initio)", out)
+        self.assertIn(g.INF_MARK, out.split("## Living bodies")[0])
+
     def test_lineages_trace_back(self):
         bodies, events = _merger_fixture()
-        out = g.render_lineages(bodies, events)
+        out = g.render_lineages(bodies, events, TODAY)
         self.assertIn("cr:gamma-1700", out)
         self.assertIn("ev900", out)
         self.assertIn("cr:alpha-1600", out.split("cr:gamma-1700", 1)[1])

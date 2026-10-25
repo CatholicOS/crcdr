@@ -14,6 +14,9 @@ the date and the act. The history of each body (renames, mergers, splits) is in
 it comes from a secondary source or an act not yet read, and is unverified.
 ‡ marks a fact that carries a documented research gap (a `gap` note); on an ID it
 marks a gap on the body as a whole. Every gap is quoted under [Known gaps](#known-gaps).
+ⁱ on a **Founded** or **Ended** date marks a founding or ending event recorded
+`inferred: true`: the act does not state it in these terms, and the reading is an
+editorial decision open to review.
 
 All IDs are drafts pending CETF review. The *Annuario Pontificio* has not been
 consulted. Authority over the documents of these bodies belongs to CMDDR, not here.
@@ -28,16 +31,16 @@ consulted. Authority over the documents of these bodies belongs to CMDDR, not he
 | `cr:clerici-1564` | Dicasterium pro Clericis † | Dicastery for the Clergy † | dicastery | Dicasteria † | 1564-08-02 † (Pius IV, motu proprio (CE)) |  |
 | `cr:communicatio-2015` | Dicasterium pro Communicatione † | Dicastery for Communication † | dicastery † | Dicasteria † | 2015-06-29 (Francis, m.p. L'attuale contesto comunicativo, 27 Jun 2015) |  |
 | `cr:cultura-et-educatio-2022` | Dicasterium de Cultura et Educatione † | Dicastery for Culture and Education † | dicastery | Dicasteria † | 2022-06-05 (Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)) |  |
-| `cr:cultus-divinus-et-disciplina-sacramentorum-1989` | Dicasterium de Cultu Divino et Disciplina Sacramentorum † | Dicastery for Divine Worship and the Discipline of the Sacraments † | dicastery | Dicasteria † | 1989-03-01 † (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |  |
+| `cr:cultus-divinus-et-disciplina-sacramentorum-1989` | Dicasterium de Cultu Divino et Disciplina Sacramentorum † | Dicastery for Divine Worship and the Discipline of the Sacraments † | dicastery | Dicasteria † | 1989-03-01 †ⁱ (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |  |
 | `cr:dialogus-interreligiosus-1964` | Dicasterium pro Dialogo Interreligioso † | Dicastery for Interreligious Dialogue † | dicastery | Dicasteria † | 1964-05-19 (Paul VI, ap. letter Progrediente Concilio, 19 May 1964, AAS 56 (1964) 560) |  |
 | `cr:doctrina-fidei-1542` | Dicasterium pro Doctrina Fidei | Dicastery for the Doctrine of the Faith | dicastery | Dicasteria † | 1542-07-21 (Paul III, Licet ab initio) |  |
-| `cr:ecclesiae-orientales-1917` | Dicasterium pro Ecclesiis Orientalibus | Dicastery for the Eastern Churches | dicastery | Dicasteria † | 1917-12-01 ‡ (Benedict XV, m.p. Dei providentis, 1 May 1917, AAS 9-I (1917) 529-531) |  |
+| `cr:ecclesiae-orientales-1917` | Dicasterium pro Ecclesiis Orientalibus | Dicastery for the Eastern Churches | dicastery | Dicasteria † | 1917-12-01 ‡ⁱ (Benedict XV, m.p. Dei providentis, 1 May 1917, AAS 9-I (1917) 529-531) |  |
 | `cr:episcopi-1588` | Dicasterium pro Episcopis † | Dicastery for Bishops † | dicastery | Dicasteria † | 1588-01-22 † (Sixtus V, bull Immensa aeterni Dei, 22 Jan 1588 (dated 'xxii Ianuarii MDLXXXVII' in the Florentine/Incarnation style, as cited by Sapienti consilio)) |  |
 | `cr:evangelizatio-2022` | Dicasterium pro Evangelizatione | Dicastery for Evangelization | dicastery | Dicasteria † | 2022-06-05 (Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)) |  |
 | `cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908` | Dicasterium pro Institutis Vitae Consecratae et Societatibus Vitae Apostolicae † | Dicastery for Institutes of Consecrated Life and Societies of Apostolic Life † | dicastery | Dicasteria † | 1908-11-03 (Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19) |  |
 | `cr:integra-humana-progressio-fovenda-2017` | Dicasterium pro Integra Humana Progressione Fovenda † | Dicastery for Promoting Integral Human Development † | dicastery | Dicasteria † | 2017-01-01 (Francis, m.p. Humanam progressionem, 17 Aug 2016 (effective 1 Jan 2017)) |  |
 | `cr:laici-familia-et-vita-2016` | Dicasterium pro Laicis, Familia et Vita | Dicastery for the Laity, the Family and Life | dicastery | Dicasteria † | 2016-09-01 (Francis, ap. letter m.p. Sedula Mater, 15 Aug 2016 (effective 1 Sep 2016)) |  |
-| `cr:legum-textus-1984` | Dicasterium de Legum Textibus † | Dicastery for Legislative Texts † | dicastery | Dicasteria † | 1984-01-02 (John Paul II, m.p. Recognito Iuris Canonici Codice, 2 Jan 1984, AAS 76 (1984) 433-434) |  |
+| `cr:legum-textus-1984` | Dicasterium de Legum Textibus † | Dicastery for Legislative Texts † | dicastery | Dicasteria † | 1984-01-02 ⁱ (John Paul II, m.p. Recognito Iuris Canonici Codice, 2 Jan 1984, AAS 76 (1984) 433-434) |  |
 | `cr:unitas-christianorum-fovenda-1960` | Dicasterium ad Unitatem Christianorum Fovendam † | Dicastery for Promoting Christian Unity † | dicastery | Dicasteria † | 1960-06-05 (John XXIII, m.p. Superno Dei nutu, 5 Jun 1960, AAS 52 (1960) 433-437 (n. 9)) |  |
 
 ### Instituta iustitiae / Bodies of justice
@@ -61,7 +64,7 @@ consulted. Authority over the documents of these bodies belongs to CMDDR, not he
 
 | ID | Name (Latin) | Name (English) | Kind | Section | Founded | Ended |
 |---|---|---|---|---|---|---|
-| `cr:liturgicae-celebrationes-summi-pontificis-1989` | Officium de Liturgicis Celebrationibus Summi Pontificis | Office for the Liturgical Celebrations of the Supreme Pontiff | office | Officia † | 1989-03-01 † (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |  |
+| `cr:liturgicae-celebrationes-summi-pontificis-1989` | Officium de Liturgicis Celebrationibus Summi Pontificis | Office for the Liturgical Celebrations of the Supreme Pontiff | office | Officia † | 1989-03-01 †ⁱ (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |  |
 | `cr:pontificalis-domus-1968` | Praefectura Pontificalis Domus ‡ | Prefecture of the Papal Household ‡ | office | Officia † | 1968-01-01 (Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968) |  |
 
 ### Not listed by the constitution
@@ -88,11 +91,11 @@ consulted. Authority over the documents of these bodies belongs to CMDDR, not he
 | ID | Name (Latin) | Name (English) | Kind | Section | Founded | Ended |
 |---|---|---|---|---|---|---|
 | `cr:conciliorum-revisio-1849` | Congregatio specialis pro Conciliorum revisione †‡ | Special Congregation for the Revision of Councils †‡ | congregation †‡ | Not listed by the constitution †‡ | 1849 † (Special congregation created by Pius IX for the revision of provincial councils, which 'had consultors from 1849'.) | 1908-11-03 (Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19) |
-| `cr:episcopi-et-regulares-1601` | Sacra Congregatio Episcoporum et Regularium † | Congregation of Bishops and Regulars † | congregation † | Not listed by the constitution †‡ | 1601 † (Clement VIII (CE)) | 1908-11-03 (Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19) |
+| `cr:episcopi-et-regulares-1601` | Sacra Congregatio Episcoporum et Regularium † | Congregation of Bishops and Regulars † | congregation † | Not listed by the constitution †‡ | 1601 † (Clement VIII (CE)) | 1908-11-03 ⁱ (Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19) |
 | `cr:lauretana-1698` | Congregatio Lauretana † | Congregation of Loreto † | congregation † | Not listed by the constitution †‡ | 1698 † (Innocent XII (CE)) | 1908-11-03 (Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19) |
 | `cr:visitatio-apostolica-urbis-1637` | Congregatio Visitationis Apostolicae Urbis †‡ | Congregation of the Apostolic Visitation of Rome †‡ | congregation †‡ | Not listed by the constitution †‡ | 1637 (Decretum Sacrae Congregationis Visitationis Apostolicae S.D.N. Urbani divina providentia Papae VIII. constitutae, contra Religiosos, & Ecclesiasticos quoscumque quaestuosas artes exercentes pro saecularibus; 'Datum Romae die 29. Augusti 1637'; Romae, ex typographia Rev. Camerae Apostolicae, 1637.) | 1908-11-03 (Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19) |
 | `cr:index-1571` | Sacra Congregatio Indicis † | Congregation of the Index † | congregation | Sacrae Congregationes † | 1571 † (Pius V (act not identified)) | 1917-03-25 (Benedict XV, m.p. Alloquentes proxime, 25 Mar 1917, AAS 9-I (1917) 167) |
-| `cr:negotia-ritus-orientalis-1862` | Sacra Congregatio de Propaganda Fide pro negotiis ritus orientalis | Congregation of Propaganda for Affairs of the Oriental Rite | congregation | Not listed by the constitution †‡ | 1862-01-06 † (Romani Pontifices) | 1917-11-30 (Benedict XV, m.p. Dei providentis, 1 May 1917, AAS 9-I (1917) 529-531) |
+| `cr:negotia-ritus-orientalis-1862` | Sacra Congregatio de Propaganda Fide pro negotiis ritus orientalis | Congregation of Propaganda for Affairs of the Oriental Rite | congregation | Not listed by the constitution †‡ | 1862-01-06 † (Romani Pontifices) | 1917-11-30 ⁱ (Benedict XV, m.p. Dei providentis, 1 May 1917, AAS 9-I (1917) 529-531) |
 
 ### Ended under `reu-1968`
 
@@ -104,16 +107,16 @@ consulted. Authority over the documents of these bodies belongs to CMDDR, not he
 | `cr:disciplina-sacramentorum-1908` | Sacra Congregatio de disciplina Sacramentorum | Sacred Congregation for the Discipline of the Sacraments | congregation | Sacrae Congregationes † | 1908-11-03 (Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19) | 1975-07-11 (Paul VI, ap. const. Constans nobis, 11 Jul 1975, AAS 67 (1975) 417-420) |
 | `cr:familia-1973` | Consilium de Familia † | Committee for the Family † | council † | Not listed by the constitution †‡ | 1973-01-11 † (Paul VI (secondary)) | 1981-05-09 (John Paul II, m.p. Familia a Deo instituta, 9 May 1981, AAS 73 (1981) 441-445) |
 | `cr:codex-iuris-canonici-recognoscendus-1963` | Pontificia Commissio Codici Iuris Canonici Recognoscendo † | Pontifical Commission for the Revision of the Code of Canon Law † | commission † | Not listed by the constitution †‡ | 1963-03-28 † (John XXIII (secondary)) | 1983 †‡ (task completed with promulgation of CIC 1983 (secondary)) |
-| `cr:codicis-canones-authentice-interpretandi-1917` | Pontificia Commissio ad Codicis canones authentice interpretandos | Pontifical Commission for the Authentic Interpretation of the Code of Canon Law | commission | Not listed by the constitution †‡ | 1917-09-15 (Benedict XV, m.p. Cum iuris canonici Codicem, 15 Sep 1917 (AAS 9-I index)) | 1984-01-02 † (John Paul II, m.p. Recognito Iuris Canonici Codice, 2 Jan 1984, AAS 76 (1984) 433-434) |
+| `cr:codicis-canones-authentice-interpretandi-1917` | Pontificia Commissio ad Codicis canones authentice interpretandos | Pontifical Commission for the Authentic Interpretation of the Code of Canon Law | commission | Not listed by the constitution †‡ | 1917-09-15 (Benedict XV, m.p. Cum iuris canonici Codicem, 15 Sep 1917 (AAS 9-I index)) | 1984-01-02 †ⁱ (John Paul II, m.p. Recognito Iuris Canonici Codice, 2 Jan 1984, AAS 76 (1984) 433-434) |
 | `cr:sacramenta-et-cultus-divinus-1975` | Sacra Congregatio pro Sacramentis et Cultu Divino | Sacred Congregation for the Sacraments and Divine Worship | congregation | Sacrae Congregationes † | 1975-07-11 (Paul VI, ap. const. Constans nobis, 11 Jul 1975, AAS 67 (1975) 417-420) | 1984-04-05 (John Paul II, chirograph Quoniam in celeri, 5 Apr 1984, AAS 76 (1984) 494-495) |
 
 ### Ended under `pastor-bonus-1989`
 
 | ID | Name (Latin) | Name (English) | Kind | Section | Founded | Ended |
 |---|---|---|---|---|---|---|
-| `cr:cultus-divinus-1984` | Sacra Congregatio pro Cultu Divino | Sacred Congregation for Divine Worship | congregation | Sacrae Congregationes † | 1984-04-05 (John Paul II, chirograph Quoniam in celeri, 5 Apr 1984, AAS 76 (1984) 494-495) | 1989-03-01 † (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |
-| `cr:publica-ecclesiae-negotia-1793` | Sacrum Consilium pro Publicis Ecclesiae negotiis | Council for the Public Affairs of the Church | council | Secretaria Status seu Papalis et Sacrum Consilium pro publicis Ecclesiae negotiis | 1793 † (Pius VI (CE)) | 1989-03-01 (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |
-| `cr:sacramenta-1984` | Sacra Congregatio pro Sacramentis | Sacred Congregation for the Sacraments | congregation | Sacrae Congregationes † | 1984-04-05 (John Paul II, chirograph Quoniam in celeri, 5 Apr 1984, AAS 76 (1984) 494-495) | 1989-03-01 † (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |
+| `cr:cultus-divinus-1984` | Sacra Congregatio pro Cultu Divino | Sacred Congregation for Divine Worship | congregation | Sacrae Congregationes † | 1984-04-05 (John Paul II, chirograph Quoniam in celeri, 5 Apr 1984, AAS 76 (1984) 494-495) | 1989-03-01 †ⁱ (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |
+| `cr:publica-ecclesiae-negotia-1793` | Sacrum Consilium pro Publicis Ecclesiae negotiis | Council for the Public Affairs of the Church | council | Secretaria Status seu Papalis et Sacrum Consilium pro publicis Ecclesiae negotiis | 1793 † (Pius VI (CE)) | 1989-03-01 ⁱ (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |
+| `cr:sacramenta-1984` | Sacra Congregatio pro Sacramentis | Sacred Congregation for the Sacraments | congregation | Sacrae Congregationes † | 1984-04-05 (John Paul II, chirograph Quoniam in celeri, 5 Apr 1984, AAS 76 (1984) 494-495) | 1989-03-01 †ⁱ (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) |
 | `cr:dialogus-cum-non-credentibus-1965` | Pontificium Consilium pro Dialogo cum Non Credentibus | Pontifical Council for Dialogue with Non-Believers | pontifical-council | Pontificia Consilia † | 1965-04-09 † (Paul VI (secondary date)) | 1993-03-25 (John Paul II, m.p. Inde a Pontificatus, 25 Mar 1993) |
 | `cr:bona-culturalia-ecclesiae-1989` | Pontificia Commissio de Bonis Culturalibus Ecclesiae | Pontifical Commission for the Cultural Heritage of the Church | commission | Not listed by the constitution †‡ | 1989-03-01 (John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989) | 2012-07-30 † (Benedict XVI, m.p. Pulchritudinis fidei, 30 Jul 2012) |
 | `cr:communicationes-sociales-1948` | Pontificium Consilium de Communicationibus Socialibus | Pontifical Council for Social Communications | pontifical-council | Pontificia Consilia † | 1948 †‡ (Pius XII (secondary)) | 2016 † (Francis, m.p. L'attuale contesto comunicativo, 27 Jun 2015 (merger to be carried out in stages)) |
