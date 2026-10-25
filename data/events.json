@@ -363,7 +363,7 @@
       "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
       "source_type": "primary",
       "verified": true,
-      "note": "Cited in Sapienti consilio's preamble; content (nomination of bishops) per CE.",
+      "note": "Cited in Sapienti consilio's preamble; content (nomination of bishops) per CE. Research direction: cr:doctrina-fidei-1542 -> cr:episcopi-1588.",
       "research_id": "ev015"
     },
     {
@@ -551,6 +551,27 @@
       "research_id": "ev022"
     },
     {
+      "id": "ev024b",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "signed": null,
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "mag": null,
+      "event_type": "foundation",
+      "before": [],
+      "after": [
+        "cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908"
+      ],
+      "operative_clause": null,
+      "clause_status": "not-transcribed",
+      "inferred": false,
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Implicit: B&R omitted from the closed list, its matters distributed. Sapienti consilio creates the Congregation of Religious as a new congregation (5th; research erected, primary). Recorded as a foundation, not as the product of a split: it is not made a successor of Bishops-and-Regulars (H8 stays an open question).",
+      "research_id": "ev024"
+    },
+    {
       "id": "ev022c",
       "date": "1908-11-03",
       "date_precision": "day",
@@ -650,27 +671,6 @@
       "source_type": "primary",
       "verified": true,
       "note": "Implicit: B&R omitted from the closed list, its matters distributed. The diocesan matters of Bishops-and-Regulars go to the Consistorial (Sapienti consilio 2° n.3, research ended.note, primary). A transfer to a body that keeps its key. The research's other stated transfer (religious matters to the new Congregation of Religious) is NOT encoded as an event: it would precede that body's foundation and would read as succession, and whether Religious continues the Regulars line is open (H8).",
-      "research_id": "ev024"
-    },
-    {
-      "id": "ev024b",
-      "date": "1908-11-03",
-      "date_precision": "day",
-      "signed": null,
-      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
-      "mag": null,
-      "event_type": "foundation",
-      "before": [],
-      "after": [
-        "cr:instituta-vitae-consecratae-et-societates-vitae-apostolicae-1908"
-      ],
-      "operative_clause": null,
-      "clause_status": "not-transcribed",
-      "inferred": false,
-      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
-      "source_type": "primary",
-      "verified": true,
-      "note": "Implicit: B&R omitted from the closed list, its matters distributed. Sapienti consilio creates the Congregation of Religious as a new congregation (5th; research erected, primary). Recorded as a foundation, not as the product of a split: it is not made a successor of Bishops-and-Regulars (H8 stays an open question).",
       "research_id": "ev024"
     },
     {
@@ -851,7 +851,7 @@
       "source": "https://www.vatican.va/archive/aas/documents/AAS-30-1938-ocr.pdf",
       "source_type": "primary",
       "verified": false,
-      "note": "Title/date verified from AAS index; territorial content not read.",
+      "note": "Title/date verified from AAS index; territorial content not read. Research direction: cr:gentium-evangelizatio-1622 -> cr:ecclesiae-orientales-1917.",
       "research_id": "ev032"
     },
     {
@@ -1319,30 +1319,6 @@
       "research_id": "ev052"
     },
     {
-      "id": "ev056",
-      "date": "1969-05-08",
-      "date_precision": "day",
-      "signed": null,
-      "act": "Paul VI, ap. const. Sacra Rituum Congregatio, 8 May 1969, AAS 61 (1969) 297-305",
-      "mag": null,
-      "event_type": "absorption",
-      "before": [
-        "cr:exsequenda-constitutio-de-sacra-liturgia-1964",
-        "cr:cultus-divinus-1969"
-      ],
-      "after": [
-        "cr:cultus-divinus-1969"
-      ],
-      "operative_clause": "tamquam Corpus sui iuris finem capere volumus",
-      "clause_status": "transcribed",
-      "inferred": false,
-      "source": "https://www.vatican.va/archive/aas/documents/AAS-61-1969-ocr.pdf",
-      "source_type": "primary",
-      "verified": true,
-      "note": null,
-      "research_id": "ev056"
-    },
-    {
       "id": "ev057",
       "date": "1969-05-08",
       "date_precision": "day",
@@ -1365,6 +1341,30 @@
       "verified": true,
       "note": "'in locum ... duas novas substituimus Congregationes'. Clause: Excerpt (Sacra Rituum Congregatio).",
       "research_id": "ev057"
+    },
+    {
+      "id": "ev056",
+      "date": "1969-05-08",
+      "date_precision": "day",
+      "signed": null,
+      "act": "Paul VI, ap. const. Sacra Rituum Congregatio, 8 May 1969, AAS 61 (1969) 297-305",
+      "mag": null,
+      "event_type": "absorption",
+      "before": [
+        "cr:exsequenda-constitutio-de-sacra-liturgia-1964",
+        "cr:cultus-divinus-1969"
+      ],
+      "after": [
+        "cr:cultus-divinus-1969"
+      ],
+      "operative_clause": "tamquam Corpus sui iuris finem capere volumus",
+      "clause_status": "transcribed",
+      "inferred": false,
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-61-1969-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": null,
+      "research_id": "ev056"
     },
     {
       "id": "ev058",
@@ -2200,7 +2200,7 @@
       "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
       "source_type": "official-secondary",
       "verified": false,
-      "note": null,
+      "note": "Research direction: cr:cultus-divinus-et-disciplina-sacramentorum-1989 -> cr:rota-romana-1323.",
       "research_id": "ev089"
     },
     {
@@ -2249,7 +2249,7 @@
       "source": "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130116_ministrorum-institutio.html",
       "source_type": "official-secondary",
       "verified": false,
-      "note": "Seminaries.",
+      "note": "Seminaries. Research direction: cr:seminaria-atque-studiorum-instituta-1824 -> cr:clerici-1564.",
       "research_id": "ev091"
     },
     {
@@ -2274,7 +2274,7 @@
       "source": "https://m.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130116_fides-per-doctrinam.pdf",
       "source_type": "official-secondary",
       "verified": false,
-      "note": "Catechesis.",
+      "note": "Catechesis. Research direction: cr:clerici-1564 -> cr:nova-evangelizatio-promovenda-2010.",
       "research_id": "ev092"
     },
     {
@@ -2506,7 +2506,7 @@
       "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
       "source_type": "primary",
       "verified": true,
-      "note": "Established within the DDF (Art. 78).",
+      "note": "Established within the DDF (Art. 78). Research direction: cr:tutela-minorum-2014 -> cr:doctrina-fidei-1542.",
       "research_id": "ev102"
     },
     {
@@ -2531,7 +2531,7 @@
       "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
       "source_type": "secondary",
       "verified": false,
-      "note": "Personal prelatures.",
+      "note": "Personal prelatures. Research direction: cr:episcopi-1588 -> cr:clerici-1564.",
       "research_id": "ev103"
     },
     {

@@ -1876,11 +1876,11 @@
           "kind": "congregation",
           "from": "1849",
           "to": "1908-11-03",
-          "verified": true,
-          "source_type": "primary",
+          "verified": false,
+          "source_type": "secondary",
           "source": "Sapienti consilio 4° n.3",
           "note": null,
-          "gap": "The research gives no start date for this kind; 'from' is set to founded.date 1849."
+          "gap": "The research gives no start date for this kind and its basis ('Sapienti consilio 4° n.3') does not cover the body from founded.date 1849; 'from' is set to founded.date and the entry is unverified."
         }
       ],
       "section": [
@@ -1921,26 +1921,26 @@
           "name_it": null,
           "name_en": "Congregation for the Erection of Churches and Consistorial Provisions",
           "from": "1588-01-22",
-          "to": null,
+          "to": "1908-11-03",
           "act": "Sixtus V, bull Immensa aeterni Dei, 22 Jan 1588 (dated 'xxii Ianuarii MDLXXXVII' in the Florentine/Incarnation style, as cited by Sapienti consilio)",
           "verified": false,
           "source_type": "secondary",
           "source": "https://www.newadvent.org/cathen/13136a.htm",
           "note": null,
-          "gap": "The research gives no end for this name although a later name follows; 'to' is left null (the date of the change is unknown)."
+          "gap": "'to' 1908-11-03 is a terminus ante quem (the next name is attested in Pius X, Const. Apost. Sapienti consilio, 29 Jun 1908, AAS 1 (1909) 7-19, in force 1908-11-03), NOT the date of the rename, which the research does not give."
         },
         {
           "name_la": "Sacra Congregatio Consistorialis",
           "name_it": null,
           "name_en": "Sacred Consistorial Congregation",
-          "from": null,
+          "from": "1908-11-03",
           "to": "1968-01-01",
           "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
           "note": "Name in use by 1908 (Sapienti consilio 2°); date of adoption of the short name unknown.",
-          "gap": "The research does not date this rename ('from': null). Research note: 'Name in use by 1908 (Sapienti consilio 2°); date of adoption of the short name unknown.'"
+          "gap": "Terminus ante quem, NOT the rename date: the research does not date this rename ('from': null) but attests the name in Pius X, Const. Apost. Sapienti consilio, 29 Jun 1908, AAS 1 (1909) 7-19 (in force 1908-11-03); 'from' is set to that date. Research note: 'Name in use by 1908 (Sapienti consilio 2°); date of adoption of the short name unknown.'"
         },
         {
           "name_la": "Sacra Congregatio pro Episcopis",
@@ -5223,12 +5223,21 @@
         {
           "kind": "tribunal",
           "from": "1256",
+          "to": "1908-11-03",
+          "verified": false,
+          "source_type": "secondary",
+          "source": "Sapienti consilio; CIC 1917; REU; PB; PE",
+          "note": null,
+          "gap": "The research gives no start date for this kind; its basis ('Sapienti consilio; CIC 1917; REU; PB; PE') covers it only from 1908-11-03 (Pius X, Const. Apost. Sapienti consilio, 29 Jun 1908, AAS 1 (1909) 7-19). Extended back to founded.date 1256 unverified."
+        },
+        {
+          "kind": "tribunal",
+          "from": "1908-11-03",
           "to": null,
           "verified": true,
           "source_type": "primary",
           "source": "Sapienti consilio; CIC 1917; REU; PB; PE",
-          "note": null,
-          "gap": "The research gives no start date for this kind; 'from' is set to founded.date 1256."
+          "note": null
         }
       ],
       "section": [
@@ -5356,12 +5365,21 @@
         {
           "kind": "tribunal",
           "from": "1323",
+          "to": "1908-11-03",
+          "verified": false,
+          "source_type": "secondary",
+          "source": "Sapienti consilio; PB; PE",
+          "note": null,
+          "gap": "The research gives no start date for this kind; its basis ('Sapienti consilio; PB; PE') covers it only from 1908-11-03 (Pius X, Const. Apost. Sapienti consilio, 29 Jun 1908, AAS 1 (1909) 7-19). Extended back to founded.date 1323 unverified."
+        },
+        {
+          "kind": "tribunal",
+          "from": "1908-11-03",
           "to": null,
           "verified": true,
           "source_type": "primary",
           "source": "Sapienti consilio; PB; PE",
-          "note": null,
-          "gap": "The research gives no start date for this kind; 'from' is set to founded.date 1323."
+          "note": null
         }
       ],
       "section": [
@@ -5559,26 +5577,26 @@
           "name_it": null,
           "name_en": "Prefecture of the Apostolic Palace",
           "from": "1968-01-01",
-          "to": null,
+          "to": "1989-03-01",
           "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
           "note": "Still 'Praefectus Palatii Apostolici' in Pontificalis Domus (1968).",
-          "gap": "The research gives no end for this name although a later name follows; 'to' is left null (the date of the change is unknown)."
+          "gap": "'to' 1989-03-01 is a terminus ante quem (the next name is attested in John Paul II, Const. Apost. Pastor Bonus, 28 Jun 1988, in force 1989-03-01), NOT the date of the rename, which the research does not give."
         },
         {
           "name_la": "Praefectura Pontificalis Domus",
           "name_it": null,
           "name_en": "Prefecture of the Papal Household",
-          "from": null,
+          "from": "1989-03-01",
           "to": null,
           "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
           "verified": true,
           "source_type": "primary",
           "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
           "note": "Name verified in PB (1988); date of the rename not located.",
-          "gap": "The research does not date this rename ('from': null). Research note: 'Name verified in PB (1988); date of the rename not located.'"
+          "gap": "Terminus ante quem, NOT the rename date: the research does not date this rename ('from': null) but attests the name in John Paul II, Const. Apost. Pastor Bonus, 28 Jun 1988 (in force 1989-03-01); 'from' is set to that date. Research note: 'Name verified in PB (1988); date of the rename not located.'"
         }
       ],
       "kind": [
@@ -5737,11 +5755,11 @@
           "kind": "congregation",
           "from": "1637",
           "to": "1908-11-03",
-          "verified": true,
-          "source_type": "primary",
+          "verified": false,
+          "source_type": "secondary",
           "source": "Sapienti consilio",
           "note": null,
-          "gap": "The research gives no start date for this kind; 'from' is set to founded.date 1637."
+          "gap": "The research gives no start date for this kind and its basis ('Sapienti consilio') does not cover the body from founded.date 1637; 'from' is set to founded.date and the entry is unverified."
         }
       ],
       "section": [

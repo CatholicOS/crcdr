@@ -156,6 +156,7 @@ def _seed_events(ctx):
         for n, m in enumerate(entries):
             eid = rid + LETTERS[n] if mapped else rid
             if mapped:
+                assert m is not None
                 etype, before, after = m["event_type"], list(m["before"]), list(m["after"])
                 inferred = bool(m.get("inferred"))
                 st, ver = _check_provenance(eid, m, src)
@@ -198,6 +199,27 @@ def _seed_events(ctx):
                 "note": note, "research_id": rid,
             })
     _assign_clauses(ctx, out)
+    return _order(ctx, out)
+
+
+def _order(ctx, events):
+    """Chronological (stable). Within a day, a creating event moves before the
+    first same-day event that involves a body it creates."""
+    events = sorted(events, key=lambda e: _d(e["date"]))
+    out = []
+    for ev in events:
+        made = set()
+        if ctx.effects[ev["event_type"]] == "new":
+            made = set(ev["after"]) - set(ev["before"])
+        at = next((n for n, o in enumerate(out) if o["date"] == ev["date"]
+                   and made & (set(o["before"]) | set(o["after"]))), None)
+        if at is None:
+            out.append(ev)
+        else:
+            out.insert(at, ev)
+            ctx.report["normalized"].append(
+                f"`{ev['id']}` (creates {', '.join(sorted(made))}) ordered before "
+                f"`{out[at + 1]['id']}` on the same day {ev['date']}.")
     return out
 
 
@@ -227,6 +249,8 @@ def _normalize(ctx, eid, etype, eff, raw_before, raw_after, b, a, inferred, note
         union = _dedupe(b + a)
         rep.append(f"`{eid}`: {etype} reshaped: before and after both set to "
                    f"{', '.join(union)} (research: {', '.join(b)} -> {', '.join(a)}).")
+        note = _join(note, "Research direction: " + ", ".join(ctx.cid(x) for x in b)
+                     + " -> " + ", ".join(ctx.cid(x) for x in a) + ".")
         return etype, union, union, inferred, note
     if eff == "end" and a:
         raise SeedError(f"{eid}: suppression with non-empty after; map it in event_map")
@@ -354,9 +378,20 @@ def _align_from(ctx, ident, lst, n, entry, lo):
         ctx.report["normalized"].append(f"`{ident}.{lst}[{n}]`: from {f} aligned to {lo}.")
 
 
+def _regime_by_act(ctx, text):
+    """Earliest regime whose constitution's incipit appears in `text` (case-insensitive)."""
+    best = None
+    for r in ctx.vocab["sections"]["regimes"]:
+        m = re.search(r"Const\. Apost\. ([^,]+),", r.get("act") or "")
+        if m and text and m.group(1).lower() in text.lower():
+            if best is None or _lt(r["effective"], best["effective"]):
+                best = r
+    return best
+
+
 def _names(ctx, rbody, founded, events_by_body):
     ident, lo = ctx.cid(rbody["key"]), founded["date"]
-    out = []
+    out, all_gaps, terminus = [], [], set()
     names = rbody["names"]
     for n, src in enumerate(names):
         e = {"name_la": src["name_la"], "name_it": src.get("name_it"),
@@ -365,23 +400,39 @@ def _names(ctx, rbody, founded, events_by_body):
              "source_type": src["source_type"], "source": src.get("act_source_url"),
              "note": src.get("note")}
         gaps = []
+        all_gaps.append(gaps)
         if e["from"] is None or not _iso(e["from"]):
             if n == 0:
                 gaps.append(f"The research gives no date for this name ('from': "
                             f"{json.dumps(src['from'])}); 'from' is set to founded.date {lo}.")
                 e["from"] = lo
             else:
-                gaps.append(f"The research does not date this rename ('from': "
-                            f"{json.dumps(src['from'])}). "
-                            + (f"Research note: '{src['note']}'" if src.get("note") else ""))
-                e["from"] = None
+                # R19: bound the unknown rename by the research's terminus ante quem,
+                # the act in which the research attests the new name in use.
+                reg = _regime_by_act(ctx, src.get("act"))
+                prev = out[n - 1]
+                if reg is None or prev["to"] is not None or not _lt(prev["from"],
+                                                                   reg["effective"]):
+                    raise SeedError(f"{ident}: names[{n}] undated and no terminus ante quem")
+                tq = reg["effective"]
+                e["from"] = prev["to"] = tq
+                terminus.add(n)
+                gaps.append(
+                    f"Terminus ante quem, NOT the rename date: the research does not date "
+                    f"this rename ('from': {json.dumps(src['from'])}) but attests the name "
+                    f"in {reg['act']} (in force {tq}); 'from' is set to that date. "
+                    + (f"Research note: '{src['note']}'" if src.get("note") else ""))
+                all_gaps[n - 1].append(
+                    f"'to' {tq} is a terminus ante quem (the next name is attested in "
+                    f"{reg['act']}, in force {tq}), NOT the date of the rename, which "
+                    "the research does not give.")
+                ctx.report["normalized"].append(
+                    f"`{ident}.names[{n - 1}..{n}]`: undated rename bounded by terminus "
+                    f"ante quem {tq} ({reg['id']}).")
         if e["to"] is not None and not _iso(e["to"]):
             raise SeedError(f"{ident}: names[{n}].to {e['to']!r} is not ISO")
-        if e["to"] is None and n + 1 < len(names):
-            gaps.append("The research gives no end for this name although a later name "
-                        "follows; 'to' is left null (the date of the change is unknown).")
         _align_from(ctx, ident, "names", n, e, lo)
-        if n > 0 and e["from"] is not None:
+        if n > 0 and e["from"] is not None and n not in terminus:
             day = [ev for ev in events_by_body.get(ident, []) if ev["date"] == e["from"]]
             if not any(ev["event_type"].startswith("rename") and ident in ev["before"]
                        and ident in ev["after"] for ev in day):
@@ -393,9 +444,12 @@ def _names(ctx, rbody, founded, events_by_body):
                 ctx.report["renames_without_event"].append(
                     f"`{ident}` names[{n}] from {e['from']} ('{e['name_la']}'): {text}")
                 gaps.append(text)
+        out.append(e)
+    for n, (e, gaps) in enumerate(zip(out, all_gaps)):
+        if e["to"] is None and n + 1 < len(out):
+            raise SeedError(f"{ident}: names[{n}] open although a later name follows")
         if gaps:
             e["gap"] = ctx.gap(f"{ident}.names[{n}]", " ".join(gaps))
-        out.append(e)
     return out
 
 
@@ -415,6 +469,45 @@ def _kind_source_type(rbody, verified, frm):
     return st if SOURCE_RANK[st] <= SOURCE_RANK["secondary"] else "secondary"
 
 
+def _substitute_kind_start(ctx, ident, founded, items):
+    """R20: a kind with no research start is extended back to founded.date only unverified.
+
+    The extended span is never verified and its source_type is at most the
+    founded fact's (and at most secondary). If the kind's basis names a
+    constitution, the research's verification is kept from that act's effective
+    date on; otherwise the whole extended entry is unverified."""
+    lo = founded["date"]
+    cap = min(founded["source_type"], "secondary", key=SOURCE_RANK.__getitem__)
+    out = []
+    for e in items:
+        if e["from"] is not None:
+            out.append(e)
+            continue
+        reg = _regime_by_act(ctx, e["source"])
+        cov = reg["effective"] if reg else None
+        st = min(e["source_type"], cap, key=SOURCE_RANK.__getitem__)
+        if cov and _lt(lo, cov) and _lt(cov, e["to"]):
+            out.append(dict(e, **{
+                "from": lo, "to": cov, "verified": False, "source_type": st,
+                "gap": (f"The research gives no start date for this kind; its basis "
+                        f"('{e['source']}') covers it only from {cov} ({reg['act']}). "
+                        f"Extended back to founded.date {lo} unverified.")}))
+            out.append(dict(e, **{"from": cov}))
+            ctx.report["normalized"].append(
+                f"`{ident}` kind '{e['kind']}': undated research entry split at {cov}; "
+                f"{lo}-{cov} unverified/{st}, from {cov} as in the research.")
+        else:
+            out.append(dict(e, **{
+                "from": lo, "verified": False, "source_type": st,
+                "gap": (f"The research gives no start date for this kind and its basis "
+                        f"('{e['source']}') does not cover the body from founded.date {lo}; "
+                        "'from' is set to founded.date and the entry is unverified.")}))
+            ctx.report["normalized"].append(
+                f"`{ident}` kind '{e['kind']}': undated research entry extended to {lo}, "
+                f"unverified/{st}.")
+    return out
+
+
 def _kinds(ctx, rbody, founded, ended):
     km = ctx.maps["kind_map"]
     key, ident, lo = rbody["key"], ctx.cid(rbody["key"]), founded["date"]
@@ -428,6 +521,7 @@ def _kinds(ctx, rbody, founded, ended):
             src = next((r for r in research if r["from"] == it["from"]), None)
             same = src is not None and km["by_string"].get(src["kind"]) == it["kind"]
             if same:
+                assert src is not None
                 ver, st = src["verified"], _kind_source_type(rbody, src["verified"], it["from"])
                 source, note = src["basis"], it.get("note")
             else:
@@ -450,11 +544,10 @@ def _kinds(ctx, rbody, founded, ended):
                           "source": r["basis"],
                           "note": (f"Research kind: '{r['kind']}'."
                                    if r["kind"] != km["by_string"][r["kind"]] else None)})
+    items = _substitute_kind_start(ctx, ident, founded, items)
     for n, e in enumerate(items):
-        if e["from"] is None:
-            e["from"] = lo
-            e["gap"] = ctx.gap(f"{ident}.kind[{n}]", "The research gives no start date for "
-                               f"this kind; 'from' is set to founded.date {lo}.")
+        if "gap" in e:
+            ctx.gap(f"{ident}.kind[{n}]", e["gap"])
         _align_from(ctx, ident, "kind", n, e, lo)
         hi = ended["date"] if ended else None
         if e["to"] is None and hi is not None:
@@ -519,7 +612,7 @@ def _section_entry(ctx, rbody, ident, regimes, overrides, kind, frm, to):
     return e
 
 
-def _part_of(ctx, key, founded, ended):
+def _part_of(ctx, key):
     out = []
     for p in ctx.maps["part_of"]["entries"]:
         if p["body"] != key:
@@ -603,7 +696,7 @@ def build(research_bodies, research_events, maps, vocab):
             "names": _names(ctx, rbody, founded, by_body),
             "kind": kinds,
             "section": _sections(ctx, rbody, ident, founded, ended, kinds),
-            "part_of": _part_of(ctx, key, founded, ended),
+            "part_of": _part_of(ctx, key),
             "aliases": [], "note": _body_note(rbody),
         })
     _lineage(ctx, events)

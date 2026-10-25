@@ -99,6 +99,115 @@ class TestSeed(unittest.TestCase):
             if not src["verified"]:
                 self.assertFalse(ev["verified"], ev["id"])
 
+    def test_provenance_never_upgraded_other_facts(self):
+        c = seeded()
+        km = {e["id"]: e["research_key"] for e in c["maps"]["key_map"]["entries"]}
+        rb = {b["key"]: b for b in c["rb"]["bodies"]}
+        fy = {e["research_key"]: e for e in c["maps"]["founding_years"]["entries"]}
+        ov = {(o["body"], o["regime"]): o for o in c["maps"]["section_overrides"]["entries"]}
+        po = c["maps"]["part_of"]["entries"]
+        for b in c["bodies"]["entries"]:
+            key = km[b["id"]]
+            r = rb[key]
+            f = b["founded"]
+            src = fy[key] if f["basis"] == "attested" else r["erected"]
+            self.assertEqual((f["verified"], f["source_type"]),
+                             (src["verified"], src["source_type"]), b["id"])
+            if b["ended"]:
+                self.assertEqual((b["ended"]["verified"], b["ended"]["source_type"]),
+                                 (r["ended"]["verified"], r["ended"]["source_type"]), b["id"])
+            for s in b["section"]:
+                o = ov.get((key, s["regime"]))
+                if o and s["source"] == o["source"]:
+                    self.assertEqual((s["verified"], s["source_type"]),
+                                     (o["verified"], o["source_type"]), b["id"])
+                else:
+                    self.assertEqual((s["verified"], s["source_type"]), (False, "inferred"))
+            mine = [p for p in po if p["body"] == key]
+            self.assertEqual(len(mine), len(b["part_of"]))
+            for got, p in zip(b["part_of"], mine):
+                self.assertEqual((got["verified"], got["source_type"]),
+                                 (p["verified"], p["source_type"]), b["id"])
+            # kind source_type rule: verified -> primary, never on an extended
+            # span, and backed by a verified research entry starting there (or
+            # an undated one); unverified -> at most secondary.
+            for k in b["kind"]:
+                if k["verified"]:
+                    self.assertEqual(k["source_type"], "primary", b["id"])
+                    self.assertNotIn("gap", k, b["id"])
+                    self.assertTrue(any(rk["verified"] and rk["from"] in (k["from"], None)
+                                        for rk in r["kind"]), b["id"])
+                    if f["basis"] == "attested":
+                        self.assertNotEqual(k["from"], f["date"], b["id"])
+                else:
+                    self.assertLessEqual(SOURCE_RANK[k["source_type"]],
+                                         SOURCE_RANK["secondary"], b["id"])
+
+    def test_extended_kind_start_is_unverified(self):
+        c = seeded()
+        pen = body(c, "cr:paenitentiaria-apostolica-1256")["kind"]
+        self.assertEqual((pen[0]["from"], pen[0]["to"], pen[0]["verified"]),
+                         ("1256", "1908-11-03", False))
+        self.assertEqual(pen[0]["source_type"], "secondary")
+        self.assertIn("gap", pen[0])
+        self.assertEqual((pen[1]["from"], pen[1]["verified"], pen[1]["source_type"]),
+                         ("1908-11-03", True, "primary"))
+        vis = body(c, "cr:visitatio-apostolica-urbis-1637")["kind"]
+        self.assertEqual(len(vis), 1)
+        self.assertFalse(vis[0]["verified"])
+        self.assertIn("gap", vis[0])
+
+    def test_name_lookup_bounded(self):
+        from crcdr import at
+        c = seeded()
+        for ident, current in (("cr:episcopi-1588", "Dicasterium pro Episcopis"),
+                               ("cr:pontificalis-domus-1968", "Praefectura Pontificalis Domus")):
+            b = body(c, ident)
+            self.assertEqual(at(b["names"], "2023")["name_la"], current, ident)
+            self.assertIsNone(at(b["names"], "1500"), ident)
+            before = str(int(b["founded"]["date"][:4]) - 1)
+            self.assertIsNone(at(b["names"], before), ident)
+        ep = body(c, "cr:episcopi-1588")["names"]
+        self.assertEqual(at(ep, "1700")["from"], "1588-01-22")
+        self.assertEqual(at(ep, "1950")["name_la"], "Sacra Congregatio Consistorialis")
+        self.assertIn("terminus ante quem", ep[1]["gap"].lower())
+        self.assertIn("terminus ante quem", ep[0]["gap"].lower())
+        pd = body(c, "cr:pontificalis-domus-1968")["names"]
+        self.assertEqual(at(pd, "1970")["name_la"], "Apostolici Palatii Praefectura")
+        self.assertEqual(at(pd, "1990")["name_la"], "Praefectura Pontificalis Domus")
+
+    def test_no_open_or_undated_inner_names(self):
+        for b in seeded()["bodies"]["entries"]:
+            names = b["names"]
+            for n, e in enumerate(names):
+                if n > 0:
+                    self.assertIsNotNone(e["from"], b["id"])
+                if n + 1 < len(names):
+                    self.assertIsNotNone(e["to"], b["id"])
+
+    def test_reshaped_same_effect_keeps_direction(self):
+        c = seeded()
+        effects = {t["id"]: t["effect"] for t in c["vocab"]["event_types"]["entries"]}
+        em = c["maps"]["event_map"]["events"]
+        evs = {e["id"]: e for e in c["events"]["entries"]}
+        checked = 0
+        for src in c["re"]["events"]:
+            if src["id"] in em or effects.get(src["event_type"]) != "same":
+                continue
+            if set(src["bodies_before"]) != set(src["bodies_after"]) and src["id"] in evs:
+                self.assertIn("Research direction:", evs[src["id"]]["note"], src["id"])
+                checked += 1
+        self.assertGreaterEqual(checked, 7)
+        self.assertIn("Research direction: cr:doctrina-fidei-1542 -> cr:episcopi-1588.",
+                      evs["ev015"]["note"])
+
+    def test_same_day_creation_first(self):
+        evs = seeded()["events"]["entries"]
+        ids = [e["id"] for e in evs]
+        self.assertLess(ids.index("ev057"), ids.index("ev056"))
+        dates = [e["date"] for e in evs]
+        self.assertEqual(dates, sorted(dates, key=parse_date))
+
     def test_divine_worship_two_bodies(self):
         c = seeded()
         a = body(c, "cr:cultus-divinus-1969")
