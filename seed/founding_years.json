@@ -1,0 +1,165 @@
+{
+  "_meta": {
+    "description": "Founding-year research for the 13 bodies that seed/research/bodies.json leaves undated (design §4 rule 4; plan Task 4). 'dated' = earliest year that a cited document securely supports; 'held-out' = no year can be secured, or the body's identity must be decided first. Earlier attestations that cannot be pinned to a year are recorded in 'note'.",
+    "researched": "2026-10-25",
+    "verified_convention": "verified=true only where the attesting document itself was read; a secondary source that was read but whose underlying document was not seen is verified=false."
+  },
+  "entries": [
+    {
+      "research_key": "revision-of-councils",
+      "status": "dated",
+      "date": "1849",
+      "precision": "year",
+      "basis": "attested",
+      "act_or_attestation": "Special congregation created by Pius IX for the revision of provincial councils, which 'had consultors from 1849'.",
+      "source": "Catholic Encyclopedia (1912), 'Roman Congregations', s.v. Congregation of the Council, https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "CE: 'a special congregation created by Pius IX for the revision of provincial councils had consultors from 1849'. The creating act was not found; it falls between Pius IX's election (1846) and 1849. 1849 is the earliest year the cited source supports. Weak: one secondary sentence, no document named. Verify against Del Re, La Curia Romana, before freezing."
+    },
+    {
+      "research_key": "papal-almonry-charity",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
+      "source": "Holy See, Office of Papal Charities, profile (2012), https://www.vatican.va/roman_curia/institutions_connected/elem_apost/documents/rc_elemosineria_pro_20121106_profile_en.html",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "No year can be secured. The profile says that 'A Bull of Innocent III (1198-1216) mentions the post of Almoner as already in existence', but it does not name the bull or its year. It says that Gregory X (1271-1276) 'set down the duties of the Almoner', again with no year. The only dated attestation it gives is 'a Bull of 1409' of Alexander V, which was rejected: Alexander V is of the Pisan obedience and is listed as an antipope, so his bull attests the office in the Pisan curia, not securely in the Roman line, and it is about two centuries after the known attestations. Next step: identify the Innocent III bull (Potthast / the Register of Innocent III), which would give a year."
+    },
+    {
+      "research_key": "secretariat-of-state",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
+      "source": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 113-116 (read); Holy See, Secretariat of State profile, https://www.vatican.va/roman_curia/secretariat_state/documents/rc_seg-st_12101998_profile_en.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "IDENTITY DECISION NEEDED. Quo aptius (read, AAS 65 p.114) gives only a century: 'Secretaria Status, cuius initium saeculo xv tribuitur — Camera Secreta tunc dicebatur'. The vatican.va profile says 'The Apostolic Constitution Non Debet Reprehensibile of 31 December 1487 established the Secretaria Apostolica', with a Secretarius Domesticus, and that 'One can also trace to this Secretaria Apostolica the Chancery of Briefs, the Secretariat of Briefs to Princes and the Secretariat of Latin Letters'. Leo X later added a Secretarius Intimus, from whom the Secretary of State developed; no year is given. So 1487 is the founding act of a common ancestor of four research bodies. Whether the Secretariat of State continues the 1487 Secretaria Apostolica (giving 1487, basis act) or emerges later as a distinct office (with no year found) is an identity question under §5 (split, rule 5), not a dating question. Held out until the owner decides."
+    },
+    {
+      "research_key": "apostolic-briefs-secretariat",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
+      "source": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 113-116 (read); Holy See, Secretariat of State profile (vatican.va, 1998)",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Sources conflict, and none gives a year. Quo aptius (read): 'Secretaria Brevium Apostolicorum, quae ... ab exeunte saeculo xiv epistulas forma minus insigni concinnatas expediebat' (late 14th century). The vatican.va Secretariat of State profile instead traces the 'Chancery of Briefs' to the Secretaria Apostolica of 1487 (Non debet reprehensibile). That depends on the same identity question as secretariat-of-state. No document naming the Secretaria Brevium as such in a specific year was found."
+    },
+    {
+      "research_key": "briefs-to-princes",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
+      "source": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 114 (read); Catholic Encyclopedia (1912), 'Roman Curia', https://www.newadvent.org/cathen/13147a.htm",
+      "source_type": "primary",
+      "verified": true,
+      "note": "No year found. Quo aptius (read) says only that the Secretaria Brevium ad Principes and the Secretaria Litterarum Latinarum 'Ex eadem [Secretaria Status] originem traxerunt ... quae propria Officia postea evaserunt'. It gives no date. The vatican.va profile traces it to the 1487 Secretaria Apostolica (see secretariat-of-state). CE describes its duties but gives no origin. Separately, the research record treats two offices (Briefs to Princes; Latin Letters, a 'duplex Officium' in 1908) as one body."
+    },
+    {
+      "research_key": "apostolic-chancery",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
+      "source": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 114 (read); Catholic Encyclopedia (1912), 'Roman Curia', https://www.newadvent.org/cathen/13147a.htm",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Only a century can be secured. Quo aptius (read): 'inde a saeculo xi Officium, ab aliis seiunctum, est constitutum, cui praepositus, nomine Bibliothecarii, Cancellarii, Vicecancellarii appellatus ... Huius Officii, quod Cancellaria Apostolica nuncupabatur'. CE: 'certainly of very ancient origin in its essence', with no year. The first dated attestation of a 'cancellarius' of the Roman Church was found only in Wikipedia (Silvester II), which is not admissible. Next step: Poole, Lectures on the History of the Papal Chancery (1915), or Bresslau."
+    },
+    {
+      "research_key": "apostolic-datary",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
+      "source": "Catholic Encyclopedia (1912), 'Roman Curia', s.v. The Apostolic Dataria, https://www.newadvent.org/cathen/13147a.htm; Paul VI, m.p. Quo aptius (1973) (read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "CE: 'while this office certainly existed in the fourteenth century, as an independent bureau, it is impossible to determine the precise time of its creation'. It also rejects Amydenus's claim of very ancient origin. Quo aptius names the Dataria among the offices split from the Chancery but gives no date. No specific year found. Next step: N. Storti, La storia e il diritto della Dataria apostolica (1969)."
+    },
+    {
+      "research_key": "apostolic-camera",
+      "status": "dated",
+      "date": "1192",
+      "precision": "year",
+      "basis": "attested",
+      "act_or_attestation": "Liber Censuum Romanae Ecclesiae, compiled in 1192 by Cencius, papal camerarius (later Honorius III), as the Camera's inventory of papal revenues.",
+      "source": "Catholic Encyclopedia (1907), J.P. Kirsch, 'Apostolic Camera', https://www.newadvent.org/cathen/01633b.htm",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "CE: 'Since the middle of the twelfth century we find a papal chamberlain (camerarius domini papae) as a regular member of the Curia' (no year), and 'Cencius Camerarius ... made in 1192 a new inventory of all these sources of papal revenue, known as the \"Liber Censuum\"'. 1192 is the earliest specific year the cited source supports. An earlier, unpinned mid-12th-century origin is acknowledged. The Liber Censuum itself (ed. Fabre-Duchesne) was not read."
+    },
+    {
+      "research_key": "apostolic-penitentiary",
+      "status": "dated",
+      "date": "1256",
+      "precision": "year",
+      "basis": "attested",
+      "act_or_attestation": "Official document of Cardinal Hugh of Saint-Cher, the first in which the term 'Penitenzieria' (Paenitentiaria) is used; Hugh is also the first to bear the title Poenitentiarius summus / Sedis Apostolicae Poenitentiarius generalis.",
+      "source": "Card. Tarcisio Bertone, address to the Apostolic Penitentiary symposium, 14 Jan 2009, citing N. Del Re, La Curia Romana (LEV 1998), https://www.vatican.va/roman_curia/secretariat_state/card-bertone/2009/documents/rc_seg-st_20090114_penitenzieria_it.html",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Bertone (after Del Re): 'Mentre è possibile trovare già nel 1193 la più antica menzione di un Cardinale « qui confessiones pro papa... recipiebat », si deve tuttavia giungere al 1256 per incontrare invece il termine Penitenzieria per la prima volta impiegato in un documento ufficiale del cardinale Ugo da San Caro'. 1193 attests an individual confessor-cardinal, not the office, so 1256 is taken as the first attestation of the body as such. The vatican.va profile ('dalla fine del sec. XII ... poenitentiarius sotto Onorio III (1216-27)') and CE (Giraldus Cambrensis, 'Prior to 1205') agree on the earlier individual officer. IDENTITY FLAG: the vatican.va profile says Pius V 'soppresso la Penitenzieria stessa (23 apr. 1569)' and 'la ricostituì (18 magg. 1569) radicalmente riformata'. Under §5 rule 6 this may be a re-foundation (new id, 1569, basis act) rather than continuity. The owner should decide; the acts' operative clauses have not been read."
+    },
+    {
+      "research_key": "roman-rota",
+      "status": "dated",
+      "date": "1323",
+      "precision": "year",
+      "basis": "attested",
+      "act_or_attestation": "First document of a case adjudicated collegialiter, and definitively, by the tribunal of the auditors of the Sacred Palace.",
+      "source": "Catholic Encyclopedia (1912), U. Benigni, 'Sacra Romana Rota', https://www.newadvent.org/cathen/13205c.htm",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "CE: 'Thus arose an autonomous tribunal ... From the year 1323 we have the first document of a transaction adjudicated collegialiter, and in a definitive way by that, tribunal; John XXII, by the Bull \"Ratio Juris\" (1331), laid down certain rules for it'; the name 'Rota' 'occurs first in 1336'. Rejected and alternative claims: (a) the vatican.va Rota profile says 'Con Innocenzo IV e il primo Concilio di Lione [1245] i cappellani formarono un tribunale stabile'. This is a formation narrative tied to an event, with no document cited; CE puts the auditors as a distinct class in the latter half of the 13th century, again with no year. It is the main alternative if the owner prefers it. (b) Ratio iuris is dated 1331 by CE and the vatican.va profile, but 1326 by John XXIII's address to the Rota of 19 Oct 1959. It is a regulating act, not a founding act. (c) The 1336 date is for the name only. The 1908 revival is already treated as continuity (H10)."
+    },
+    {
+      "research_key": "signatura-gratiae",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
+      "source": "Catholic Encyclopedia (1912), 'Roman Curia', s.v. The Apostolic Signatura, https://www.newadvent.org/cathen/13147a.htm; CE 'Referendarii', https://www.newadvent.org/cathen/12700a.htm; CE 'Roman Congregations', https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "IDENTITY DECISION NEEDED. The research record stands for 'Signatura gratiae / Signatura iustitiae' and itself says 'Possibly two bodies; kept as one placeholder'. Its curia_status also mixes the Sixtine congregation (Immensa, 1588, 2nd congregation 'for the Signature of Grace') with the older referendaries' Signatura. Candidate years by identity: (a) Signatura gratiae of the referendaries: origin conflicting (CE 'Roman Curia': Alexander VI created the double Signatura; CE 'Referendarii': Innocent VIII introduced the distinction), with no year in either; the earliest dated mention is 1586, when Sixtus V limited 'those of the Signatura of Grace to 70' (CE, act not named); (b) the Sixtine congregation: Immensa aeterni Dei, 22 Jan 1588 (basis act). CE also says the Signatura of Grace 'gradually disappeared: no mention is made of it after 1847', which conflicts with a 1908 end. Held out until the owner decides which body the key denotes."
+    },
+    {
+      "research_key": "ceremonial",
+      "status": "held-out",
+      "date": null,
+      "precision": null,
+      "basis": null,
+      "act_or_attestation": null,
+      "source": "Catholic Encyclopedia (1912), 'Roman Congregations', s.v. Congregation of Ceremonies, https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "CE: 'It is not quite certain who created this congregation. Many attribute its establishment to Sixtus V, others to his immediate predecessor, Gregory XIII. Haine says that the latter opinion is proved to be correct by the records of the congregation itself'. No act and no year is given; the founder itself is disputed. Immensa (1588), as summarised in CE, has a congregation 'pro sacris ritibus et caeremoniis' (Rites), not a separate Ceremonial congregation. The poor OCR of the 1642 Lunadoro, Relatione della corte di Roma (archive.org bub_gb_npmOW2OCs5kC) was checked without finding the body, which is inconclusive. Next step: Haine, Synopsis (1857); Del Re."
+    },
+    {
+      "research_key": "apostolic-visitation-urbis",
+      "status": "dated",
+      "date": "1637-08-29",
+      "precision": "day",
+      "basis": "attested",
+      "act_or_attestation": "Decretum Sacrae Congregationis Visitationis Apostolicae S.D.N. Urbani divina providentia Papae VIII. constitutae, contra Religiosos, & Ecclesiasticos quoscumque quaestuosas artes exercentes pro saecularibus; 'Datum Romae die 29. Augusti 1637'; Romae, ex typographia Rev. Camerae Apostolicae, 1637.",
+      "source": "Printed decree, Biblioteca de la Universidad de Granada, DIGIBUG http://hdl.handle.net/10481/12321 (scan read)",
+      "source_type": "primary",
+      "verified": true,
+      "note": "The scan of the printed broadside was read. It names the 'Sacra Congregatio Visitationis Apostolicae' and says it was 'constituted' by Urban VIII ('Urbani ... Papae VIII. constitutae'), so the founding act is Urban VIII's and falls between 1623 and 1637. That act was not found. If it is found, the year will be earlier than 1637 and founded.basis becomes 'act'. Under design §4 rule 4, a key frozen at 1637 would then keep its year. The 'Urbis' scope is supported by the decree's subject (monasteries and religious 'in Urbe'). No earlier dated document naming the body was found."
+    }
+  ]
+}
