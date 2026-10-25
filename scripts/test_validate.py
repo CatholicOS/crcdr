@@ -104,7 +104,49 @@ class ValidateTests(unittest.TestCase):
         def m(body, *_):
             del body["section"][0]["in_curia"]
             body["section"][0]["gap"] = "unknown"
-        self.assertEqual(counts(run(m)), (1, 0))
+        r = run(m)
+        # the error stands; the gap is still surfaced once, by R0
+        self.assertEqual(counts(r), (1, 1))
+        self.assertTrue(r.warnings[0].startswith("[R0]"), r.warnings)
+
+    def test_r0_every_gap_reported(self):
+        def m(body, _b, ev, doc):
+            body["names"][0]["gap"] = "rename date not located"
+            body["kind"][0]["gap"] = "kind basis unread"
+            body["founded"]["gap"] = "act not read"
+            body["section"][1]["gap"] = "placement inferred"
+            ev[1]["gap"] = "clause not found"
+            body["gap"] = "identity open"
+        r = run(m)
+        self.assertEqual(r.errors, [])
+        r0 = [w for w in r.warnings if w.startswith("[R0]")]
+        self.assertEqual(len(r0), 6, r.warnings)
+        for text in ("rename date not located", "kind basis unread", "act not read",
+                     "placement inferred", "clause not found", "identity open"):
+            self.assertTrue(any(text in w for w in r0), text)
+        self.assertTrue(any(w.startswith(f"[R0] {ID}: names[0]") for w in r0), r0)
+        self.assertTrue(any(w.startswith("[R0] ev002") for w in r0), r0)
+
+    def test_r0_no_duplicate_when_rule_already_warns(self):
+        def m(body, *_):
+            body["names"][1]["from"] = "1900-01-01"
+            body["names"][1]["gap"] = "undated rename"
+        r = run(m)
+        self.assertEqual(counts(r), (0, 1), r.warnings)
+        self.assertTrue(r.warnings[0].startswith("[R2]"))
+
+        def n(body, *_):
+            body["names"][1]["from"] = "1900-01-01"
+            body["names"][0]["gap"] = "end not located"
+        r = run(n)
+        self.assertEqual(counts(r), (0, 1), r.warnings)
+
+        def o(body, *_):
+            body["section"][0]["in_curia"] = None
+            body["section"][0]["gap"] = "unknown"
+        r = run(o)
+        self.assertEqual(counts(r), (0, 1), r.warnings)
+        self.assertTrue(r.warnings[0].startswith("[R3]"))
 
     def test_attested_null_but_created_by_event(self):
         def m(body, *_):

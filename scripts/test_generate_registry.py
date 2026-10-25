@@ -69,13 +69,27 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn("Sacra Congregatio Sancti Officii †", out)
         self.assertIn("unverified", out.lower())
 
+    def test_gap_facts_marked_and_listed(self):
+        bodies, events = fixtures.make_fixture()
+        b = bodies["entries"][0]
+        b["names"][1]["gap"] = "rename date not located"
+        b["founded"]["gap"] = "act not read"
+        out = g.render_bodies(bodies, events, validate.load_vocab(), today=TODAY)
+        head, gaps = out.split("## Known gaps")
+        self.assertIn(f"Sacra Congregatio Sancti Officii {g.GAP_MARK}", head)
+        self.assertIn(f"1542-07-21 {g.GAP_MARK}", head)
+        legend = head.split("## Living bodies")[0]
+        self.assertIn(g.GAP_MARK, legend)
+        self.assertIn("rename date not located", gaps)
+        self.assertIn("act not read", gaps)
+
     def test_warnings_listed(self):
         bodies, events = fixtures.make_fixture()
         events["entries"][1]["clause_status"] = "not-transcribed"
         rep = validate.validate(bodies, events, validate.load_vocab())
         self.assertTrue(rep.warnings)
         out = g.render_bodies(bodies, events, validate.load_vocab(), today=TODAY)
-        gaps = out.split("Known gaps")[1]
+        gaps = out.split("## Known gaps")[1]
         for w in rep.warnings:
             self.assertIn(w, gaps)
 

@@ -1,4 +1,5 @@
-"""CRCDR validator: design section 7, rules 1-7. Errors vs documented-gap warnings."""
+"""CRCDR validator: design section 7, rules 1-7, plus R0 (every documented gap) and
+R8 (dated fact without a source). Errors vs documented-gap warnings."""
 import os
 import sys
 from dataclasses import dataclass, field
@@ -17,10 +18,15 @@ FAR_FUTURE = crcdr.parse_date("9999-12-31")
 class Report:
     errors: list = field(default_factory=list)
     warnings: list = field(default_factory=list)
+    gap_paths: set = field(default_factory=set)
 
-    def add(self, rule, ident, msg, gap=False):
+    def add(self, rule, ident, msg, gap=False, path=None):
+        """Record a finding. `gap` true makes it a warning; `path` names the fact
+        whose `gap` note made it one, so R0 does not report that gap twice."""
         text = f"[R{rule}] {ident}: {msg}"
         (self.warnings if gap else self.errors).append(text)
+        if gap and path is not None:
+            self.gap_paths.add((ident, path))
 
 
 def load_vocab():
@@ -82,44 +88,46 @@ def _r2(bodies, rep):
 
 def _check_list(rep, i, b, lst, lo, hi):
     items = b.get(lst) or []
-    parsed = []
+    ok = []
     for n, e in enumerate(items):
         try:
-            parsed.append((_d(e["from"]), _end(e.get("to")), e))
+            ok.append((_d(e["from"]), _end(e.get("to")), e, f"{lst}[{n}]"))
         except (KeyError, TypeError, ValueError):
-            rep.add(2, i, f"{lst}[{n}] has a missing or invalid date", _gap(e))
-            parsed.append(None)
-    ok = [p for p in parsed if p]
+            rep.add(2, i, f"{lst}[{n}] has a missing or invalid date", _gap(e), f"{lst}[{n}]")
     alive = b.get("ended") is None
-    for n, (f, t, e) in enumerate(ok):
-        label = f"{lst}[{n}]"
+
+    def add(msg, *cands):
+        """Warn (with the gap-carrying fact's path) if any candidate has a gap."""
+        hit = next(((e, p) for e, p in cands if _gap(e)), None)
+        rep.add(2, i, msg, hit is not None, hit[1] if hit else None)
+
+    for f, t, e, label in ok:
         if f < lo:
-            rep.add(2, i, f"{label} starts before founding", _gap(e))
+            add(f"{label} starts before founding", (e, label))
         if t > hi and not (alive and t == FAR_FUTURE):
-            rep.add(2, i, f"{label} extends past end", _gap(e))
+            add(f"{label} extends past end", (e, label))
         if t <= f:
-            rep.add(2, i, f"{label} is empty or reversed", _gap(e))
+            add(f"{label} is empty or reversed", (e, label))
     for n in range(1, len(ok)):
-        pf, pt, pe = ok[n - 1]
-        f, t, e = ok[n]
-        label = f"{lst}[{n}]"
+        pf, pt, pe, plabel = ok[n - 1]
+        f, t, e, label = ok[n]
         if f < pf:
-            rep.add(2, i, f"{label} out of order", _gap(e))
+            add(f"{label} out of order", (e, label))
         elif f < pt:
-            rep.add(2, i, f"{label} overlaps {lst}[{n - 1}]", _gap(e) or _gap(pe))
+            add(f"{label} overlaps {plabel}", (e, label), (pe, plabel))
         elif lst == "names" and f > pt:
-            rep.add(2, i, f"names do not cover lifespan between [{n - 1}] and [{n}]",
-                    _gap(e) or _gap(pe))
+            add(f"names do not cover lifespan between {plabel} and {label}",
+                (e, label), (pe, plabel))
     if lst == "names":
         if not ok:
             rep.add(2, i, "names is empty")
             return
-        f, _t, e = ok[0]
+        f, _t, e, label = ok[0]
         if f > lo:
-            rep.add(2, i, "names[0] starts after founding", _gap(e))
-        f, t, e = ok[-1]
+            add(f"{label} starts after founding", (e, label))
+        f, t, e, label = ok[-1]
         if t < hi:
-            rep.add(2, i, "last name ends before the end of the lifespan", _gap(e))
+            add("last name ends before the end of the lifespan", (e, label))
 
 
 # --- R3 ---------------------------------------------------------------
@@ -132,6 +140,7 @@ def _r3(bodies, vocab, rep):
         for n, e in enumerate(b.get("section") or []):
             label = f"section[{n}]"
             g = _gap(e)
+            add = lambda rule, msg, gap: rep.add(rule, i, msg, gap, label)  # noqa: E731
             try:
                 frm = e["from"]
                 want = crcdr.regime_at(sec, frm)
@@ -143,20 +152,20 @@ def _r3(bodies, vocab, rep):
             if e.get("regime") not in regimes:
                 continue  # reported by R6
             if e["regime"] != want:
-                rep.add(3, i, f"{label} regime {e['regime']} but {want} is in force on {frm}", g)
+                add(3, f"{label} regime {e['regime']} but {want} is in force on {frm}", g)
                 continue
             if e.get("section") not in {s["id"] for s in regimes[want]["sections"]}:
-                rep.add(3, i, f"{label} section {e.get('section')!r} not in regime {want}", g)
+                add(3, f"{label} section {e.get('section')!r} not in regime {want}", g)
             if nxt and to > min(nxt):
-                rep.add(3, i, f"{label} extends past the next regime's effective date", g)
+                add(3, f"{label} extends past the next regime's effective date", g)
             if e.get("section") == "not-listed":
                 if "in_curia" not in e:
                     rep.add(3, i, f"{label} not-listed entry lacks in_curia")
                 elif e["in_curia"] is None:
                     msg = f"{label} in_curia is null" + ("" if g else " without a gap note")
-                    rep.add(3, i, msg, g)
+                    add(3, msg, g)
                 elif not isinstance(e["in_curia"], bool):
-                    rep.add(3, i, f"{label} in_curia must be true/false", g)
+                    add(3, f"{label} in_curia must be true/false", g)
 
 
 # --- R4 ---------------------------------------------------------------
@@ -236,12 +245,12 @@ def _r5(bodies, events, vocab, rep):
         else:
             problems = _event_problems(evs, effects, f, i, "new", True)
             if problems:
-                rep.add(5, i, "founded.event " + "; ".join(problems), _gap(f))
+                rep.add(5, i, "founded.event " + "; ".join(problems), _gap(f), "founded")
         e = b.get("ended")
         if e:
             problems = _event_problems(evs, effects, e, i, None, False)
             if problems:
-                rep.add(5, i, "ended.event " + "; ".join(problems), _gap(e))
+                rep.add(5, i, "ended.event " + "; ".join(problems), _gap(e), "ended")
 
 
 def _event_problems(evs, effects, fact, body, need_effect, in_after):
@@ -274,22 +283,21 @@ def _r6(bodies, events, vocab, rep):
     ids = set(_index(bodies))
     for b in bodies.get("entries", []):
         i = b.get("id")
-        for k in b.get("kind") or []:
+        for n, k in enumerate(b.get("kind") or []):
             if k.get("kind") not in kinds:
-                rep.add(6, i, f"unknown kind {k.get('kind')!r}", _gap(k))
-        for s in b.get("section") or []:
+                rep.add(6, i, f"unknown kind {k.get('kind')!r}", _gap(k), f"kind[{n}]")
+        for n, s in enumerate(b.get("section") or []):
             if s.get("regime") not in regimes:
-                rep.add(6, i, f"unknown regime {s.get('regime')!r}", _gap(s))
-        for p in b.get("part_of") or []:
+                rep.add(6, i, f"unknown regime {s.get('regime')!r}", _gap(s), f"section[{n}]")
+        for n, p in enumerate(b.get("part_of") or []):
+            path = f"part_of[{n}]"
             if p.get("relation") not in RELATIONS:
-                rep.add(6, i, f"unknown part_of relation {p.get('relation')!r}", _gap(p))
+                rep.add(6, i, f"unknown part_of relation {p.get('relation')!r}", _gap(p), path)
             if p.get("body") not in ids:
-                rep.add(6, i, f"part_of references unknown body {p.get('body')!r}", _gap(p))
-        facts = [b.get("founded"), b.get("ended")] + [
-            e for lst in ("names", "kind", "section", "part_of") for e in b.get(lst) or []]
-        for fct in facts:
-            if fct and "source_type" in fct and fct["source_type"] not in SOURCE_TYPES:
-                rep.add(6, i, f"unknown source_type {fct['source_type']!r}", _gap(fct))
+                rep.add(6, i, f"part_of references unknown body {p.get('body')!r}", _gap(p), path)
+        for path, fct in _facts(b):
+            if path and "source_type" in fct and fct["source_type"] not in SOURCE_TYPES:
+                rep.add(6, i, f"unknown source_type {fct['source_type']!r}", _gap(fct), path)
     for ev in events.get("entries", []):
         i = ev.get("id")
         if ev.get("event_type") not in etypes:
@@ -318,6 +326,30 @@ def _r7(events, rep):
             rep.add(7, i, "operative clause not yet transcribed", gap=True)
 
 
+# --- R0 / R8 -------------------------------------------------------------
+
+def _facts(b):
+    """(path, fact) for a body itself (path "") and each of its dated facts."""
+    out = [("", b)]
+    for k in ("founded", "ended"):
+        if b.get(k):
+            out.append((k, b[k]))
+    for lst in ("names", "kind", "section", "part_of"):
+        out.extend((f"{lst}[{n}]", e) for n, e in enumerate(b.get(lst) or []) if e)
+    return out
+
+
+def _r0(bodies, events, rep):
+    """Every fact with a `gap` note is a warning, quoting the gap, unless another
+    rule already reported that fact's gap as a warning."""
+    found = [(b.get("id"), path, f) for b in bodies.get("entries", []) for path, f in _facts(b)]
+    found += [(ev.get("id"), "", ev) for ev in events.get("entries", [])]
+    for ident, path, f in found:
+        if _gap(f) and (ident, path) not in rep.gap_paths:
+            where = f"{path}: " if path else ""
+            rep.add(0, ident, f"{where}documented gap: {f['gap']}", True, path)
+
+
 def validate(bodies, events, vocab):
     rep = Report()
     _r1(bodies, rep)
@@ -327,6 +359,7 @@ def validate(bodies, events, vocab):
     _r5(bodies, events, vocab, rep)
     _r6(bodies, events, vocab, rep)
     _r7(events, rep)
+    _r0(bodies, events, rep)
     return rep
 
 
