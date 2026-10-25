@@ -303,7 +303,8 @@
       "research_key": "communication-dicastery",
       "id": "cr:communicatio-2015",
       "minted_from_la": "Dicasterium pro Communicatione",
-      "rule_note": "'Dicasterium' and 'pro' dropped; nominative reconstructed 'Communicatione' -> 'Communicatio'. The Latin of the 2018 rescript was not read (research: press-office summary); the 2015 name 'Secretaria pro Communicatione' is replaced in the key by the current name per rule 2. Year 2015: instituted 27 Jun, functioning from 29 Jun 2015 (same year)."
+      "rule_note": "'Dicasterium' and 'pro' dropped; nominative reconstructed 'Communicatione' -> 'Communicatio'. The Latin of the 2018 rescript was not read (research: press-office summary); the 2015 name 'Secretaria pro Communicatione' is replaced in the key by the current name per rule 2. Year 2015: instituted 27 Jun, functioning from 29 Jun 2015 (same year). founded_date (Task 6): the research states the act was operative from 29 Jun 2015 (names[0].note 'functioning from 29 Jun 2015 (Art. 4)'; event ev095 note 'Operative 29 Jun 2015'), so the effective date governs (design §5 rule 9).",
+      "founded_date": "2015-06-29"
     },
     {
       "research_key": "public-affairs-extraordinary",
