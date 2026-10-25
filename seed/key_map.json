@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "description": "Hand-curated cr: keys for the 65 research bodies kept in phase 1 (76 minus the 2 exclusions and the 9 bodies held out in seed/founding_years.json). Keys follow design §4 and the Global Constraints: Latin, the distinguishing noun phrase in the nominative, kind words and the governing preposition dropped, et kept, ASCII-folded, founding year appended. minted_from_la is the research names[].name_la string (or the substring of it) the slug was derived from: the current name for a living body, the last name for an ended one. rule_note records every judgment and is the Latinist's review list.",
+    "description": "Hand-curated cr: keys for the 64 research bodies kept in phase 1 (76 minus the 2 exclusions, the 9 bodies held out in seed/founding_years.json, and state-of-regulars, held out by controller ruling because one research record conflates two bodies). Keys follow design §4 and the Global Constraints: Latin, the distinguishing noun phrase in the nominative, kind words and the governing preposition dropped, et kept, ASCII-folded, founding year appended. minted_from_la is the research names[].name_la string (or the substring of it) the slug was derived from: the current name for a living body, the last name for an ended one. rule_note records every judgment and is the Latinist's review list.",
     "conventions": [
       "Kind words stripped as listed in design §4 rule 3. By analogy, also stripped: 'Pontificia Commissio' (as 'Pontificia Academia'), 'Consilium' and 'Sacrum Consilium' (the Latin term of kinds.json 'council'), 'Secretaria' (as 'Secretariatus'), 'Supremum' (as 'Suprema'), and the adjective 'specialis' qualifying the kind word. Each case is flagged in its rule_note.",
       "Governing prepositions dropped: 'pro' and 'de' (design), and by analogy 'ad' and 'super'. A preposition inside the remaining phrase (governing a complement of the noun, not of the kind word) is kept: flagged in rule_note.",
@@ -158,12 +158,6 @@
       "id": "cr:episcopi-et-regulares-1601",
       "minted_from_la": "Sacra Congregatio Episcoporum et Regularium",
       "rule_note": "Ended 1908. 'Sacra Congregatio' dropped; nominative reconstructed from the genitives 'Episcoporum et Regularium' -> 'Episcopi et Regulares'; 'et' kept. Founding year 1601 secondary."
-    },
-    {
-      "research_key": "state-of-regulars",
-      "id": "cr:status-regularium-1652",
-      "minted_from_la": "Congregatio super statu Regularium",
-      "rule_note": "Ended. 'Congregatio' and governing 'super' dropped; nominative reconstructed 'statu' -> 'status'. IDENTITY FLAG: the research body is a placeholder conflating two bodies (1652-1698 and a second one founded 17 Jun 1847, suppressed 1906; research name note says it should be split into two keys after verification). This key denotes the 1652 body only; its research 'ended' (1906) belongs to the 1847 body. Date secondary."
     },
     {
       "research_key": "discipline-of-regulars",

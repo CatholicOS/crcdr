@@ -5,6 +5,9 @@ import unittest
 from crcdr import ID_RE, ROOT, at, load, parse_date
 
 EXCLUDED = {"sixtine-temporal-congregations", "fabric-st-peter"}
+# held out by controller ruling: one research record conflates two bodies
+RULED_OUT = {"state-of-regulars"}
+SOURCE_RANK = {"inferred": 0, "secondary": 1, "official-secondary": 2, "primary": 3}
 RELATIONS = {"within", "subject-to", "section-of", "complement-of"}
 SOURCE_TYPES = {"primary", "official-secondary", "secondary", "inferred"}
 
@@ -48,8 +51,9 @@ class SeedMaps(unittest.TestCase):
         entries = _load("seed", "key_map.json")["entries"]
         keys = [e["research_key"] for e in entries]
         self.assertEqual(len(keys), len(set(keys)), "duplicate research_key")
-        expected = set(bodies) - EXCLUDED - _held_out()
+        expected = set(bodies) - EXCLUDED - _held_out() - RULED_OUT
         self.assertEqual(set(keys), expected)
+        self.assertEqual(len(keys), 64)
         ids = [e["id"] for e in entries]
         self.assertEqual(len(ids), len(set(ids)), "duplicate id")
         for e in entries:
@@ -123,13 +127,65 @@ class SeedMaps(unittest.TestCase):
         self.assertEqual(em["ev120"], [])
         self.assertGreaterEqual(len({it["event_type"] for it in em["ev022"]}), 2)
 
+    def test_event_map_never_upgrades_provenance(self):
+        research = _research_events()
+        for i, items in _load("seed", "event_map.json")["events"].items():
+            r = research[i]
+            for it in items:
+                if "source_type" in it:
+                    self.assertLessEqual(SOURCE_RANK[it["source_type"]],
+                                         SOURCE_RANK[r["source_type"]], i)
+                if "verified" in it:
+                    self.assertIsInstance(it["verified"], bool, i)
+                    self.assertFalse(it["verified"] and not r["verified"], i)
+        ev005 = _load("seed", "event_map.json")["events"]["ev005"]
+        self.assertTrue(all(it["source_type"] == "secondary" and it["verified"] is False
+                            for it in ev005))
+
+    def test_ev024_suppression_by_omission(self):
+        items = _load("seed", "event_map.json")["events"]["ev024"]
+        self.assertEqual([it["event_type"] for it in items],
+                         ["competence-transfer", "foundation", "suppression"])
+        sup = items[-1]
+        self.assertEqual(sup["before"], ["bishops-and-regulars"])
+        self.assertEqual(sup["after"], [])
+        self.assertTrue(sup["inferred"])
+        self.assertNotIn("bishops-and-regulars", items[1]["before"] + items[1]["after"])
+
+    def test_reu_part_v_only_for_named_bodies(self):
+        """REU Part V names only the Laity council and Justice and Peace; any other
+        commission/council alive under REU needs an override."""
+        km = _key_map()
+        kmap = _load("seed", "kind_map.json")
+        overrides = {(o["body"], o["regime"]) for o in
+                     _load("seed", "section_overrides.json")["entries"]}
+        reu_from, reu_to = parse_date("1968-01-01"), parse_date("1989-03-01")
+        for k, b in _research_bodies().items():
+            if k not in km or k in ("justice-peace", "laity-council"):
+                continue
+            items = kmap["by_body"].get(k) or [
+                dict(e, kind=kmap["by_string"][e["kind"]]) for e in b["kind"]]
+            for n, it in enumerate(_intervals(items) if k in kmap["by_body"] else items):
+                if it["kind"] not in ("commission", "council") or it["from"] is None:
+                    continue
+                lo = parse_date(it["from"])
+                hi = parse_date(it["to"]) if it.get("to") else parse_date("9999-12-31")
+                if lo < reu_to and hi > reu_from:
+                    self.assertIn((k, "reu-1968"), overrides, k)
+
     def test_clauses_verbatim(self):
         research = _research_events()
         corpus = json.dumps(_load("seed", "research", "events.json"), ensure_ascii=False)
         corpus += json.dumps(_load("seed", "research", "bodies.json"), ensure_ascii=False)
         with open(os.path.join(ROOT, "docs", "curia-history-report.md"), encoding="utf-8") as f:
             corpus += f.read()
-        for i, clause in _load("seed", "clauses.json").items():
+        clauses = _load("seed", "clauses.json")
+        for i in clauses.get("_notes", {}):
+            if i != "convention":
+                self.assertIn(i, clauses, i)
+        for i, clause in clauses.items():
+            if i == "_notes":
+                continue
             self.assertIn(i, research, i)
             self.assertTrue(clause.strip(), i)
             self.assertTrue(clause in corpus, f"{i}: clause not quoted verbatim in the research")

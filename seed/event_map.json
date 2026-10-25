@@ -1,9 +1,10 @@
 {
   "_meta": {
-    "description": "Maps research events (seed/research/events.json) to data/event_types.json types. Every research event whose type is not in the vocabulary is mapped here; a few in-vocabulary events whose research shape contradicts design §5 are remapped too (ev024, ev054, ev067, ev085, ev098). Each research id maps to a list with one entry per effect; the seeder names them evNNNa, evNNNb, ... in list order. An empty list means no structural event (the research event is dropped; the reason is in 'notes').",
+    "description": "Maps research events (seed/research/events.json) to data/event_types.json types. Every research event whose type is not in the vocabulary is mapped here; a few in-vocabulary events whose research shape contradicts design §5 are remapped too (ev024, ev030, ev054, ev067, ev085, ev098). Each research id maps to a list with one entry per effect; the seeder names them evNNNa, evNNNb, ... in list order. An empty list means no structural event (the research event is dropped; the reason is in 'notes').",
     "keys": "before/after use research keys. Excluded or held-out keys may appear; the seeder strips them and drops any entry left with empty before and after. Entries are written in the validator's shape: same-effect types list identical before and after; an absorption lists the absorber in both before and after.",
     "unmapped_events": "Research events not listed here keep their research type and shape. Note for the seeder: the research writes absorption as before=[absorbed], after=[absorber] and competence-transfer/attachment as before=[from], after=[to]; validator R4 needs the absorber in before too and identical before/after for same-effect types.",
-    "clauses": "seed/clauses.json is keyed by research id; for an expanded event the clause belongs to its first entry (ev024 -> the split)."
+    "clauses": "seed/clauses.json is keyed by research id; for an expanded event the clause belongs to the entry named in clauses.json _notes, otherwise to the first entry (ev024 -> ev024c, the suppression).",
+    "provenance": "An entry may carry optional source_type and verified; they override the research event's provenance for that entry and may only downgrade it, never upgrade (tested). ev005's expansions are secondary/unverified because the list of the fifteen is secondary."
   },
   "notes": {
     "ev028": "Codex Iuris Canonici 1917 (in force 19 May 1918): no structural effect of its own. Its list of 11 congregations, 3 tribunals and 5 offices restates changes made by other acts with their own events (Seminaria clericorum ev026, Alloquentes proxime ev027, Dei providentis ev030). Its effect is the change of regime, recorded as cic-1917 in data/sections.json.",
@@ -19,7 +20,9 @@
           "rites"
         ],
         "inferred": false,
-        "note": "Immensa aeterni Dei founds the Congregation for Sacred Rites and Ceremonies. The list of the fifteen Sixtine congregations and their titles is secondary (Catholic Encyclopedia); the act was not read; date and count verified from Sapienti consilio's recital."
+        "note": "Immensa aeterni Dei founds the Congregation for Sacred Rites and Ceremonies. The list of the fifteen Sixtine congregations and their titles is secondary (Catholic Encyclopedia); the act was not read; date and count verified from Sapienti consilio's recital.",
+        "source_type": "secondary",
+        "verified": false
       },
       {
         "event_type": "foundation",
@@ -28,7 +31,9 @@
           "consistorial-bishops"
         ],
         "inferred": false,
-        "note": "Immensa founds the Congregation for the Erection of Churches and Consistorial Provisions (secondary list, as above)."
+        "note": "Immensa founds the Congregation for the Erection of Churches and Consistorial Provisions (secondary list, as above).",
+        "source_type": "secondary",
+        "verified": false
       },
       {
         "event_type": "foundation",
@@ -37,7 +42,9 @@
           "bishops-consultations-1588"
         ],
         "inferred": false,
-        "note": "Immensa founds the Congregation for Consultations of Bishops and other Prelates (secondary list, as above). H18: not the ancestor of the Congregation for Bishops."
+        "note": "Immensa founds the Congregation for Consultations of Bishops and other Prelates (secondary list, as above). H18: not the ancestor of the Congregation for Bishops.",
+        "source_type": "secondary",
+        "verified": false
       },
       {
         "event_type": "foundation",
@@ -46,7 +53,9 @@
           "roman-university"
         ],
         "inferred": false,
-        "note": "Immensa founds the Congregation for the University of the Roman Study (secondary list, as above)."
+        "note": "Immensa founds the Congregation for the University of the Roman Study (secondary list, as above).",
+        "source_type": "secondary",
+        "verified": false
       },
       {
         "event_type": "foundation",
@@ -55,7 +64,9 @@
           "signatura-gratiae"
         ],
         "inferred": false,
-        "note": "Immensa lists the Signatura gratiae among its fifteen (secondary). signatura-gratiae is HELD OUT (founding_years.json; identity open, ruling R11): the seeder strips it and drops this entry."
+        "note": "Immensa lists the Signatura gratiae among its fifteen (secondary). signatura-gratiae is HELD OUT (founding_years.json; identity open, ruling R11): the seeder strips it and drops this entry.",
+        "source_type": "secondary",
+        "verified": false
       },
       {
         "event_type": "foundation",
@@ -64,7 +75,9 @@
           "sixtine-temporal-congregations"
         ],
         "inferred": false,
-        "note": "The six temporal congregations (one research placeholder). EXCLUDED in phase 1: the seeder strips the key and drops this entry."
+        "note": "The six temporal congregations (one research placeholder). EXCLUDED in phase 1: the seeder strips the key and drops this entry.",
+        "source_type": "secondary",
+        "verified": false
       }
     ],
     "ev022": [
@@ -121,17 +134,6 @@
     ],
     "ev024": [
       {
-        "event_type": "split",
-        "before": [
-          "bishops-and-regulars"
-        ],
-        "after": [
-          "religious-consecrated-life"
-        ],
-        "inferred": true,
-        "note": "H9: Bishops-and-Regulars is not named as suppressed; it is omitted from Sapienti consilio's closed list ('non alia sint ... quam quae praesenti Constitutione decernuntur') and its religious matters go to the NEW Congregation of Religious. Silent act, hence inferred (design §5 rule 8). The research listed consistorial-bishops among the split's results, but it is an existing body that keeps its key (design §5 rule 5), so it is moved to the next entry."
-      },
-      {
         "event_type": "competence-transfer",
         "before": [
           "bishops-and-regulars",
@@ -142,7 +144,25 @@
           "consistorial-bishops"
         ],
         "inferred": false,
-        "note": "The diocesan matters of Bishops-and-Regulars go to the Consistorial (Sapienti consilio 2° n.3, research ended.note, primary). Research models this as a partial absorption ('only the diocesan-government share'); it is a transfer to a body that keeps its key."
+        "note": "The diocesan matters of Bishops-and-Regulars go to the Consistorial (Sapienti consilio 2° n.3, research ended.note, primary). A transfer to a body that keeps its key. The research's other stated transfer (religious matters to the new Congregation of Religious) is NOT encoded as an event: it would precede that body's foundation and would read as succession, and whether Religious continues the Regulars line is open (H8)."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "religious-consecrated-life"
+        ],
+        "inferred": false,
+        "note": "Sapienti consilio creates the Congregation of Religious as a new congregation (5th; research erected, primary). Recorded as a foundation, not as the product of a split: it is not made a successor of Bishops-and-Regulars (H8 stays an open question)."
+      },
+      {
+        "event_type": "suppression",
+        "before": [
+          "bishops-and-regulars"
+        ],
+        "after": [],
+        "inferred": true,
+        "note": "Suppression by omission, design §5 rule 8 (its worked example, H9): Bishops-and-Regulars is not named as suppressed; it is omitted from Sapienti consilio's closed list ('non alia sint ... quam quae praesenti Constitutione decernuntur'); research ended.how = 'suppressed'. Dated to the constitution's effective date, inferred. The research typed the whole event 'split' with consistorial-bishops and religious-consecrated-life in 'after'."
       }
     ],
     "ev026": [
@@ -599,6 +619,19 @@
       }
     ],
     "ev118": [],
-    "ev120": []
+    "ev120": [],
+    "ev030": [
+      {
+        "event_type": "re-foundation",
+        "before": [
+          "oriental-rites-propaganda"
+        ],
+        "after": [
+          "oriental-churches"
+        ],
+        "inferred": true,
+        "note": "H12, Dei providentis: the old body 'esse desinat' on 30 Nov 1917 and a new congregation is set up 'seorsum' from Propaganda from 1 Dec 1917 — a clean end plus a new foundation. Remapped from the research 'split' (one successor only, the original does not divide). Re-foundation (design §5 rule 6) rather than suppression + foundation, so that the successor link the report traces (§3, Eastern Churches) is kept; the act states the cessation and the new body explicitly, but not a succession, hence inferred. Date note for the seeder: the research event date is 1917-11-30, oriental-churches' erected.date 1917-12-01."
+      }
+    ]
   }
 }

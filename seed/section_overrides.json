@@ -36,16 +36,6 @@
       "note": "Founded 1622. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
     },
     {
-      "body": "state-of-regulars",
-      "regime": "immensa-1588",
-      "section": "not-listed",
-      "in_curia": null,
-      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
-      "source_type": "secondary",
-      "verified": false,
-      "note": "Founded 1652. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
-    },
-    {
       "body": "indulgences-relics",
       "regime": "immensa-1588",
       "section": "not-listed",
@@ -122,8 +112,8 @@
       "in_curia": null,
       "source": "Pius X, Sapienti consilio, 6° n.6, AAS 1 (1909) 7-19; research curia_status: 'Sapienti consilio lists it as a congregation united to Propaganda, not among the 11'",
       "source_type": "primary",
-      "verified": true,
-      "note": "Named only inside Propaganda's article, not among the 11 congregations; the kind default 'congregation' would be wrong. in_curia not stated: null."
+      "verified": false,
+      "note": "Named only inside Propaganda's article, not among the 11 congregations; the kind default 'congregation' would be wrong. in_curia not stated: null. verified: false because the placement rests on the research curia_status text, not on an act read for this task."
     },
     {
       "body": "oriental-churches",
@@ -152,8 +142,8 @@
       "in_curia": false,
       "source": "Paul VI, Regimini Ecclesiae universae, n.133 (research curia_status: 'REU n.133 keeps it donec munus absolvat — attached to, not among, the curial dicasteries')",
       "source_type": "primary",
-      "verified": true,
-      "note": "Kind 'council' would default to Part V. in_curia false is the section's value in data/sections.json, which is itself an editorial reading of the Appendix."
+      "verified": false,
+      "note": "Kind 'council' would default to Part V. in_curia false is the section's value in data/sections.json, which is itself an editorial reading of the Appendix. verified: false because the placement rests on the research curia_status text, not on an act read for this task."
     },
     {
       "body": "laity-council",
@@ -164,6 +154,16 @@
       "source_type": "primary",
       "verified": true,
       "note": "REU Part V names this body. Needed because from 10 Dec 1976 its kind is 'pontifical-council', which has no REU section; the override keeps Part V for the whole REU period."
+    },
+    {
+      "body": "legislative-texts",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Founded 1984 (commission until PB), after REU; Part V does not name it. The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
     },
     {
       "body": "code-interpretation-1917",
@@ -272,8 +272,8 @@
       "in_curia": true,
       "source": "Francis, m.p. Fidelis dispensator et prudens, 24 Feb 2014, n.4 (research curia_status: 'Dicastery of the Roman Curia (FDP n.4)')",
       "source_type": "primary",
-      "verified": true,
-      "note": "Created 2014, not listed by PB; FDP n.4 makes it a dicastery of the Roman Curia."
+      "verified": false,
+      "note": "Created 2014, not listed by PB; FDP n.4 makes it a dicastery of the Roman Curia. verified: false because the placement rests on the research curia_status text, not on an act read for this task."
     },
     {
       "body": "communication-dicastery",
@@ -282,8 +282,8 @@
       "in_curia": true,
       "source": "Francis, m.p. L'attuale contesto comunicativo, 27 Jun 2015 (research curia_status: 'a new Dicastery of the Roman Curia')",
       "source_type": "primary",
-      "verified": true,
-      "note": "Created 2015, not listed by PB; the founding act calls it a new dicastery of the Roman Curia. Covers 2015-2022 (secretariat, then dicastery from 2018)."
+      "verified": false,
+      "note": "Created 2015, not listed by PB; the founding act calls it a new dicastery of the Roman Curia. Covers 2015-2022 (secretariat, then dicastery from 2018). verified: false because the placement rests on the research curia_status text, not on an act read for this task."
     },
     {
       "body": "laity-family-life",

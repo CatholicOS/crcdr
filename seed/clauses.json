@@ -17,5 +17,13 @@
   "ev057": "in locum Sacrae Rituum Congregationis ... duas novas substituimus Congregationes",
   "ev062": "Nova S. Congregatio instituitur",
   "ev064": "Consilium de Laicis in posterum appellabitur Pontificium Consilium pro Laicis",
-  "ev065": "Pontificium Consilium pro Familia conditur, quod Consilio de Familia succedit eique sufficitur; quare hoc iam ilico cessat"
+  "ev065": "Pontificium Consilium pro Familia conditur, quod Consilio de Familia succedit eique sufficitur; quare hoc iam ilico cessat",
+  "_notes": {
+    "convention": "'_notes' is not an event id. A clause containing ' ... ' is an excerpt: the research's own elisions, quoted as given.",
+    "ev024": "Excerpt (closed-list clause of Sapienti consilio). Belongs to the suppression entry ev024c, not to ev024a.",
+    "ev026": "Quoted as the relevant text of Seminaria clericorum (it founds the seminaries congregation); it is NOT confirmation of the inferred rename of Studies (H11).",
+    "ev049": "Excerpt (REU n.75).",
+    "ev051": "Excerpt (REU n.26).",
+    "ev057": "Excerpt (Sacra Rituum Congregatio)."
+  }
 }
