@@ -1,0 +1,604 @@
+{
+  "_meta": {
+    "description": "Maps research events (seed/research/events.json) to data/event_types.json types. Every research event whose type is not in the vocabulary is mapped here; a few in-vocabulary events whose research shape contradicts design §5 are remapped too (ev024, ev054, ev067, ev085, ev098). Each research id maps to a list with one entry per effect; the seeder names them evNNNa, evNNNb, ... in list order. An empty list means no structural event (the research event is dropped; the reason is in 'notes').",
+    "keys": "before/after use research keys. Excluded or held-out keys may appear; the seeder strips them and drops any entry left with empty before and after. Entries are written in the validator's shape: same-effect types list identical before and after; an absorption lists the absorber in both before and after.",
+    "unmapped_events": "Research events not listed here keep their research type and shape. Note for the seeder: the research writes absorption as before=[absorbed], after=[absorber] and competence-transfer/attachment as before=[from], after=[to]; validator R4 needs the absorber in before too and identical before/after for same-effect types.",
+    "clauses": "seed/clauses.json is keyed by research id; for an expanded event the clause belongs to its first entry (ev024 -> the split)."
+  },
+  "notes": {
+    "ev028": "Codex Iuris Canonici 1917 (in force 19 May 1918): no structural effect of its own. Its list of 11 congregations, 3 tribunals and 5 offices restates changes made by other acts with their own events (Seminaria clericorum ev026, Alloquentes proxime ev027, Dei providentis ev030). Its effect is the change of regime, recorded as cic-1917 in data/sections.json.",
+    "ev118": "Praedicate Evangelium as a whole: every structural effect the research found has its own event, so nothing is repeated here (repeating a merger would create a body twice): Minors placed within the DDF ev102, personal prelatures ev103, Evangelization merger ev104, Culture and Education merger ev105, Camera renamed ev106, renames to 'Dicasterium' ev107-ev117 (Almonry ev117). The abolition of PB bodies not provided for (Art. 250 §3) ends no research body without its own event. The change of regime is recorded as praedicate-evangelium-2022 in data/sections.json.",
+    "ev120": "General Regulation of the Roman Curia (signed 23 Nov 2025, known from a news report): no structural change reported, so no event."
+  },
+  "events": {
+    "ev005": [
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "rites"
+        ],
+        "inferred": false,
+        "note": "Immensa aeterni Dei founds the Congregation for Sacred Rites and Ceremonies. The list of the fifteen Sixtine congregations and their titles is secondary (Catholic Encyclopedia); the act was not read; date and count verified from Sapienti consilio's recital."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "consistorial-bishops"
+        ],
+        "inferred": false,
+        "note": "Immensa founds the Congregation for the Erection of Churches and Consistorial Provisions (secondary list, as above)."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "bishops-consultations-1588"
+        ],
+        "inferred": false,
+        "note": "Immensa founds the Congregation for Consultations of Bishops and other Prelates (secondary list, as above). H18: not the ancestor of the Congregation for Bishops."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "roman-university"
+        ],
+        "inferred": false,
+        "note": "Immensa founds the Congregation for the University of the Roman Study (secondary list, as above)."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "signatura-gratiae"
+        ],
+        "inferred": false,
+        "note": "Immensa lists the Signatura gratiae among its fifteen (secondary). signatura-gratiae is HELD OUT (founding_years.json; identity open, ruling R11): the seeder strips it and drops this entry."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "sixtine-temporal-congregations"
+        ],
+        "inferred": false,
+        "note": "The six temporal congregations (one research placeholder). EXCLUDED in phase 1: the seeder strips the key and drops this entry."
+      }
+    ],
+    "ev022": [
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "sacraments-1908"
+        ],
+        "inferred": false,
+        "note": "Sapienti consilio creates the Congregation for the Discipline of the Sacraments (3rd congregation, 'new'); it takes sacramental/matrimonial matters from Council, Rites, Datary and Penitentiary (research erected.note). Other effects of the act have their own research events and are not repeated here: Inquisition renamed (ev021), Bishops-and-Regulars dissolved (ev024), Religious created (ev024), Lauretana united to Council (ev018), Revision of Councils ended (ev019), Visitation suppressed (ev025), Rota revived (ev023), Signatura re-founded (ev020). The Secretariat of Briefs becoming the 3rd part of the Secretariat of State is a placement between two held-out bodies and is omitted."
+      },
+      {
+        "event_type": "rename",
+        "before": [
+          "rites"
+        ],
+        "after": [
+          "rites"
+        ],
+        "inferred": true,
+        "note": "Research names[] change Rites' name at 1908-11-03 ('Congregatio pro sacris ritibus et caeremoniis' -> 'Sacra Congregatio Rituum') citing Sapienti consilio, with no event; the act uses the new name but the research quotes no renaming clause, hence inferred."
+      },
+      {
+        "event_type": "competence-transfer",
+        "before": [
+          "inquisition-holy-office-cdf-ddf",
+          "council-clergy",
+          "consistorial-bishops",
+          "religious-consecrated-life"
+        ],
+        "after": [
+          "inquisition-holy-office-cdf-ddf",
+          "council-clergy",
+          "consistorial-bishops",
+          "religious-consecrated-life"
+        ],
+        "inferred": false,
+        "note": "Holy Office loses ecclesiastical precepts (to Council), the election of bishops (to Consistorial) and dispensation of religious vows (to Religious) (research competence_changes of the Inquisition, primary, verified)."
+      },
+      {
+        "event_type": "competence-transfer",
+        "before": [
+          "rites",
+          "inquisition-holy-office-cdf-ddf"
+        ],
+        "after": [
+          "rites",
+          "inquisition-holy-office-cdf-ddf"
+        ],
+        "inferred": true,
+        "note": "Holy Office gains all matters of indulgences (research competence_changes, primary). The research does not name the losing body; Rites is inferred because it had absorbed the Congregation of Indulgences and Relics in 1904 and 'in 1908 indulgences went to the Holy Office and relics to Rites' (research note on indulgences-relics)."
+      }
+    ],
+    "ev024": [
+      {
+        "event_type": "split",
+        "before": [
+          "bishops-and-regulars"
+        ],
+        "after": [
+          "religious-consecrated-life"
+        ],
+        "inferred": true,
+        "note": "H9: Bishops-and-Regulars is not named as suppressed; it is omitted from Sapienti consilio's closed list ('non alia sint ... quam quae praesenti Constitutione decernuntur') and its religious matters go to the NEW Congregation of Religious. Silent act, hence inferred (design §5 rule 8). The research listed consistorial-bishops among the split's results, but it is an existing body that keeps its key (design §5 rule 5), so it is moved to the next entry."
+      },
+      {
+        "event_type": "competence-transfer",
+        "before": [
+          "bishops-and-regulars",
+          "consistorial-bishops"
+        ],
+        "after": [
+          "bishops-and-regulars",
+          "consistorial-bishops"
+        ],
+        "inferred": false,
+        "note": "The diocesan matters of Bishops-and-Regulars go to the Consistorial (Sapienti consilio 2° n.3, research ended.note, primary). Research models this as a partial absorption ('only the diocesan-government share'); it is a transfer to a body that keeps its key."
+      }
+    ],
+    "ev026": [
+      {
+        "event_type": "rename",
+        "before": [
+          "studies-catholic-education"
+        ],
+        "after": [
+          "studies-catholic-education"
+        ],
+        "inferred": true,
+        "note": "H11, Seminaria clericorum: the act founds a congregation for seminaries ('De Seminariis propria iam esto Sacra Congregatio'), adds the functions of the Congregation of Studies and gives the combined name; it never says Studies is suppressed. Reading A (rename of Studies, kept) vs reading B (new body absorbing Studies) are equally defensible; the research models continuity, so: rename, inferred (brief)."
+      }
+    ],
+    "ev028": [],
+    "ev051": [
+      {
+        "event_type": "rename",
+        "before": [
+          "public-affairs-extraordinary"
+        ],
+        "after": [
+          "public-affairs-extraordinary"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event. Congregation for Extraordinary Ecclesiastical Affairs becomes 'Sacrum Consilium pro Publicis Ecclesiae negotiis' (REU n.26); kind congregation -> council."
+      }
+    ],
+    "ev052": [
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "apsa"
+        ],
+        "inferred": false,
+        "note": "REU creates the Administration of the Patrimony of the Apostolic See (REU n.123; report §2 item 7 'New'). Event date 1968-01-01 (in force); the research erected.date 1967-08-15 is the signing date (see key_map founded_date). Other REU effects have their own research events: renames ev045-ev051, absorption of the Briefs offices ev044, suppression of Datary ev053 and Ceremonial ev054."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "prefecture-economic-affairs"
+        ],
+        "inferred": false,
+        "note": "REU creates the Prefecture for the Economic Affairs of the Holy See (REU n.117). Same date note as APSA."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "papal-household-prefecture"
+        ],
+        "inferred": false,
+        "note": "REU creates the Prefecture of the Apostolic Palace (REU n.125). Same date note as APSA. Ceremonial's non-liturgical ceremonies pass to it (REU n.126; partial, inferred succession in research), recorded in ev054's note, not as an absorption."
+      }
+    ],
+    "ev054": [
+      {
+        "event_type": "suppression",
+        "before": [
+          "ceremonial"
+        ],
+        "after": [],
+        "inferred": true,
+        "note": "Ceremonial is not named in REU (suppression by omission, inferred: design §5 rule 8). The research put papal-household-prefecture in 'after'; a suppression has no 'after' (it ends a body). The non-liturgical ceremonies pass to the Prefecture of the Apostolic Palace (REU n.126) as a partial, inferred succession, kept here as a note only. Ceremonial is HELD OUT, so the seeder strips it and drops this event."
+      }
+    ],
+    "ev064": [
+      {
+        "event_type": "rename",
+        "before": [
+          "laity-council"
+        ],
+        "after": [
+          "laity-council"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event. 1976: rename + permanent status + new internal order in one act (same pattern as CDF 1965, H1); 'in posterum appellabitur' (H17 contrast)."
+      }
+    ],
+    "ev067": [
+      {
+        "event_type": "re-foundation",
+        "before": [
+          "code-interpretation-1917"
+        ],
+        "after": [
+          "legislative-texts"
+        ],
+        "inferred": true,
+        "note": "H15, Recognito Iuris Canonici Codice: the act 'erects' a new commission following Benedict XV's precedent, with no succession clause. Design §5 rule 6 treats succession by imitation as re-foundation (new key, linked as successor). The research typed it 'foundation' with the 1917 commission in 'before'. The end of the 1917 commission is inferred (research ended source_type inferred)."
+      }
+    ],
+    "ev076": [
+      {
+        "event_type": "rename",
+        "before": [
+          "christian-unity"
+        ],
+        "after": [
+          "christian-unity"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev077": [
+      {
+        "event_type": "rename",
+        "before": [
+          "interreligious-dialogue"
+        ],
+        "after": [
+          "interreligious-dialogue"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev078": [
+      {
+        "event_type": "rename",
+        "before": [
+          "non-believers"
+        ],
+        "after": [
+          "non-believers"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev079": [
+      {
+        "event_type": "rename",
+        "before": [
+          "justice-peace"
+        ],
+        "after": [
+          "justice-peace"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev080": [
+      {
+        "event_type": "rename",
+        "before": [
+          "migrants"
+        ],
+        "after": [
+          "migrants"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev081": [
+      {
+        "event_type": "rename",
+        "before": [
+          "health-care"
+        ],
+        "after": [
+          "health-care"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev082": [
+      {
+        "event_type": "rename",
+        "before": [
+          "legislative-texts"
+        ],
+        "after": [
+          "legislative-texts"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev083": [
+      {
+        "event_type": "rename",
+        "before": [
+          "social-communications"
+        ],
+        "after": [
+          "social-communications"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev084": [
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "cultural-heritage-commission"
+        ],
+        "inferred": false,
+        "note": "PB creates the Pontifical Commission for Preserving the Patrimony of Art and History inside the Congregation for the Clergy (PB Arts. 99-104; placement in seed/part_of.json). Other PB effects have their own research events: Worship+Sacraments merger ev072, Council for Public Affairs absorbed by the Secretariat of State ev071, renames ev073-ev083."
+      },
+      {
+        "event_type": "foundation",
+        "before": [],
+        "after": [
+          "papal-liturgical-celebrations"
+        ],
+        "inferred": true,
+        "note": "PB Art. 182 describes the Office for the Liturgical Celebrations of the Supreme Pontiff; its founding by PB is inferred by the research (erected source_type inferred; antecedents not traced)."
+      },
+      {
+        "event_type": "rename",
+        "before": [
+          "propaganda-fide-evangelization"
+        ],
+        "after": [
+          "propaganda-fide-evangelization"
+        ],
+        "inferred": true,
+        "note": "Research names[] change at 1989-03-01 (PB) with no event: 'Sacra Congregatio pro Gentium Evangelizatione seu de Propaganda Fide' -> 'Congregatio pro Gentium Evangelizatione'. 'Sacra' dropped; when 'Sacra' was dropped is not tied to a located act (report §5), hence inferred."
+      },
+      {
+        "event_type": "rename",
+        "before": [
+          "council-clergy"
+        ],
+        "after": [
+          "council-clergy"
+        ],
+        "inferred": true,
+        "note": "Research names[] change at 1989-03-01 (PB) with no event: 'Sacra Congregatio pro Clericis' -> 'Congregatio pro Clericis' ('Sacra' dropped; inferred as above)."
+      },
+      {
+        "event_type": "rename",
+        "before": [
+          "consistorial-bishops"
+        ],
+        "after": [
+          "consistorial-bishops"
+        ],
+        "inferred": true,
+        "note": "Research names[] change at 1989-03-01 (PB) with no event: 'Sacra Congregatio pro Episcopis' -> 'Congregatio pro Episcopis' ('Sacra' dropped; inferred as above)."
+      },
+      {
+        "event_type": "rename",
+        "before": [
+          "culture-council"
+        ],
+        "after": [
+          "culture-council"
+        ],
+        "inferred": true,
+        "note": "Research names[] change at 1989-03-01 (PB) with no event: 'Pontificium Consilium pro hominum Cultura' -> 'Pontificium Consilium de Cultura' (PB form); no renaming clause quoted, hence inferred."
+      },
+      {
+        "event_type": "rename",
+        "before": [
+          "roman-rota"
+        ],
+        "after": [
+          "roman-rota"
+        ],
+        "inferred": true,
+        "note": "Research names[] change at 1989-03-01 (PB) with no event: 'Sacra Romana Rota' -> 'Tribunal Rotae Romanae' (PB heading); no renaming clause quoted, hence inferred."
+      }
+    ],
+    "ev085": [
+      {
+        "event_type": "absorption",
+        "before": [
+          "non-believers",
+          "culture-council"
+        ],
+        "after": [
+          "culture-council"
+        ],
+        "inferred": false,
+        "note": "H5, Inde a Pontificatus: 'a single entity that will be called the Pontifical Council for Culture'. The research typed it 'merger', but the result keeps the Council for Culture's name and the research keeps culture-council as one continuous body; design §5 rule 3 cites H5 as an absorption (the absorbing body keeps its key, the absorbed one ends)."
+      }
+    ],
+    "ev086": [
+      {
+        "event_type": "rename",
+        "before": [
+          "cultural-heritage-commission"
+        ],
+        "after": [
+          "cultural-heritage-commission"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event. Also detached from the Congregation for the Clergy and made autonomous: the within placement ends here (seed/part_of.json)."
+      }
+    ],
+    "ev098": [
+      {
+        "event_type": "suppression",
+        "before": [
+          "prefecture-economic-affairs"
+        ],
+        "after": [],
+        "inferred": false,
+        "note": "Research: suppressed 30 Dec 2016 (Wikipedia only; act not identified). The research put secretariat-economy in 'after', but calls it a 'functional, not formal, successor'; a suppression has no 'after'. The functional succession is kept as this note."
+      }
+    ],
+    "ev107": [
+      {
+        "event_type": "rename",
+        "before": [
+          "inquisition-holy-office-cdf-ddf"
+        ],
+        "after": [
+          "inquisition-holy-office-cdf-ddf"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev108": [
+      {
+        "event_type": "rename",
+        "before": [
+          "oriental-churches"
+        ],
+        "after": [
+          "oriental-churches"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev109": [
+      {
+        "event_type": "rename",
+        "before": [
+          "divine-worship-sacraments-1988"
+        ],
+        "after": [
+          "divine-worship-sacraments-1988"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev110": [
+      {
+        "event_type": "rename",
+        "before": [
+          "causes-of-saints"
+        ],
+        "after": [
+          "causes-of-saints"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev111": [
+      {
+        "event_type": "rename",
+        "before": [
+          "consistorial-bishops"
+        ],
+        "after": [
+          "consistorial-bishops"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev112": [
+      {
+        "event_type": "rename",
+        "before": [
+          "council-clergy"
+        ],
+        "after": [
+          "council-clergy"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev113": [
+      {
+        "event_type": "rename",
+        "before": [
+          "religious-consecrated-life"
+        ],
+        "after": [
+          "religious-consecrated-life"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev114": [
+      {
+        "event_type": "rename",
+        "before": [
+          "christian-unity"
+        ],
+        "after": [
+          "christian-unity"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev115": [
+      {
+        "event_type": "rename",
+        "before": [
+          "interreligious-dialogue"
+        ],
+        "after": [
+          "interreligious-dialogue"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev116": [
+      {
+        "event_type": "rename",
+        "before": [
+          "legislative-texts"
+        ],
+        "after": [
+          "legislative-texts"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event."
+      }
+    ],
+    "ev117": [
+      {
+        "event_type": "rename",
+        "before": [
+          "papal-almonry-charity"
+        ],
+        "after": [
+          "papal-almonry-charity"
+        ],
+        "inferred": false,
+        "note": "Research type 'rename+kind-change' mapped to 'rename' (brief); the kind change is carried by the body's dated kind list, not by the event. Almonry is held out in phase 1; the seeder drops this event."
+      }
+    ],
+    "ev118": [],
+    "ev120": []
+  }
+}

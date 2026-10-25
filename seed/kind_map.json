@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "description": "Maps research kind strings (seed/research/bodies.json kind[].kind) to data/kinds.json ids. Parenthetical qualifiers map to the base kind.",
+    "by_body": "When a research key is present in by_body, its list REPLACES that body's research kind[] list: each item runs from its 'from' to the next item's 'from'; the last runs to the research's last 'to'. Provenance: an item whose 'from' equals a research kind entry's 'from' carries that entry's basis/verified; an item that splits a research entry at a new date is an editorial split (source_type 'inferred', verified false). Used for strings that are ambiguous and where the Latin term of the act differs from the research's English kind label (design §6.3: the Latin term governs, H3)."
+  },
+  "by_string": {
+    "congregation": "congregation",
+    "congregation (attached section)": "congregation",
+    "dicastery": "dicastery",
+    "commission": "commission",
+    "commission (attached)": "commission",
+    "commission (inside a congregation)": "commission",
+    "commission (part of a council)": "commission",
+    "pontifical council": "pontifical-council",
+    "council": "council",
+    "council (experimental)": "council",
+    "council (separate from the Secretariat of State)": "council",
+    "committee": "committee",
+    "secretariat": "secretariat",
+    "secretariat (conciliar, preparatory)": "secretariat",
+    "secretariat (curial)": "secretariat",
+    "secretariat (dicastery)": "secretariat",
+    "secretariat (curial institution, not a dicastery)": "secretariat",
+    "office": "office",
+    "office (papal household)": "office",
+    "tribunal": "tribunal",
+    "institution adhering to the Holy See": "institution",
+    "institution associated with the Holy See": "institution"
+  },
+  "by_body": {
+    "signatura-gratiae": [
+      {
+        "from": null,
+        "kind": "tribunal",
+        "research_kind": "congregation / tribunal",
+        "note": "Ambiguous string. The act that ends it calls them 'tribunalia Signaturae papalis gratiae et iustitiae' (Sapienti consilio, research ended.note), so the Latin governs: tribunal. Immensa (not read) counts the Signatura gratiae among its congregations. Body is held out in phase 1; the seeder drops it."
+      }
+    ],
+    "liturgy-consilium": [
+      {
+        "from": "1964",
+        "kind": "council",
+        "research_kind": "commission",
+        "note": "Latin name 'Consilium ad exsequendam Constitutionem de Sacra Liturgia': the act's term is Consilium, which kinds.json maps to 'council' (a Consilium not yet pontifical); 'Commission' is an English rendering (H3). The Latin name is secondary (research verified: false)."
+      }
+    ],
+    "family-committee": [
+      {
+        "from": "1973-01-11",
+        "kind": "council",
+        "research_kind": "committee",
+        "note": "Familia a Deo instituta (1981, primary, read) calls it 'Consilium de Familia'; 'Comitatus pro Familia' is the research's secondary variant. The Latin of the act read governs: council. Founding act not read; flag for review."
+      }
+    ],
+    "social-communications": [
+      {
+        "from": "1948",
+        "kind": "commission",
+        "research_kind": "commission",
+        "note": "1948 body: English 'Pontifical Commission for didactic and religious cinema'; no Latin name known. Research kind kept."
+      },
+      {
+        "from": "1959-02-22",
+        "kind": "pontifical-council",
+        "research_kind": "commission",
+        "note": "Editorial split (H3). From Boni Pastoris (22 Feb 1959, research event ev034, date secondary) the body is 'Pontificium Consilium (de re cinematographica, radiophonica ac televisifica)' (research name, source_type primary, unverified), and In fructibus multis (1964, primary, read) refers to it as 'commemorati Consilii' and renames it 'Pontificium Consilium instrumentis communicationis socialis praepositum'. The Latin term governs (design §6.3); 'Commission' is English usage (research name note)."
+      },
+      {
+        "from": "1989-03-01",
+        "kind": "pontifical-council",
+        "research_kind": "pontifical council",
+        "note": "Research kind entry (PB)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "description": "Dated part-of placements (design §6.4, H16) found in the research, between bodies kept in phase 1. A placement never changes identity. Placements involving an excluded or held-out body are omitted (listed in .superpowers/sdd/2026-10-25-crcdr-phase1/task-5-report.md).",
+    "dates": "'from' inclusive, 'to' exclusive, null = still open. Where an end is not stated by an act, 'to' is the date the body's status changed in the research (noted per entry)."
+  },
+  "entries": [
+    {
+      "body": "oriental-rites-propaganda",
+      "relation": "section-of",
+      "target": "propaganda-fide-evangelization",
+      "from": "1862-01-06",
+      "to": "1917-11-30",
+      "source": "Pius X, ap. const. Sapienti consilio, 6° n.6, AAS 1 (1909): 'Unitam habet Congregationem pro Negotiis rituum orientalium'; name 'S. Congregatio de Propaganda Fide pro negotiis ritus orientalis' per Benedict XV, m.p. Dei providentis, AAS 9-I (1917) 529-531",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "The union with Propaganda is verified in Sapienti consilio (primary) for 1908; that it held from the founding date (1862-01-06, itself secondary) is the research's 'attached section' reading. Ends with the body (30 Nov 1917, Dei providentis)."
+    },
+    {
+      "body": "migrants",
+      "relation": "subject-to",
+      "target": "consistorial-bishops",
+      "from": "1970-03-19",
+      "to": "1989-03-01",
+      "source": "Paul VI, m.p. Apostolicae caritatis, 19 Mar 1970, AAS 62 (1970) 193ff: 'Sacrae Congregationi pro Episcopis obnoxiam'",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Its president is the Prefect of Bishops. End = PB's entry into force, when it became a Pontifical Council (research curia_status '1970-1988'); no act read states the end of the subjection."
+    },
+    {
+      "body": "health-care",
+      "relation": "complement-of",
+      "target": "laity-council",
+      "from": "1985-02-11",
+      "to": "1989-03-01",
+      "source": "John Paul II, m.p. Dolentium hominum, 11 Feb 1985, AAS 77 (1985) 457ff: 'Consociari hanc Commissionem ... cum Pontificio Consilio pro Laicis, cuius complens sit ipsa pars'",
+      "source_type": "primary",
+      "verified": true,
+      "note": "End = PB's entry into force, when it became a Pontifical Council (research curia_status '1985-1988'); no act read states the end."
+    },
+    {
+      "body": "cultural-heritage-commission",
+      "relation": "within",
+      "target": "council-clergy",
+      "from": "1989-03-01",
+      "to": "1993-03-25",
+      "source": "John Paul II, ap. const. Pastor bonus, Arts. 99-104 (placement); John Paul II, m.p. Inde a Pontificatus, 25 Mar 1993 (detached, made autonomous, renamed)",
+      "source_type": "primary",
+      "verified": true,
+      "note": "H16: placed inside the Congregation for the Clergy by PB."
+    },
+    {
+      "body": "family-committee",
+      "relation": "within",
+      "target": "laity-council",
+      "from": "1973-01-11",
+      "to": "1981-05-09",
+      "source": "Research curia_status: 'Committee/Council for the Family within the Laity council (1973); not a separate dicastery' (founding act not read; secondary); end per John Paul II, m.p. Familia a Deo instituta, 9 May 1981, AAS 73 (1981) 441-445",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Not in the H16 list, but stated by the research. Ends with the body (1981)."
+    },
+    {
+      "body": "latin-america-commission",
+      "relation": "within",
+      "target": "consistorial-bishops",
+      "from": "1989-03-01",
+      "to": null,
+      "source": "John Paul II, ap. const. Pastor bonus, Arts. 83-84 (research curia_status: 'attached to the Congregation/Dicastery for Bishops')",
+      "source_type": "primary",
+      "verified": true,
+      "note": "The research says 'attached'; 'within' is chosen editorially because PB treats the Commission inside the Congregation's own articles, as it does Cultural Heritage inside Clergy. Placement before PB (1958-1989) not traced, so 'from' is PB's entry into force; continues under PE (research: 'Congregation/Dicastery')."
+    },
+    {
+      "body": "protection-minors-commission",
+      "relation": "within",
+      "target": "inquisition-holy-office-cdf-ddf",
+      "from": "2022-06-05",
+      "to": null,
+      "source": "Francis, ap. const. Praedicate Evangelium, Art. 78 §1, in force 5 Jun 2022",
+      "source_type": "primary",
+      "verified": true,
+      "note": "H16: 'established within' the DDF. Research event ev102 types this as an attachment."
+    }
+  ]
+}
