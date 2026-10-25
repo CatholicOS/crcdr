@@ -151,10 +151,10 @@ def _r3(bodies, vocab, rep):
                 rep.add(3, i, f"{label} extends past the next regime's effective date", g)
             if e.get("section") == "not-listed":
                 if "in_curia" not in e:
-                    rep.add(3, i, f"{label} not-listed entry lacks in_curia", g)
+                    rep.add(3, i, f"{label} not-listed entry lacks in_curia")
                 elif e["in_curia"] is None:
-                    rep.add(3, i, f"{label} in_curia is null", g) if g else \
-                        rep.add(3, i, f"{label} in_curia is null without a gap note")
+                    msg = f"{label} in_curia is null" + ("" if g else " without a gap note")
+                    rep.add(3, i, msg, g)
                 elif not isinstance(e["in_curia"], bool):
                     rep.add(3, i, f"{label} in_curia must be true/false", g)
 
@@ -166,7 +166,7 @@ def _r4(bodies, events, vocab, rep):
     effects = {t["id"]: t["effect"] for t in vocab["event_types"]["entries"]}
     seen = set()
     known = {e.get("id") for e in events.get("entries", [])}
-    _links_to = lambda fact, eid: _links(fact, eid, known)  # noqa: E731
+    _links_to = lambda fact, eid, created=False: _links(fact, eid, known, created)  # noqa: E731
     for ev in events.get("entries", []):
         i = ev.get("id")
         if i in seen:
@@ -185,7 +185,7 @@ def _r4(bodies, events, vocab, rep):
                 rep.add(4, i, f"{ev['event_type']} needs identical, non-empty before and after")
         elif eff == "new":
             for x in sorted(sa - sb):
-                if _links_to(idx[x].get("founded"), i) is False:
+                if _links_to(idx[x].get("founded"), i, created=True) is False:
                     rep.add(4, i, f"{x} is created but its founded.event is not {i}")
             if ev["event_type"] in ("merger", "split"):
                 for x in sorted(sb - sa):
@@ -210,13 +210,14 @@ def _r4(bodies, events, vocab, rep):
                     rep.add(4, i, f"{x} is suppressed but its ended.event is not {i}")
 
 
-def _links(fact, event_id, known):
+def _links(fact, event_id, known, created=False):
     """True/False if fact names an event; None when R5 owns the problem."""
     if not fact:
         return False if fact is None else None
     ev = fact.get("event")
     if ev is None:
-        return None if fact.get("basis") == "attested" else False
+        # attested-null is exempt only when no event claims to create the body
+        return None if fact.get("basis") == "attested" and not created else False
     if ev not in known:
         return None
     return ev == event_id

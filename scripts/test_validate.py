@@ -100,6 +100,20 @@ class ValidateTests(unittest.TestCase):
             body["section"][0]["gap"] = "unknown"
         self.assertEqual(counts(run(g)), (0, 1))
 
+    def test_missing_in_curia_with_gap_still_error(self):
+        def m(body, *_):
+            del body["section"][0]["in_curia"]
+            body["section"][0]["gap"] = "unknown"
+        self.assertEqual(counts(run(m)), (1, 0))
+
+    def test_attested_null_but_created_by_event(self):
+        def m(body, *_):
+            body["founded"]["event"] = None
+            body["founded"]["basis"] = "attested"
+        r = run(m)
+        self.assertEqual(counts(r), (1, 0), r.errors)
+        self.assertIn("[R4] ev001", r.errors[0])
+
     def test_rename_before_equals_after(self):
         def m(body, _b, ev, doc):
             ev[1]["after"] = []
