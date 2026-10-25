@@ -1,0 +1,1960 @@
+{
+  "_meta": {
+    "warning": "All keys are PROVISIONAL working keys for research only, not identifiers. 'verified': true = checked against the text of the act (AAS PDF or vatican.va page). source_type: primary = act text read; official-secondary = vatican.va/press office summary or search extract of the act; secondary = encyclopedias, Wikipedia, GCatholic, BnF, news; inferred = deduced from the structure of an act that does not state it.",
+    "generated": "2026-10-25"
+  },
+  "events": [
+    {
+      "id": "ev001",
+      "date": "1542-07-21",
+      "date_precision": "day",
+      "act": "Paul III, Licet ab initio",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-57-1965-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Date as recited in Integrae servandae."
+    },
+    {
+      "id": "ev002",
+      "date": "1564-08-02",
+      "date_precision": "day",
+      "act": "Pius IV, motu proprio (Congregation of the Council)",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "council-clergy"
+      ],
+      "source": "https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev003",
+      "date": "1571",
+      "date_precision": "year",
+      "act": "Pius V (Index)",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "index"
+      ],
+      "source": "https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev004",
+      "date": "1586-05-17",
+      "date_precision": "day",
+      "act": "Sixtus V, brief (Regulars)",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "regulars-consultations-1586"
+      ],
+      "source": "https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev005",
+      "date": "1588-01-22",
+      "date_precision": "day",
+      "act": "Sixtus V, bull Immensa aeterni Dei, 22 Jan 1588 (dated 'xxii Ianuarii MDLXXXVII' in the Florentine/Incarnation style, as cited by Sapienti consilio)",
+      "event_type": "reorganization",
+      "bodies_before": [],
+      "bodies_after": [
+        "rites",
+        "consistorial-bishops",
+        "bishops-consultations-1588",
+        "roman-university",
+        "sixtine-temporal-congregations",
+        "signatura-gratiae"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Date and 'fifteen congregations' verified from Sapienti consilio's recital ('die xxii mensis Ianuarii an. MDLXXXVII ... Congregationes constituit quindecim'); the list of the fifteen and their Latin titles are secondary (CE). Also confirmed existing bodies (Inquisition, Index, Council, Regulars)."
+    },
+    {
+      "id": "ev006",
+      "date": "1601",
+      "date_precision": "year",
+      "act": "Clement VIII",
+      "event_type": "merger",
+      "bodies_before": [
+        "bishops-consultations-1588",
+        "regulars-consultations-1586"
+      ],
+      "bodies_after": [
+        "bishops-and-regulars"
+      ],
+      "source": "https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev007",
+      "date": "1622-06-22",
+      "date_precision": "day",
+      "act": "Gregory XV, Inscrutabili divinae",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "propaganda-fide-evangelization"
+      ],
+      "source": "https://www.vatican.va/roman_curia/congregations/cevang/documents/rc_con_cevang_20100524_profile_sp.html",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev008",
+      "date": "1652-08-15",
+      "date_precision": "day",
+      "act": "Innocent X",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "state-of-regulars"
+      ],
+      "source": "https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev009",
+      "date": "1669",
+      "date_precision": "year",
+      "act": "Clement IX",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "indulgences-relics"
+      ],
+      "source": null,
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev010",
+      "date": "1695-07-18",
+      "date_precision": "day",
+      "act": "Innocent XII",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "discipline-of-regulars"
+      ],
+      "source": "https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev011",
+      "date": "1698",
+      "date_precision": "year",
+      "act": "Innocent XII",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "lauretana"
+      ],
+      "source": "https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev012",
+      "date": "1793",
+      "date_precision": "year",
+      "act": "Pius VI",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "public-affairs-extraordinary"
+      ],
+      "source": "https://www.newadvent.org/cathen/13136a.htm",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Lapsed 1809, re-established 1814, renamed 1805 and 1827 (CE)."
+    },
+    {
+      "id": "ev013",
+      "date": "1824-08-28",
+      "date_precision": "day",
+      "act": "Leo XII, Quod divina sapientia",
+      "event_type": "re-foundation",
+      "bodies_before": [
+        "roman-university"
+      ],
+      "bodies_after": [
+        "studies-catholic-education"
+      ],
+      "source": null,
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev014",
+      "date": "1862-01-06",
+      "date_precision": "day",
+      "act": "Pius IX, Romani Pontifices",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "oriental-rites-propaganda"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founding by Pius IX verified in Dei providentis; date secondary."
+    },
+    {
+      "id": "ev015",
+      "date": "1903-12-17",
+      "date_precision": "day",
+      "act": "Pius X, Romanis Pontificibus",
+      "event_type": "competence-transfer",
+      "bodies_before": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "bodies_after": [
+        "consistorial-bishops"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Cited in Sapienti consilio's preamble; content (nomination of bishops) per CE."
+    },
+    {
+      "id": "ev016",
+      "date": "1904-01-28",
+      "date_precision": "day",
+      "act": "Pius X, Quae in Ecclesiae bonum",
+      "event_type": "absorption",
+      "bodies_before": [
+        "indulgences-relics"
+      ],
+      "bodies_after": [
+        "rites"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Act cited in Sapienti consilio; effect secondary."
+    },
+    {
+      "id": "ev017",
+      "date": "1906-05-26",
+      "date_precision": "day",
+      "act": "Pius X, Sacrae Congregationi super negotiis",
+      "event_type": "absorption",
+      "bodies_before": [
+        "discipline-of-regulars",
+        "state-of-regulars"
+      ],
+      "bodies_after": [
+        "bishops-and-regulars"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Act cited in Sapienti consilio; effect per CE."
+    },
+    {
+      "id": "ev018",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "event_type": "absorption",
+      "bodies_before": [
+        "lauretana"
+      ],
+      "bodies_after": [
+        "council-clergy"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev019",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "event_type": "absorption",
+      "bodies_before": [
+        "revision-of-councils"
+      ],
+      "bodies_after": [
+        "council-clergy"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev020",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "event_type": "re-foundation",
+      "bodies_before": [
+        "signatura-gratiae"
+      ],
+      "bodies_after": [
+        "apostolic-signatura"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "'restituimus, seu melius instituimus'."
+    },
+    {
+      "id": "ev021",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "event_type": "rename",
+      "bodies_before": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "bodies_after": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev022",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "event_type": "reorganization",
+      "bodies_before": [
+        "bishops-and-regulars",
+        "revision-of-councils",
+        "lauretana",
+        "apostolic-visitation-urbis",
+        "signatura-gratiae"
+      ],
+      "bodies_after": [
+        "sacraments-1908",
+        "religious-consecrated-life",
+        "apostolic-signatura"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Closed list of 11 congregations, 3 tribunals, 5 offices from 3 Nov 1908. Rename Inquisition -> Holy Office; Bishops-and-Regulars dissolved (diocesan matters to Consistorial, religious to new Congregation of Religious); Sacraments created; Lauretana united to Council; Visitation and Revision of Councils suppressed; Rota revived; Signatura refounded; Secretariat of Briefs becomes 3rd part of the Secretariat of State."
+    },
+    {
+      "id": "ev023",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "event_type": "revival",
+      "bodies_before": [
+        "roman-rota"
+      ],
+      "bodies_after": [
+        "roman-rota"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "'rursus in exercitium revocamus'."
+    },
+    {
+      "id": "ev024",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "event_type": "split",
+      "bodies_before": [
+        "bishops-and-regulars"
+      ],
+      "bodies_after": [
+        "religious-consecrated-life",
+        "consistorial-bishops"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Implicit: B&R omitted from the closed list, its matters distributed."
+    },
+    {
+      "id": "ev025",
+      "date": "1908-11-03",
+      "date_precision": "day",
+      "act": "Pius X, ap. const. Sapienti consilio, 29 Jun 1908, in force 3 Nov 1908, AAS 1 (1909) 7-19",
+      "event_type": "suppression",
+      "bodies_before": [
+        "apostolic-visitation-urbis"
+      ],
+      "bodies_after": [],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-01-1909-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev026",
+      "date": "1915-11-04",
+      "date_precision": "day",
+      "act": "Benedict XV, m.p. Seminaria clericorum, 4 Nov 1915, AAS 7 (1915) 493-495",
+      "event_type": "merger-or-rename",
+      "bodies_before": [
+        "studies-catholic-education"
+      ],
+      "bodies_after": [
+        "studies-catholic-education"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-07-1915-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "New congregation for seminaries (from the Consistorial) to which the functions of the Congregation of Studies are added; combined name. Modelled as continuity of Studies — see hard cases."
+    },
+    {
+      "id": "ev027",
+      "date": "1917-03-25",
+      "date_precision": "day",
+      "act": "Benedict XV, m.p. Alloquentes proxime, 25 Mar 1917, AAS 9-I (1917) 167",
+      "event_type": "absorption",
+      "bodies_before": [
+        "index"
+      ],
+      "bodies_after": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Also indulgences: Holy Office -> Penitentiary."
+    },
+    {
+      "id": "ev028",
+      "date": "1917-05-27",
+      "date_precision": "day",
+      "act": "Codex Iuris Canonici 1917 (promulgated 27 May 1917, in force 19 May 1918), cann. 242-264",
+      "event_type": "codification",
+      "bodies_before": [],
+      "bodies_after": [],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-09-II-1917-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Lists 11 congregations (Index gone; Seminaries and Universities and the Oriental Church added), 3 tribunals, 5 offices. Oriental Church listed before it formally began (1 Dec 1917)."
+    },
+    {
+      "id": "ev029",
+      "date": "1917-09-15",
+      "date_precision": "day",
+      "act": "Benedict XV, m.p. Cum iuris canonici Codicem, 15 Sep 1917 (AAS 9-I index)",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "code-interpretation-1917"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev030",
+      "date": "1917-11-30",
+      "date_precision": "day",
+      "act": "Benedict XV, m.p. Dei providentis, 1 May 1917, AAS 9-I (1917) 529-531",
+      "event_type": "split",
+      "bodies_before": [
+        "oriental-rites-propaganda"
+      ],
+      "bodies_after": [
+        "oriental-churches"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-09-I-1917-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Old body ceases 30 Nov; new congregation from 1 Dec 1917."
+    },
+    {
+      "id": "ev031",
+      "date": "1930-02-06",
+      "date_precision": "day",
+      "act": "Pius XI, m.p. Già da qualche tempo",
+      "event_type": "competence-transfer",
+      "bodies_before": [
+        "rites"
+      ],
+      "bodies_after": [
+        "rites"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-22-1930-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Historical section created."
+    },
+    {
+      "id": "ev032",
+      "date": "1938-03-25",
+      "date_precision": "day",
+      "act": "Pius XI, m.p. Sancta Dei Ecclesia",
+      "event_type": "competence-transfer",
+      "bodies_before": [
+        "propaganda-fide-evangelization"
+      ],
+      "bodies_after": [
+        "oriental-churches"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-30-1938-ocr.pdf",
+      "source_type": "primary",
+      "verified": false,
+      "note": "Title/date verified from AAS index; territorial content not read."
+    },
+    {
+      "id": "ev033",
+      "date": "1958-04-19",
+      "date_precision": "day",
+      "act": "Pius XII",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "latin-america-commission"
+      ],
+      "source": null,
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev034",
+      "date": "1959-02-22",
+      "date_precision": "day",
+      "act": "John XXIII, Boni Pastoris",
+      "event_type": "kind-change",
+      "bodies_before": [
+        "social-communications"
+      ],
+      "bodies_after": [
+        "social-communications"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-56-1964-ocr.pdf",
+      "source_type": "primary",
+      "verified": false,
+      "note": "Made permanent; date secondary."
+    },
+    {
+      "id": "ev035",
+      "date": "1960-06-05",
+      "date_precision": "day",
+      "act": "John XXIII, m.p. Superno Dei nutu, 5 Jun 1960, AAS 52 (1960) 433-437 (n. 9)",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "christian-unity"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-52-1960-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev036",
+      "date": "1963-03-28",
+      "date_precision": "day",
+      "act": "John XXIII",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "code-revision-1963"
+      ],
+      "source": null,
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev037",
+      "date": "1964",
+      "date_precision": "year",
+      "act": "Paul VI, Sacram Liturgiam",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "liturgy-consilium"
+      ],
+      "source": null,
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev038",
+      "date": "1964-04-02",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. In fructibus multis, 2 Apr 1964, AAS 56 (1964) 289-292",
+      "event_type": "rename",
+      "bodies_before": [
+        "social-communications"
+      ],
+      "bodies_after": [
+        "social-communications"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-56-1964-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Rename with enlarged competences ('mutato nomine et munerum provincia amplificata')."
+    },
+    {
+      "id": "ev039",
+      "date": "1964-05-19",
+      "date_precision": "day",
+      "act": "Paul VI, ap. letter Progrediente Concilio, 19 May 1964, AAS 56 (1964) 560",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "interreligious-dialogue"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-56-1964-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev040",
+      "date": "1965-04-09",
+      "date_precision": "day",
+      "act": "Paul VI",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "non-believers"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-58-1966-ocr.pdf",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founder verified (Finis Concilio); date secondary."
+    },
+    {
+      "id": "ev041",
+      "date": "1965-12-07",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. Integrae servandae, 7 Dec 1965, AAS 57 (1965) 952-955",
+      "event_type": "rename",
+      "bodies_before": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "bodies_after": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-57-1965-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Name and 'ordo' changed."
+    },
+    {
+      "id": "ev042",
+      "date": "1966-01-03",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. Finis Concilio, 3 Jan 1966, AAS 58 (1966) 37-40 (n. 11)",
+      "event_type": "kind-change",
+      "bodies_before": [
+        "christian-unity"
+      ],
+      "bodies_after": [
+        "christian-unity"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-58-1966-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Secretariat confirmed beyond the Council."
+    },
+    {
+      "id": "ev043",
+      "date": "1967-01-06",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. Catholicam Christi Ecclesiam, 6 Jan 1967, AAS 59 (1967) 25-28",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "laity-council",
+        "justice-peace"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-59-1967-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Both ad experimentum for five years."
+    },
+    {
+      "id": "ev044",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "absorption",
+      "bodies_before": [
+        "apostolic-briefs-secretariat",
+        "briefs-to-princes"
+      ],
+      "bodies_after": [
+        "secretariat-of-state"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-65-1973-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "As stated retrospectively by Quo aptius."
+    },
+    {
+      "id": "ev045",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "rename",
+      "bodies_before": [
+        "consistorial-bishops"
+      ],
+      "bodies_after": [
+        "consistorial-bishops"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev046",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "rename",
+      "bodies_before": [
+        "council-clergy"
+      ],
+      "bodies_after": [
+        "council-clergy"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev047",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "rename",
+      "bodies_before": [
+        "oriental-churches"
+      ],
+      "bodies_after": [
+        "oriental-churches"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev048",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "rename",
+      "bodies_before": [
+        "religious-consecrated-life"
+      ],
+      "bodies_after": [
+        "religious-consecrated-life"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev049",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "rename",
+      "bodies_before": [
+        "studies-catholic-education"
+      ],
+      "bodies_after": [
+        "studies-catholic-education"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev050",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "rename",
+      "bodies_before": [
+        "propaganda-fide-evangelization"
+      ],
+      "bodies_after": [
+        "propaganda-fide-evangelization"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev051",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "public-affairs-extraordinary"
+      ],
+      "bodies_after": [
+        "public-affairs-extraordinary"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Congregation becomes 'Sacrum Consilium'."
+    },
+    {
+      "id": "ev052",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "reorganization",
+      "bodies_before": [
+        "apostolic-datary",
+        "ceremonial",
+        "apostolic-briefs-secretariat",
+        "briefs-to-princes"
+      ],
+      "bodies_after": [
+        "apsa",
+        "prefecture-economic-affairs",
+        "papal-household-prefecture"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Signed 15 Aug 1967, in force 1 Jan 1968. Renames: Consistorial->pro Episcopis; Council->pro Clericis; Oriental Church->Oriental Churches; Religious->+Secular Institutes; Seminaries&Universities->Catholic Education; Propaganda->Evangelization of Peoples; Extraordinary Affairs->Council for Public Affairs. Datary and Ceremonial not named (implicitly suppressed)."
+    },
+    {
+      "id": "ev053",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "suppression",
+      "bodies_before": [
+        "apostolic-datary"
+      ],
+      "bodies_after": [],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Not named in REU."
+    },
+    {
+      "id": "ev054",
+      "date": "1968-01-01",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928, in force 1 Jan 1968",
+      "event_type": "suppression",
+      "bodies_before": [
+        "ceremonial"
+      ],
+      "bodies_after": [
+        "papal-household-prefecture"
+      ],
+      "source": "https://www.vatican.va/content/paul-vi/la/apost_constitutions/documents/hf_p-vi_apc_19670815_regimini-ecclesiae-universae.html",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Not named in REU."
+    },
+    {
+      "id": "ev055",
+      "date": "1968-03-28",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. Pontificalis Domus, 28 Mar 1968, AAS 60 (1968)",
+      "event_type": "rename",
+      "bodies_before": [
+        "papal-almonry-charity"
+      ],
+      "bodies_after": [
+        "papal-almonry-charity"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-60-1968-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Office-holder renamed Eleemosynarius Sanctitatis Suae."
+    },
+    {
+      "id": "ev056",
+      "date": "1969-05-08",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Sacra Rituum Congregatio, 8 May 1969, AAS 61 (1969) 297-305",
+      "event_type": "absorption",
+      "bodies_before": [
+        "liturgy-consilium"
+      ],
+      "bodies_after": [
+        "divine-worship-1969"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-61-1969-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev057",
+      "date": "1969-05-08",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Sacra Rituum Congregatio, 8 May 1969, AAS 61 (1969) 297-305",
+      "event_type": "split",
+      "bodies_before": [
+        "rites"
+      ],
+      "bodies_after": [
+        "divine-worship-1969",
+        "causes-of-saints"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-61-1969-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "'in locum ... duas novas substituimus Congregationes'."
+    },
+    {
+      "id": "ev058",
+      "date": "1970-03-19",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. Apostolicae caritatis, 19 Mar 1970, AAS 62 (1970) 193ff",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "migrants"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-62-1970-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev059",
+      "date": "1971-07-15",
+      "date_precision": "day",
+      "act": "Paul VI, letter Amoris officio to Card. Villot, 15 Jul 1971, AAS 63 (1971) 669",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "cor-unum"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-63-1971-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev060",
+      "date": "1973-01-11",
+      "date_precision": "day",
+      "act": "Paul VI",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "family-committee"
+      ],
+      "source": null,
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev061",
+      "date": "1973-02-27",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. Quo aptius, 27 Feb 1973, AAS 65 (1973) 113-116",
+      "event_type": "absorption",
+      "bodies_before": [
+        "apostolic-chancery"
+      ],
+      "bodies_after": [
+        "secretariat-of-state"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-65-1973-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev062",
+      "date": "1975-07-11",
+      "date_precision": "day",
+      "act": "Paul VI, ap. const. Constans nobis, 11 Jul 1975, AAS 67 (1975) 417-420",
+      "event_type": "merger",
+      "bodies_before": [
+        "sacraments-1908",
+        "divine-worship-1969"
+      ],
+      "bodies_after": [
+        "sacraments-divine-worship-1975"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-67-1975-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev063",
+      "date": "1976-12-10",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. Iustitiam et pacem, 10 Dec 1976, AAS 68 (1976) 700ff",
+      "event_type": "kind-change",
+      "bodies_before": [
+        "justice-peace"
+      ],
+      "bodies_after": [
+        "justice-peace"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-68-1976-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Made permanent."
+    },
+    {
+      "id": "ev064",
+      "date": "1976-12-10",
+      "date_precision": "day",
+      "act": "Paul VI, m.p. Apostolatus peragendi, 10 Dec 1976, AAS 68 (1976) 696ff",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "laity-council"
+      ],
+      "bodies_after": [
+        "laity-council"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-68-1976-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev065",
+      "date": "1981-05-09",
+      "date_precision": "day",
+      "act": "John Paul II, m.p. Familia a Deo instituta, 9 May 1981, AAS 73 (1981) 441-445",
+      "event_type": "re-foundation",
+      "bodies_before": [
+        "family-committee"
+      ],
+      "bodies_after": [
+        "family-council"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-73-1981-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "'succedit eique sufficitur ... hoc iam ilico cessat'."
+    },
+    {
+      "id": "ev066",
+      "date": "1982-05-20",
+      "date_precision": "day",
+      "act": "John Paul II, letter to Card. Casaroli instituting the Pontificium Consilium pro hominum Cultura, 20 May 1982, AAS 74 (1982) 683",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "culture-council"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-74-1982-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev067",
+      "date": "1984-01-02",
+      "date_precision": "day",
+      "act": "John Paul II, m.p. Recognito Iuris Canonici Codice, 2 Jan 1984, AAS 76 (1984) 433-434",
+      "event_type": "foundation",
+      "bodies_before": [
+        "code-interpretation-1917"
+      ],
+      "bodies_after": [
+        "legislative-texts"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-76-1984-ocr.pdf",
+      "source_type": "primary",
+      "verified": true,
+      "note": "New erection modelled on the 1917 commission; no explicit succession clause."
+    },
+    {
+      "id": "ev068",
+      "date": "1984-04-05",
+      "date_precision": "day",
+      "act": "John Paul II, chirograph Quoniam in celeri, 5 Apr 1984, AAS 76 (1984) 494-495",
+      "event_type": "split",
+      "bodies_before": [
+        "sacraments-divine-worship-1975"
+      ],
+      "bodies_after": [
+        "sacraments-1984",
+        "divine-worship-1984"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-76-1984-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev069",
+      "date": "1985-02-11",
+      "date_precision": "day",
+      "act": "John Paul II, m.p. Dolentium hominum, 11 Feb 1985, AAS 77 (1985) 457ff",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "health-care"
+      ],
+      "source": "https://www.vatican.va/archive/aas/documents/AAS-77-1985-ocr.pdf",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev070",
+      "date": "1988-07-02",
+      "date_precision": "day",
+      "act": "John Paul II, Ecclesia Dei adflicta",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "ecclesia-dei-commission"
+      ],
+      "source": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190117_ecclesia-dei.html",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev071",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "absorption",
+      "bodies_before": [
+        "public-affairs-extraordinary"
+      ],
+      "bodies_after": [
+        "secretariat-of-state"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/en/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev072",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "merger",
+      "bodies_before": [
+        "sacraments-1984",
+        "divine-worship-1984"
+      ],
+      "bodies_after": [
+        "divine-worship-sacraments-1988"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/en/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "No merger clause found; inferred from the single congregation described."
+    },
+    {
+      "id": "ev073",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename",
+      "bodies_before": [
+        "religious-consecrated-life"
+      ],
+      "bodies_after": [
+        "religious-consecrated-life"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev074",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename",
+      "bodies_before": [
+        "studies-catholic-education"
+      ],
+      "bodies_after": [
+        "studies-catholic-education"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev075",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename",
+      "bodies_before": [
+        "causes-of-saints"
+      ],
+      "bodies_after": [
+        "causes-of-saints"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev076",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "christian-unity"
+      ],
+      "bodies_after": [
+        "christian-unity"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev077",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "interreligious-dialogue"
+      ],
+      "bodies_after": [
+        "interreligious-dialogue"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev078",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "non-believers"
+      ],
+      "bodies_after": [
+        "non-believers"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev079",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "justice-peace"
+      ],
+      "bodies_after": [
+        "justice-peace"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev080",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "migrants"
+      ],
+      "bodies_after": [
+        "migrants"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev081",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "health-care"
+      ],
+      "bodies_after": [
+        "health-care"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev082",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "legislative-texts"
+      ],
+      "bodies_after": [
+        "legislative-texts"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev083",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "social-communications"
+      ],
+      "bodies_after": [
+        "social-communications"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev084",
+      "date": "1989-03-01",
+      "date_precision": "day",
+      "act": "John Paul II, ap. const. Pastor bonus, 28 Jun 1988, in force 1 Mar 1989",
+      "event_type": "reorganization",
+      "bodies_before": [
+        "sacraments-1984",
+        "divine-worship-1984",
+        "public-affairs-extraordinary"
+      ],
+      "bodies_after": [
+        "divine-worship-sacraments-1988",
+        "papal-liturgical-celebrations",
+        "cultural-heritage-commission"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/en/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Signed 28 Jun 1988, in force 1 Mar 1989. 9 congregations, 3 tribunals, 12 pontifical councils, 3 offices; 'Sacra' dropped from names; secretariats and commissions become 'Pontifical Councils'; Council for Public Affairs becomes 2nd Section of the Secretariat of State."
+    },
+    {
+      "id": "ev085",
+      "date": "1993-03-25",
+      "date_precision": "day",
+      "act": "John Paul II, m.p. Inde a Pontificatus, 25 Mar 1993",
+      "event_type": "merger",
+      "bodies_before": [
+        "culture-council",
+        "non-believers"
+      ],
+      "bodies_after": [
+        "culture-council"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_25031993_inde-a-pontificatus.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Result keeps the name of one partner."
+    },
+    {
+      "id": "ev086",
+      "date": "1993-03-25",
+      "date_precision": "day",
+      "act": "John Paul II, m.p. Inde a Pontificatus, 25 Mar 1993",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "cultural-heritage-commission"
+      ],
+      "bodies_after": [
+        "cultural-heritage-commission"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_25031993_inde-a-pontificatus.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Detached from the Congregation for the Clergy, autonomous, renamed."
+    },
+    {
+      "id": "ev087",
+      "date": "1999",
+      "date_precision": "year",
+      "act": "act not identified",
+      "event_type": "rename",
+      "bodies_before": [
+        "legislative-texts"
+      ],
+      "bodies_after": [
+        "legislative-texts"
+      ],
+      "source": "https://data.bnf.fr/13506922/eglise_catholique_pontificium_consilium_de_legum_textibus/fr.pdf",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev088",
+      "date": "2010-09-21",
+      "date_precision": "day",
+      "act": "Benedict XVI, m.p. Ubicumque et semper, 21 Sep 2010",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "new-evangelization-council"
+      ],
+      "source": "https://www.vatican.va/content/benedict-xvi/en/apost_letters/documents/hf_ben-xvi_apl_20100921_ubicumque-et-semper.html",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev089",
+      "date": "2011-08-30",
+      "date_precision": "day",
+      "act": "Benedict XVI, Quaerit semper",
+      "event_type": "competence-transfer",
+      "bodies_before": [
+        "divine-worship-sacraments-1988"
+      ],
+      "bodies_after": [
+        "roman-rota"
+      ],
+      "source": "https://www.vatican.va/content/john-paul-ii/la/apost_constitutions/documents/hf_jp-ii_apc_19880628_pastor-bonus.html",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev090",
+      "date": "2012-07-30",
+      "date_precision": "day",
+      "act": "Benedict XVI, m.p. Pulchritudinis fidei, 30 Jul 2012",
+      "event_type": "absorption",
+      "bodies_before": [
+        "cultural-heritage-commission"
+      ],
+      "bodies_after": [
+        "culture-council"
+      ],
+      "source": "https://m.vatican.va/content/benedict-xvi/la/motu_proprio/documents/hf_ben-xvi_motu-proprio_20120730_pulchritudinis-fidei.pdf",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev091",
+      "date": "2013-01-16",
+      "date_precision": "day",
+      "act": "Benedict XVI, m.p. Ministrorum institutio, 16 Jan 2013",
+      "event_type": "competence-transfer",
+      "bodies_before": [
+        "studies-catholic-education"
+      ],
+      "bodies_after": [
+        "council-clergy"
+      ],
+      "source": "https://www.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130116_ministrorum-institutio.html",
+      "source_type": "official-secondary",
+      "verified": false,
+      "note": "Seminaries."
+    },
+    {
+      "id": "ev092",
+      "date": "2013-01-16",
+      "date_precision": "day",
+      "act": "Benedict XVI, m.p. Fides per doctrinam, 16 Jan 2013",
+      "event_type": "competence-transfer",
+      "bodies_before": [
+        "council-clergy"
+      ],
+      "bodies_after": [
+        "new-evangelization-council"
+      ],
+      "source": "https://m.vatican.va/content/benedict-xvi/en/motu_proprio/documents/hf_ben-xvi_motu-proprio_20130116_fides-per-doctrinam.pdf",
+      "source_type": "official-secondary",
+      "verified": false,
+      "note": "Catechesis."
+    },
+    {
+      "id": "ev093",
+      "date": "2014-02-24",
+      "date_precision": "day",
+      "act": "Francis, m.p. Fidelis dispensator et prudens, 24 Feb 2014",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "secretariat-economy",
+        "council-economy",
+        "auditor-general"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/papa-francesco-motu-proprio_20140224_fidelis-dispensator-et-prudens.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev094",
+      "date": "2014-03-22",
+      "date_precision": "day",
+      "act": "Francis, chirograph",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "protection-minors-commission"
+      ],
+      "source": null,
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev095",
+      "date": "2015-06-27",
+      "date_precision": "day",
+      "act": "Francis, m.p. L'attuale contesto comunicativo, 27 Jun 2015",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "communication-dicastery"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/papa-francesco-motu-proprio_20150627_segreteria-comunicazione.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Operative 29 Jun 2015; nine bodies to be combined into it."
+    },
+    {
+      "id": "ev096",
+      "date": "2016",
+      "date_precision": "year",
+      "act": "Francis, m.p. L'attuale contesto comunicativo, 27 Jun 2015",
+      "event_type": "absorption",
+      "bodies_before": [
+        "social-communications"
+      ],
+      "bodies_after": [
+        "communication-dicastery"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/papa-francesco-motu-proprio_20150627_segreteria-comunicazione.html",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev097",
+      "date": "2016-09-01",
+      "date_precision": "day",
+      "act": "Francis, ap. letter m.p. Sedula Mater, 15 Aug 2016 (effective 1 Sep 2016)",
+      "event_type": "merger",
+      "bodies_before": [
+        "laity-council",
+        "family-council"
+      ],
+      "bodies_after": [
+        "laity-family-life"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_letters/documents/papa-francesco-lettera-ap_20160815_sedula-mater.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Act 15 Aug 2016; operative 1 Sep 2016."
+    },
+    {
+      "id": "ev098",
+      "date": "2016-12-30",
+      "date_precision": "day",
+      "act": "act not identified",
+      "event_type": "suppression",
+      "bodies_before": [
+        "prefecture-economic-affairs"
+      ],
+      "bodies_after": [
+        "secretariat-economy"
+      ],
+      "source": "https://en.wikipedia.org/wiki/Prefecture_for_the_Economic_Affairs_of_the_Holy_See",
+      "source_type": "secondary",
+      "verified": false
+    },
+    {
+      "id": "ev099",
+      "date": "2017-01-01",
+      "date_precision": "day",
+      "act": "Francis, m.p. Humanam progressionem, 17 Aug 2016 (effective 1 Jan 2017)",
+      "event_type": "merger",
+      "bodies_before": [
+        "justice-peace",
+        "cor-unum",
+        "migrants",
+        "health-care"
+      ],
+      "bodies_after": [
+        "integral-human-development"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/motu_proprio/documents/papa-francesco-motu-proprio_20160817_humanam-progressionem.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Act 17 Aug 2016; operative 1 Jan 2017."
+    },
+    {
+      "id": "ev100",
+      "date": "2018-06-23",
+      "date_precision": "day",
+      "act": "Rescript ex audientia (audience of 27 Feb 2018), published 23 Jun 2018",
+      "event_type": "rename",
+      "bodies_before": [
+        "communication-dicastery"
+      ],
+      "bodies_after": [
+        "communication-dicastery"
+      ],
+      "source": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2018/06/23/180623f.html",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev101",
+      "date": "2019-01-17",
+      "date_precision": "day",
+      "act": "Francis, m.p. [Ecclesia Dei] 'Da oltre trent'anni', 17 Jan 2019",
+      "event_type": "absorption",
+      "bodies_before": [
+        "ecclesia-dei-commission"
+      ],
+      "bodies_after": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "source": "https://www.vatican.va/content/francesco/it/motu_proprio/documents/papa-francesco-motu-proprio-20190117_ecclesia-dei.html",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev102",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "attachment",
+      "bodies_before": [
+        "protection-minors-commission"
+      ],
+      "bodies_after": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Established within the DDF (Art. 78)."
+    },
+    {
+      "id": "ev103",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "competence-transfer",
+      "bodies_before": [
+        "consistorial-bishops"
+      ],
+      "bodies_after": [
+        "council-clergy"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Personal prelatures."
+    },
+    {
+      "id": "ev104",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "merger",
+      "bodies_before": [
+        "propaganda-fide-evangelization",
+        "new-evangelization-council"
+      ],
+      "bodies_after": [
+        "evangelization-dicastery"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Inferred from PE structure; no article names the merged bodies."
+    },
+    {
+      "id": "ev105",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "merger",
+      "bodies_before": [
+        "culture-council",
+        "studies-catholic-education"
+      ],
+      "bodies_after": [
+        "culture-education-dicastery"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Inferred from PE structure (two sections, Art. 153 §2)."
+    },
+    {
+      "id": "ev106",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename",
+      "bodies_before": [
+        "apostolic-camera"
+      ],
+      "bodies_after": [
+        "apostolic-camera"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Office now named after its holder (Camerlengo)."
+    },
+    {
+      "id": "ev107",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "bodies_after": [
+        "inquisition-holy-office-cdf-ddf"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev108",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "oriental-churches"
+      ],
+      "bodies_after": [
+        "oriental-churches"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev109",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "divine-worship-sacraments-1988"
+      ],
+      "bodies_after": [
+        "divine-worship-sacraments-1988"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev110",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "causes-of-saints"
+      ],
+      "bodies_after": [
+        "causes-of-saints"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev111",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "consistorial-bishops"
+      ],
+      "bodies_after": [
+        "consistorial-bishops"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev112",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "council-clergy"
+      ],
+      "bodies_after": [
+        "council-clergy"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev113",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "religious-consecrated-life"
+      ],
+      "bodies_after": [
+        "religious-consecrated-life"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev114",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "christian-unity"
+      ],
+      "bodies_after": [
+        "christian-unity"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev115",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "interreligious-dialogue"
+      ],
+      "bodies_after": [
+        "interreligious-dialogue"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev116",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "legislative-texts"
+      ],
+      "bodies_after": [
+        "legislative-texts"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true
+    },
+    {
+      "id": "ev117",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "rename+kind-change",
+      "bodies_before": [
+        "papal-almonry-charity"
+      ],
+      "bodies_after": [
+        "papal-almonry-charity"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Institution connected with the Holy See -> dicastery."
+    },
+    {
+      "id": "ev118",
+      "date": "2022-06-05",
+      "date_precision": "day",
+      "act": "Francis, ap. const. Praedicate Evangelium, 19 Mar 2022, in force 5 Jun 2022 (Art. 250)",
+      "event_type": "reorganization",
+      "bodies_before": [
+        "propaganda-fide-evangelization",
+        "new-evangelization-council",
+        "culture-council",
+        "studies-catholic-education"
+      ],
+      "bodies_after": [
+        "evangelization-dicastery",
+        "culture-education-dicastery"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/apost_constitutions/documents/20220319-costituzione-ap-praedicate-evangelium.html",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Signed 19 Mar 2022, in force 5 Jun 2022. PB abrogated (Art. 250 §3). 16 dicasteries, all juridically equal with the Secretariat of State (Art. 12). All congregations and councils renamed 'Dicastery'. Almonry becomes the Dicastery for the Service of Charity. PCPM established within the DDF."
+    },
+    {
+      "id": "ev119",
+      "date": "2025-02-11",
+      "date_precision": "day",
+      "act": "Francis, chirograph Vinculum unitatis et caritatis",
+      "event_type": "foundation",
+      "bodies_before": [],
+      "bodies_after": [
+        "donations-commission"
+      ],
+      "source": "https://www.vatican.va/content/francesco/en/letters/2025/documents/20250211-chirografo-vinculum-unitatisetcaritatis.html",
+      "source_type": "official-secondary",
+      "verified": false
+    },
+    {
+      "id": "ev120",
+      "date": "2025-11-24",
+      "date_precision": "day",
+      "act": "Leo XIV, General Regulation of the Roman Curia (signed 23 Nov 2025)",
+      "event_type": "regulation",
+      "bodies_before": [],
+      "bodies_after": [],
+      "source": "https://www.vaticannews.va/en/pope/news/2025-11/vatican-publishes-the-new-regulations-of-the-roman-curia.html",
+      "source_type": "official-secondary",
+      "verified": false,
+      "note": "Replaces the 1999 regulation; no structural change reported."
+    },
+    {
+      "id": "ev121",
+      "date": "2025-12-04",
+      "date_precision": "day",
+      "act": "Leo XIV, chirograph Vinculum unitatis et caritatis (29 Sep 2025, published 4 Dec 2025)",
+      "event_type": "suppression",
+      "bodies_before": [
+        "donations-commission"
+      ],
+      "bodies_after": [],
+      "source": "https://www.vatican.va/content/leo-xiv/it/letters/2025/documents/20250929-chirografo-vinculum-unitatis.html",
+      "source_type": "primary",
+      "verified": true
+    }
+  ]
+}
