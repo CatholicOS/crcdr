@@ -10,11 +10,26 @@ from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import crcdr  # noqa: E402
 import fixtures  # noqa: E402
 import generate_registry as g  # noqa: E402
 import validate  # noqa: E402
 
 TODAY = "2026-10-25"
+
+
+def ambiguous(doc):
+    """(name, id, id) for every name that matches two ids on some date."""
+    seen, out = {}, []
+    for e in doc["entries"]:
+        for n in e["names"] + e["aliases"]:
+            lo = crcdr.parse_date(n["from"])
+            hi = crcdr.parse_date(n["to"]) if n["to"] else None
+            for other, olo, ohi in seen.get(n["name"].casefold(), []):
+                if other != e["id"] and (ohi is None or lo < ohi) and (hi is None or olo < hi):
+                    out.append((n["name"], other, e["id"]))
+            seen.setdefault(n["name"].casefold(), []).append((e["id"], lo, hi))
+    return out
 
 
 def _body(ident, name, year):
@@ -29,7 +44,7 @@ def _body(ident, name, year):
 
 def _merger_fixture():
     bodies, events = fixtures.make_fixture()
-    bodies["entries"][0]["aliases"] = ["Sanctum Officium"]
+    bodies["entries"][0]["aliases"] = [{"name": "Sanctum Officium", "lang": "la"}]
     a, b = _body("cr:alpha-1600", "Alpha", 1600), _body("cr:beta-1610", "Beta", 1610)
     c = _body("cr:gamma-1700", "Gamma", 1700)
     bodies["entries"] += [a, b, c]
@@ -44,19 +59,38 @@ class GeneratorTests(unittest.TestCase):
         bodies, events = _merger_fixture()
         doc = g.identifiers(bodies, events)
         self.assertEqual(doc["license"], "CC0-1.0")
+        self.assertIn("(name, date)", doc["$comment"])
         self.assertEqual([e["id"] for e in doc["entries"]],
                          sorted(b["id"] for b in bodies["entries"]))
         e = {x["id"]: x for x in doc["entries"]}["cr:doctrina-fidei-1542"]
+        self.assertEqual(e["names"], [
+            {"name": "Sancta Romana et Universalis Inquisitio", "lang": "la",
+             "from": "1542-07-21", "to": "1908-11-03"},
+            {"name": "Holy Office", "lang": "en", "from": "1542-07-21", "to": None},
+            {"name": "Sacra Congregatio Sancti Officii", "lang": "la",
+             "from": "1908-11-03", "to": None}])
         self.assertEqual(e["aliases"], [
-            "Sancta Romana et Universalis Inquisitio", "Holy Office",
-            "Sacra Congregatio Sancti Officii", "Sanctum Officium"])
+            {"name": "Sanctum Officium", "lang": "la", "from": "1542-07-21", "to": None}])
         self.assertIsNone(e["founding_act_mag"])
 
-    def test_name_alias_objects_accepted(self):
+    def test_name_aliases_dated_by_their_name(self):
         bodies, events = fixtures.make_fixture()
-        bodies["entries"][0]["names"][1]["aliases"] = [{"name": "Suprema", "lang": "la"}]
-        doc = g.identifiers(bodies, events)
-        self.assertIn("Suprema", json.dumps(doc))
+        bodies["entries"][0]["names"][0]["aliases"] = [{"name": "Suprema", "lang": "la"}]
+        e = g.identifiers(bodies, events)["entries"][0]
+        self.assertEqual(e["aliases"], [
+            {"name": "Suprema", "lang": "la", "from": "1542-07-21", "to": "1908-11-03"}])
+
+    def test_name_date_lookup_unambiguous(self):
+        bodies, events = crcdr.load("bodies"), crcdr.load("events")
+        self.assertEqual(ambiguous(g.identifiers(bodies, events)), [])
+        with open(g.IDS_PATH, encoding="utf-8") as f:
+            self.assertEqual(ambiguous(json.load(f)), [])
+        # the check itself catches an overlap
+        bodies, events = _merger_fixture()
+        for x in bodies["entries"]:
+            if x["id"] == "cr:beta-1610":
+                x["names"][0]["name_la"] = "Alpha"
+        self.assertEqual(len(ambiguous(g.identifiers(bodies, events))), 1)
 
     def test_lineage_derived_from_events(self):
         bodies, events = _merger_fixture()
