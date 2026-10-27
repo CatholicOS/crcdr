@@ -1,0 +1,248 @@
+{
+  "$comment": "Curated corrections applied by scripts/seed_from_research.py to research names whose name_la or name_en carries editorial text (variants, remarks, '(Latin unverified)'). Keyed by research key and index into the research body's names[]. research_name_la / research_name_en must match the research exactly (a guard). name_la is the clean form, or null when no Latin name is attested; nothing is reconstructed. Variants go to aliases [{name, lang}], remarks to the name's note. verified may only be set to false (a downgrade).",
+  "entries": [
+    {
+      "research_key": "inquisition-holy-office-cdf-ddf",
+      "index": 1,
+      "research_name_la": "Congregatio Sancti Officii (Suprema Sacra Congregatio S. Officii)",
+      "name_la": "Congregatio Sancti Officii",
+      "research_name_en": "Congregation of the Holy Office (Supreme Sacred Congregation of the Holy Office)",
+      "name_en": "Congregation of the Holy Office",
+      "aliases": [
+        {
+          "name": "Suprema Sacra Congregatio S. Officii",
+          "lang": "la"
+        },
+        {
+          "name": "Supreme Sacred Congregation of the Holy Office",
+          "lang": "en"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives the name with its AAS-heading form in parentheses ('Congregatio Sancti Officii (Suprema Sacra Congregatio S. Officii)'; English 'Congregation of the Holy Office (Supreme Sacred Congregation of the Holy Office)'). The parenthesised forms are aliases."
+    },
+    {
+      "research_key": "inquisition-holy-office-cdf-ddf",
+      "index": 2,
+      "research_name_la": "Congregatio pro doctrina fidei / Sacra Congregatio pro Doctrina Fidei",
+      "name_la": "Congregatio pro doctrina fidei",
+      "research_name_en": "Congregation for the Doctrine of the Faith (Sacred Congregation ...)",
+      "name_en": "Congregation for the Doctrine of the Faith",
+      "aliases": [
+        {
+          "name": "Sacra Congregatio pro Doctrina Fidei",
+          "lang": "la"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives two forms ('Congregatio pro doctrina fidei / Sacra Congregatio pro Doctrina Fidei'): the first is the form of Integrae servandae, the second (REU) is an alias. The research's English adds an incomplete '(Sacred Congregation ...)', which is not carried."
+    },
+    {
+      "research_key": "rites",
+      "index": 1,
+      "research_name_la": "Sacra Congregatio Rituum / Congregatio sacrorum Rituum",
+      "name_la": "Sacra Congregatio Rituum",
+      "aliases": [
+        {
+          "name": "Congregatio sacrorum Rituum",
+          "lang": "la"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives two forms ('Sacra Congregatio Rituum / Congregatio sacrorum Rituum'); the REU form, from which the key was minted, is the name, the other an alias."
+    },
+    {
+      "research_key": "council-clergy",
+      "index": 0,
+      "research_name_la": "Congregatio Cardinalium Concilii Tridentini interpretum (Sacra Congregatio Concilii)",
+      "name_la": "Congregatio Cardinalium Concilii Tridentini interpretum",
+      "research_name_en": "Congregation of the Council (of Trent)",
+      "name_en": "Congregation of the Council",
+      "aliases": [
+        {
+          "name": "Sacra Congregatio Concilii",
+          "lang": "la"
+        },
+        {
+          "name": "Congregation of the Council of Trent",
+          "lang": "en"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives the short form in parentheses ('Congregatio Cardinalium Concilii Tridentini interpretum (Sacra Congregatio Concilii)'; English 'Congregation of the Council (of Trent)'). The short form and the expanded English are aliases."
+    },
+    {
+      "research_key": "religious-consecrated-life",
+      "index": 0,
+      "research_name_la": "Sacra Congregatio Negotiis religiosorum sodalium praeposita (de Religiosis)",
+      "name_la": "Sacra Congregatio Negotiis religiosorum sodalium praeposita",
+      "aliases": [
+        {
+          "name": "S. Congregatio de Religiosis",
+          "lang": "la"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research adds '(de Religiosis)' to the name; the alias is the AAS 1909 heading form the research quotes in its note."
+    },
+    {
+      "research_key": "studies-catholic-education",
+      "index": 1,
+      "research_name_la": "Sacra Congregatio de Seminariis et (de) Studiorum Universitatibus",
+      "name_la": "Sacra Congregatio de Seminariis et Studiorum Universitatibus",
+      "aliases": [
+        {
+          "name": "Sacra Congregatio de Seminariis et de Studiorum Universitatibus",
+          "lang": "la"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research marks the second 'de' as optional ('Sacra Congregatio de Seminariis et (de) Studiorum Universitatibus'); the form with it is an alias."
+    },
+    {
+      "research_key": "studies-catholic-education",
+      "index": 3,
+      "research_name_la": "Congregatio de Seminariis atque Studiorum Institutis / de Institutione Catholica",
+      "name_la": "Congregatio de Seminariis atque Studiorum Institutis",
+      "research_name_en": "Congregation for Catholic Education (for Seminaries and Educational Institutions)",
+      "name_en": "Congregation for Catholic Education",
+      "aliases": [
+        {
+          "name": "Congregatio de Institutione Catholica",
+          "lang": "la"
+        },
+        {
+          "name": "Congregation of Seminaries and Educational Institutions",
+          "lang": "en"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives two forms ('Congregatio de Seminariis atque Studiorum Institutis / de Institutione Catholica'); the PB heading, from which the key was minted, is the name, the other an alias. Research English: 'Congregation for Catholic Education (for Seminaries and Educational Institutions)'; the English of the PB page, quoted in the research note, is an alias."
+    },
+    {
+      "research_key": "interreligious-dialogue",
+      "index": 0,
+      "research_name_la": "Secretariatus de non Christianis / pro non christianis",
+      "name_la": "Secretariatus de non Christianis",
+      "aliases": [
+        {
+          "name": "Secretariatus pro non christianis",
+          "lang": "la"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives two forms ('Secretariatus de non Christianis / pro non christianis'): the first is the 1964 act's, the second (REU n.96) an alias."
+    },
+    {
+      "research_key": "family-committee",
+      "index": 0,
+      "research_name_la": "Consilium de Familia (Comitatus pro Familia)",
+      "name_la": "Consilium de Familia",
+      "aliases": [
+        {
+          "name": "Comitatus pro Familia",
+          "lang": "la"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives a second form in parentheses ('Consilium de Familia (Comitatus pro Familia)'); the form verified in Familia a Deo instituta, from which the key was minted, is the name, the other an alias."
+    },
+    {
+      "research_key": "integral-human-development",
+      "index": 0,
+      "research_name_la": "Dicasterium pro Integra Humana Progressione Fovenda (Latin unverified)",
+      "name_la": "Dicasterium pro Integra Humana Progressione Fovenda",
+      "aliases": [],
+      "verified": false,
+      "note": "Seeding (seed/name_fixes.json): the research marks this Latin form '(Latin unverified)': only the English name was checked (PE Arts. 163-174). The name is therefore recorded as unverified."
+    },
+    {
+      "research_key": "social-communications",
+      "index": 0,
+      "research_name_la": "(Pontifical Commission for didactic and religious cinema; later for cinema, radio and television)",
+      "name_la": null,
+      "research_name_en": "Pontifical Commission for Cinema / Cinema, Radio and Television",
+      "name_en": "Pontifical Commission for Cinema",
+      "aliases": [
+        {
+          "name": "Pontifical Commission for didactic and religious cinema",
+          "lang": "en"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): no Latin name is attested; the research's name_la holds English prose ('(Pontifical Commission for didactic and religious cinema; later for cinema, radio and television)'). Research English: 'Pontifical Commission for Cinema / Cinema, Radio and Television'; the second form is the later name (names[1]) and is not repeated here."
+    },
+    {
+      "research_key": "social-communications",
+      "index": 1,
+      "research_name_la": "Pontificium Consilium (de re cinematographica, radiophonica ac televisifica)",
+      "name_la": "Pontificium Consilium de re cinematographica, radiophonica ac televisifica",
+      "aliases": [],
+      "note": "Seeding (seed/name_fixes.json): the research puts the complement in parentheses ('Pontificium Consilium (de re cinematographica, radiophonica ac televisifica)'); whether the complement is part of the official title is not established (act not read)."
+    },
+    {
+      "research_key": "auditor-general",
+      "index": 0,
+      "research_name_la": "Revisor Generalis (Officium)",
+      "name_la": "Revisor Generalis",
+      "aliases": [],
+      "note": "Seeding (seed/name_fixes.json): the research gives the officeholder's title with the kind word in parentheses ('Revisor Generalis (Officium)'). The office's own Latin name is not attested; none is reconstructed."
+    },
+    {
+      "research_key": "apostolic-penitentiary",
+      "index": 0,
+      "research_name_la": "Sacra Paenitentiaria (Poenitentiaria) Apostolica",
+      "name_la": "Sacra Paenitentiaria Apostolica",
+      "aliases": [
+        {
+          "name": "Sacra Poenitentiaria Apostolica",
+          "lang": "la"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives a spelling variant in parentheses ('Sacra Paenitentiaria (Poenitentiaria) Apostolica'); the variant is an alias."
+    },
+    {
+      "research_key": "apostolic-signatura",
+      "index": 0,
+      "research_name_la": "Signatura Apostolica / Supremum Signaturae Apostolicae Tribunal",
+      "name_la": "Supremum Signaturae Apostolicae Tribunal",
+      "aliases": [
+        {
+          "name": "Signatura Apostolica",
+          "lang": "la"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research gives two forms for the whole span ('Signatura Apostolica / Supremum Signaturae Apostolicae Tribunal') without dating either; the PB form, from which the key was minted, is the name, the other an alias."
+    },
+    {
+      "research_key": "revision-of-councils",
+      "index": 0,
+      "research_name_la": "Congregatio specialis pro Conciliorum revisione",
+      "name_la": "Congregatio specialis pro Conciliorum revisione",
+      "research_name_en": "Special Congregation for the Revision of (Provincial) Councils",
+      "name_en": "Special Congregation for the Revision of Councils",
+      "aliases": [
+        {
+          "name": "Special Congregation for the Revision of Provincial Councils",
+          "lang": "en"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research's English marks 'Provincial' as optional ('Special Congregation for the Revision of (Provincial) Councils'); the form with it is an alias."
+    },
+    {
+      "research_key": "roman-university",
+      "index": 0,
+      "research_name_la": "Congregatio pro universitate studii Romani",
+      "name_la": "Congregatio pro universitate studii Romani",
+      "research_name_en": "Congregation for the University of the Roman Study (Sapienza)",
+      "name_en": "Congregation for the University of the Roman Study",
+      "aliases": [],
+      "note": "Seeding (seed/name_fixes.json): the research's English adds the remark '(Sapienza)', the later name of the university ('Congregation for the University of the Roman Study (Sapienza)')."
+    },
+    {
+      "research_key": "cultural-heritage-commission",
+      "index": 1,
+      "research_name_la": "Pontificia Commissio de Bonis Culturalibus Ecclesiae",
+      "name_la": "Pontificia Commissio de Bonis Culturalibus Ecclesiae",
+      "research_name_en": "Pontifical Commission for the Cultural Heritage (Patrimony) of the Church",
+      "name_en": "Pontifical Commission for the Cultural Heritage of the Church",
+      "aliases": [
+        {
+          "name": "Pontifical Commission for the Cultural Patrimony of the Church",
+          "lang": "en"
+        }
+      ],
+      "note": "Seeding (seed/name_fixes.json): the research's English gives a variant in parentheses ('Pontifical Commission for the Cultural Heritage (Patrimony) of the Church'); the English text of Inde a Pontificatus, quoted in the research note, is an alias."
+    }
+  ]
+}

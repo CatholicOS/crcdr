@@ -1,11 +1,13 @@
 Licensing of this repository
 
-- The data, registry and documentation in this repository are licensed under the
-  Creative Commons Attribution-NoDerivatives 4.0 International licence (CC BY-ND 4.0),
-  whose legal code follows.
+- The data, registry and documentation in this repository, including `seed/` (the
+  research data and the curated maps), are licensed under the Creative Commons
+  Attribution-NoDerivatives 4.0 International licence (CC BY-ND 4.0), whose legal
+  code follows.
 - `data/identifiers.json` is instead dedicated to the public domain under CC0 1.0
   (see `LICENSE-CC0`).
-- `scripts/` is licensed under the Apache License 2.0 (see `scripts/LICENSE`).
+- `scripts/` and `seed/research/build_curia.py` are licensed under the Apache License
+  2.0 (see `scripts/LICENSE`).
 
 =======================================================================
 

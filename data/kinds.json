@@ -1,0 +1,89 @@
+{
+  "entries": [
+    {
+      "id": "congregation",
+      "la": "Congregatio",
+      "en": [
+        "Congregation"
+      ]
+    },
+    {
+      "id": "council",
+      "la": "Consilium",
+      "en": [
+        "Council",
+        "Commission"
+      ]
+    },
+    {
+      "id": "pontifical-council",
+      "la": "Pontificium Consilium",
+      "en": [
+        "Pontifical Council"
+      ]
+    },
+    {
+      "id": "secretariat",
+      "la": "Secretariatus",
+      "en": [
+        "Secretariat"
+      ]
+    },
+    {
+      "id": "commission",
+      "la": "Commissio",
+      "en": [
+        "Commission"
+      ]
+    },
+    {
+      "id": "committee",
+      "la": "Comitatus",
+      "en": [
+        "Committee"
+      ]
+    },
+    {
+      "id": "dicastery",
+      "la": "Dicasterium",
+      "en": [
+        "Dicastery"
+      ]
+    },
+    {
+      "id": "tribunal",
+      "la": "Tribunal",
+      "en": [
+        "Tribunal"
+      ]
+    },
+    {
+      "id": "office",
+      "la": "Officium",
+      "en": [
+        "Office"
+      ]
+    },
+    {
+      "id": "prefecture",
+      "la": "Praefectura",
+      "en": [
+        "Prefecture"
+      ]
+    },
+    {
+      "id": "academy",
+      "la": "Pontificia Academia",
+      "en": [
+        "Pontifical Academy"
+      ]
+    },
+    {
+      "id": "institution",
+      "la": "Institutio",
+      "en": [
+        "Institution"
+      ]
+    }
+  ]
+}

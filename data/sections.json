@@ -1,0 +1,364 @@
+{
+  "regimes": [
+    {
+      "id": "pre-1588",
+      "effective": null,
+      "act": null,
+      "sections": [
+        {
+          "id": "not-listed",
+          "la": null,
+          "en": "Not listed by the constitution",
+          "in_curia": null,
+          "kinds": []
+        }
+      ]
+    },
+    {
+      "id": "immensa-1588",
+      "effective": "1588-01-22",
+      "act": "Sixtus V, Const. Apost. Immensa aeterni Dei, 22 Jan 1588",
+      "note": "Act text not read by the research (secondary sources only); the section value is unverified.",
+      "sections": [
+        {
+          "id": "congregation",
+          "la": "Congregationes",
+          "en": "Congregations",
+          "in_curia": true,
+          "kinds": [
+            "congregation"
+          ],
+          "note": "Unverified: no division heading checked against the act text."
+        },
+        {
+          "id": "not-listed",
+          "la": null,
+          "en": "Not listed by the constitution",
+          "in_curia": null,
+          "kinds": []
+        }
+      ]
+    },
+    {
+      "id": "sapienti-consilio-1908",
+      "effective": "1908-11-03",
+      "act": "Pius X, Const. Apost. Sapienti consilio, 29 Jun 1908, AAS 1 (1909) 7-19",
+      "note": "Headings verified against AAS 1 (1909) text: I. SACRAE CONGREGATIONES; II. TRIBUNALIA; III. OFFICIA.",
+      "sections": [
+        {
+          "id": "congregation",
+          "la": "Sacrae Congregationes",
+          "en": "Sacred Congregations",
+          "in_curia": true,
+          "kinds": [
+            "congregation"
+          ]
+        },
+        {
+          "id": "tribunal",
+          "la": "Tribunalia",
+          "en": "Tribunals",
+          "in_curia": true,
+          "kinds": [
+            "tribunal"
+          ]
+        },
+        {
+          "id": "office",
+          "la": "Officia",
+          "en": "Offices",
+          "in_curia": true,
+          "kinds": [
+            "office"
+          ]
+        },
+        {
+          "id": "not-listed",
+          "la": null,
+          "en": "Not listed by the constitution",
+          "in_curia": null,
+          "kinds": []
+        }
+      ]
+    },
+    {
+      "id": "cic-1917",
+      "effective": "1918-05-19",
+      "act": "Codex Iuris Canonici (1917), cann. 242-264",
+      "note": "Headings from the Code's table of contents in AAS 9-II (1917): Art. I De Sacris Congregationibus (cann. 246-257); Art. II De Tribunalibus Curiae Romanae (258-259); Art. III De Officiis Curiae Romanae (260-264).",
+      "sections": [
+        {
+          "id": "congregation",
+          "la": "De Sacris Congregationibus",
+          "en": "Sacred Congregations",
+          "in_curia": true,
+          "kinds": [
+            "congregation"
+          ]
+        },
+        {
+          "id": "tribunal",
+          "la": "De Tribunalibus Curiae Romanae",
+          "en": "Tribunals of the Roman Curia",
+          "in_curia": true,
+          "kinds": [
+            "tribunal"
+          ]
+        },
+        {
+          "id": "office",
+          "la": "De Officiis Curiae Romanae",
+          "en": "Offices of the Roman Curia",
+          "in_curia": true,
+          "kinds": [
+            "office"
+          ]
+        },
+        {
+          "id": "not-listed",
+          "la": null,
+          "en": "Not listed by the constitution",
+          "in_curia": null,
+          "kinds": []
+        }
+      ]
+    },
+    {
+      "id": "reu-1968",
+      "effective": "1968-01-01",
+      "act": "Paul VI, Const. Apost. Regimini Ecclesiae universae, 15 Aug 1967, AAS 59 (1967) 885-928",
+      "note": "Parts verified against the AAS 59 text: I Normae generales; II Secretaria Status seu Papalis et Sacrum Consilium pro publicis Ecclesiae negotiis; III Sacrae Congregationes; IV Secretariatus; V Consilium de Laicis et Pontificia Commissio studiosorum a 'Iustitia et Pace'; VI Tribunalia; VII Officia; Appendix. The in_curia value of 'appendix' is an editorial reading.",
+      "sections": [
+        {
+          "id": "secretariat-of-state",
+          "la": "Secretaria Status seu Papalis et Sacrum Consilium pro publicis Ecclesiae negotiis",
+          "en": "Secretariat of State and Council for the Public Affairs of the Church",
+          "in_curia": true,
+          "kinds": []
+        },
+        {
+          "id": "congregation",
+          "la": "Sacrae Congregationes",
+          "en": "Sacred Congregations",
+          "in_curia": true,
+          "kinds": [
+            "congregation"
+          ]
+        },
+        {
+          "id": "secretariat",
+          "la": "Secretariatus",
+          "en": "Secretariats",
+          "in_curia": true,
+          "kinds": [
+            "secretariat"
+          ]
+        },
+        {
+          "id": "laity-and-justice-peace",
+          "la": "Consilium de Laicis et Pontificia Commissio studiosorum a 'Iustitia et Pace'",
+          "en": "Council for the Laity and Pontifical Commission 'Justice and Peace'",
+          "in_curia": true,
+          "kinds": [
+            "council",
+            "commission"
+          ],
+          "note": "Part V; kinds mapping is an editorial default."
+        },
+        {
+          "id": "tribunal",
+          "la": "Tribunalia",
+          "en": "Tribunals",
+          "in_curia": true,
+          "kinds": [
+            "tribunal"
+          ]
+        },
+        {
+          "id": "office",
+          "la": "Officia",
+          "en": "Offices",
+          "in_curia": true,
+          "kinds": [
+            "office",
+            "prefecture"
+          ]
+        },
+        {
+          "id": "appendix",
+          "la": "Appendix (nn. 132-134)",
+          "en": "Appendix: bodies left in statu quo",
+          "in_curia": false,
+          "kinds": [
+            "academy",
+            "institution"
+          ],
+          "note": "Appendix lists the Fabric of St Peter, the Library, the Archive, etc.; in_curia is an editorial reading."
+        },
+        {
+          "id": "not-listed",
+          "la": null,
+          "en": "Not listed by the constitution",
+          "in_curia": null,
+          "kinds": []
+        }
+      ]
+    },
+    {
+      "id": "pastor-bonus-1989",
+      "effective": "1989-03-01",
+      "act": "John Paul II, Const. Apost. Pastor Bonus, 28 Jun 1988",
+      "note": "Headings verified against the Latin text on vatican.va (index): I Normae generales; II Secretaria Status; III Congregationes; IV Tribunalia; V Pontificia Consilia; VI Officia; VII Cetera Curiae Romanae instituta; VIII Advocati; IX Institutiones Sanctae Sedi adhaerentes. The in_curia value of 'advocates' is an editorial reading.",
+      "sections": [
+        {
+          "id": "secretariat-of-state",
+          "la": "Secretaria Status",
+          "en": "Secretariat of State",
+          "in_curia": true,
+          "kinds": []
+        },
+        {
+          "id": "congregation",
+          "la": "Congregationes",
+          "en": "Congregations",
+          "in_curia": true,
+          "kinds": [
+            "congregation"
+          ]
+        },
+        {
+          "id": "tribunal",
+          "la": "Tribunalia",
+          "en": "Tribunals",
+          "in_curia": true,
+          "kinds": [
+            "tribunal"
+          ]
+        },
+        {
+          "id": "pontifical-council",
+          "la": "Pontificia Consilia",
+          "en": "Pontifical Councils",
+          "in_curia": true,
+          "kinds": [
+            "pontifical-council"
+          ]
+        },
+        {
+          "id": "office",
+          "la": "Officia",
+          "en": "Offices",
+          "in_curia": true,
+          "kinds": [
+            "office"
+          ]
+        },
+        {
+          "id": "other-organism",
+          "la": "Cetera Curiae Romanae instituta",
+          "en": "Other institutes of the Roman Curia",
+          "in_curia": true,
+          "kinds": []
+        },
+        {
+          "id": "advocates",
+          "la": "Advocati",
+          "en": "Advocates",
+          "in_curia": false,
+          "kinds": []
+        },
+        {
+          "id": "institution-connected",
+          "la": "Institutiones Sanctae Sedi adhaerentes",
+          "en": "Institutions connected with the Holy See",
+          "in_curia": false,
+          "kinds": [
+            "academy",
+            "institution"
+          ]
+        },
+        {
+          "id": "not-listed",
+          "la": null,
+          "en": "Not listed by the constitution",
+          "in_curia": null,
+          "kinds": []
+        }
+      ]
+    },
+    {
+      "id": "praedicate-evangelium-2022",
+      "effective": "2022-06-05",
+      "act": "Francis, Const. Apost. Praedicate Evangelium, 19 Mar 2022",
+      "note": "Headings verified against the Latin text on vatican.va (index): IV Secretaria Status; V Dicasteria; VI Instituta iustitiae; VII Instituta oeconomicis negotiis praeposita; VIII Officia; IX Advocati; X Instituta Sanctae Sedi adhaerentia. The in_curia value of 'advocates' is an editorial reading.",
+      "sections": [
+        {
+          "id": "secretariat-of-state",
+          "la": "Secretaria Status",
+          "en": "Secretariat of State",
+          "in_curia": true,
+          "kinds": []
+        },
+        {
+          "id": "dicastery",
+          "la": "Dicasteria",
+          "en": "Dicasteries",
+          "in_curia": true,
+          "kinds": [
+            "dicastery"
+          ]
+        },
+        {
+          "id": "body-of-justice",
+          "la": "Instituta iustitiae",
+          "en": "Bodies of justice",
+          "in_curia": true,
+          "kinds": [
+            "tribunal"
+          ]
+        },
+        {
+          "id": "economic-body",
+          "la": "Instituta oeconomicis negotiis praeposita",
+          "en": "Economic bodies",
+          "in_curia": true,
+          "kinds": []
+        },
+        {
+          "id": "office",
+          "la": "Officia",
+          "en": "Offices",
+          "in_curia": true,
+          "kinds": [
+            "office",
+            "prefecture"
+          ]
+        },
+        {
+          "id": "advocates",
+          "la": "Advocati",
+          "en": "Advocates",
+          "in_curia": false,
+          "kinds": []
+        },
+        {
+          "id": "institution-connected",
+          "la": "Instituta Sanctae Sedi adhaerentia",
+          "en": "Institutions connected with the Holy See",
+          "in_curia": false,
+          "kinds": [
+            "academy",
+            "institution"
+          ]
+        },
+        {
+          "id": "not-listed",
+          "la": null,
+          "en": "Not listed by the constitution",
+          "in_curia": null,
+          "kinds": []
+        }
+      ]
+    }
+  ]
+}

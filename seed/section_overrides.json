@@ -1,0 +1,349 @@
+{
+  "_meta": {
+    "description": "Per-body section overrides (data/sections.json) where the kind-based default is wrong for a body in a regime, or to give in_curia to a body the constitution leaves 'not-listed'. One entry per (body, regime); it applies to the body's whole span within that regime.",
+    "in_curia": "For a listed section, in_curia repeats the section's own value. For 'not-listed', true/false only where the research curia_status or an act states it; null = the override fixes the section only, and the seeder still adds the gap note.",
+    "not_done": "The design §6.3 example (Penitentiary and Rota 'in the Curia' although Immensa omits them) is not encoded: the research curia_status gives no statement for that period."
+  },
+  "entries": [
+    {
+      "body": "bishops-and-regulars",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founded 1601 by merging two of the fifteen; a new body (design §5 rule 4). Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "apostolic-visitation-urbis",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Attested from 1637. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "propaganda-fide-evangelization",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founded 1622. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "indulgences-relics",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founded 1669. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "discipline-of-regulars",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founded 1695. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "lauretana",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founded 1698. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "public-affairs-extraordinary",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founded 1793. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "studies-catholic-education",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founded 1824 (Roman University, one of the fifteen, was re-founded as a new body). Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "revision-of-councils",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Attested from 1849. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "oriental-rites-propaganda",
+      "regime": "immensa-1588",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "docs/curia-history-report.md §2 item 1: the fifteen congregations of Immensa aeterni Dei (list from secondary sources; the act itself was not read)",
+      "source_type": "secondary",
+      "verified": false,
+      "note": "Founded 1862; an attached section of Propaganda. Not among Immensa's fifteen congregations, so the kind default (immensa-1588 'congregation') would wrongly say the constitution places it. No research statement on its curial status in this period: in_curia left null."
+    },
+    {
+      "body": "oriental-rites-propaganda",
+      "regime": "sapienti-consilio-1908",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Pius X, Sapienti consilio, 6° n.6, AAS 1 (1909) 7-19; research curia_status: 'Sapienti consilio lists it as a congregation united to Propaganda, not among the 11'",
+      "source_type": "primary",
+      "verified": false,
+      "note": "Named only inside Propaganda's article, not among the 11 congregations; the kind default 'congregation' would be wrong. in_curia not stated: null. verified: false because the placement rests on the research curia_status text, not on an act read for this task."
+    },
+    {
+      "body": "oriental-churches",
+      "regime": "sapienti-consilio-1908",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Benedict XV, m.p. Dei providentis, AAS 9-I (1917) 529-531 (in force 1 Dec 1917); Sapienti consilio's closed list (1908) predates it",
+      "source_type": "primary",
+      "verified": true,
+      "note": "Created 1 Dec 1917, while Sapienti consilio was still the governing constitution (the 1917 Code, which lists it in can. 257, took effect 19 May 1918). The kind default 'congregation' would wrongly say Sapienti consilio places it. in_curia not stated for these months: null."
+    },
+    {
+      "body": "public-affairs-extraordinary",
+      "regime": "reu-1968",
+      "section": "secretariat-of-state",
+      "in_curia": true,
+      "source": "Paul VI, Regimini Ecclesiae universae, Part II 'Secretaria Status seu Papalis et Sacrum Consilium pro publicis Ecclesiae negotiis' (data/sections.json) and n.26, AAS 59 (1967) 885-928",
+      "source_type": "primary",
+      "verified": true,
+      "note": "REU places the Council for the Public Affairs of the Church in Part II with the Secretariat of State; the kind default ('council' -> Part V) would be wrong."
+    },
+    {
+      "body": "liturgy-consilium",
+      "regime": "reu-1968",
+      "section": "appendix",
+      "in_curia": false,
+      "source": "Paul VI, Regimini Ecclesiae universae, n.133 (research curia_status: 'REU n.133 keeps it donec munus absolvat — attached to, not among, the curial dicasteries')",
+      "source_type": "primary",
+      "verified": false,
+      "note": "Kind 'council' would default to Part V. in_curia false is the section's value in data/sections.json, which is itself an editorial reading of the Appendix. verified: false because the placement rests on the research curia_status text, not on an act read for this task."
+    },
+    {
+      "body": "laity-council",
+      "regime": "reu-1968",
+      "section": "laity-and-justice-peace",
+      "in_curia": true,
+      "source": "Paul VI, Regimini Ecclesiae universae, Part V 'Consilium de Laicis et Pontificia Commissio studiosorum a Iustitia et Pace' (data/sections.json); research curia_status 'REU n.103'",
+      "source_type": "primary",
+      "verified": true,
+      "note": "REU Part V names this body. Needed because from 10 Dec 1976 its kind is 'pontifical-council', which has no REU section; the override keeps Part V for the whole REU period."
+    },
+    {
+      "body": "legislative-texts",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Founded 1984 (commission until PB), after REU; Part V does not name it. The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
+    },
+    {
+      "body": "code-interpretation-1917",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "REU Part V names only the Consilium de Laicis and the Iustitia et Pax commission; the research does not report where (or whether) REU places this commission. Possibly the Appendix (nn.132-134): check. The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
+    },
+    {
+      "body": "code-revision-1963",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "As for the 1917 code commission: Part V does not name it and the research reports no REU placement. Possibly the Appendix: check. The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
+    },
+    {
+      "body": "latin-america-commission",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Part V does not name it; the research reports no REU placement. The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
+    },
+    {
+      "body": "migrants",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Founded 1970, after REU; subject to the Congregation for Bishops (seed/part_of.json), not part of Part V. The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
+    },
+    {
+      "body": "family-committee",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Founded 1973, after REU; within the Laity council (seed/part_of.json). The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
+    },
+    {
+      "body": "health-care",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Founded 1985, after REU; a completing part of the Laity council (seed/part_of.json), not itself named in Part V. The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
+    },
+    {
+      "body": "ecclesia-dei-commission",
+      "regime": "reu-1968",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Paul VI, Regimini Ecclesiae universae, Parts I-VII and Appendix (headings in data/sections.json, verified by the research)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Founded 2 Jul 1988, after REU (which governed until 1 Mar 1989). The kind default ('commission'/'council' -> Part V 'laity-and-justice-peace') would be wrong. in_curia: no research statement; null."
+    },
+    {
+      "body": "papal-household-prefecture",
+      "regime": "pastor-bonus-1989",
+      "section": "other-organism",
+      "in_curia": true,
+      "source": "John Paul II, Pastor bonus, Art. 180 (research curia_status); Part VII 'Cetera Curiae Romanae instituta' (data/sections.json)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Research gives PB Art. 180; that Arts. 180-182 fall under Part VII (not Part VI 'Officia', Arts. 171-179) is from PB's structure and was not checked by the research. Kind default 'office' would put it in Part VI."
+    },
+    {
+      "body": "papal-liturgical-celebrations",
+      "regime": "pastor-bonus-1989",
+      "section": "other-organism",
+      "in_curia": true,
+      "source": "John Paul II, Pastor bonus, Art. 182 (research curia_status); Part VII 'Cetera Curiae Romanae instituta' (data/sections.json)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "As for the Prefecture of the Papal Household: Art. 182 is in Part VII; mapping not checked by the research."
+    },
+    {
+      "body": "auditor-general",
+      "regime": "pastor-bonus-1989",
+      "section": "not-listed",
+      "in_curia": null,
+      "source": "Francis, m.p. Fidelis dispensator et prudens, 24 Feb 2014 (founding); PB (1988) predates it",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Created 2014; PB cannot list it, so the kind default 'office' (PB Part VI) would be wrong. Research curia_status says only 'Office (FDP 2014)': in_curia null."
+    },
+    {
+      "body": "secretariat-economy",
+      "regime": "pastor-bonus-1989",
+      "section": "not-listed",
+      "in_curia": true,
+      "source": "Francis, m.p. Fidelis dispensator et prudens, 24 Feb 2014, n.4 (research curia_status: 'Dicastery of the Roman Curia (FDP n.4)')",
+      "source_type": "primary",
+      "verified": false,
+      "note": "Created 2014, not listed by PB; FDP n.4 makes it a dicastery of the Roman Curia. verified: false because the placement rests on the research curia_status text, not on an act read for this task."
+    },
+    {
+      "body": "communication-dicastery",
+      "regime": "pastor-bonus-1989",
+      "section": "not-listed",
+      "in_curia": true,
+      "source": "Francis, m.p. L'attuale contesto comunicativo, 27 Jun 2015 (research curia_status: 'a new Dicastery of the Roman Curia')",
+      "source_type": "primary",
+      "verified": false,
+      "note": "Created 2015, not listed by PB; the founding act calls it a new dicastery of the Roman Curia. Covers 2015-2022 (secretariat, then dicastery from 2018). verified: false because the placement rests on the research curia_status text, not on an act read for this task."
+    },
+    {
+      "body": "laity-family-life",
+      "regime": "pastor-bonus-1989",
+      "section": "not-listed",
+      "in_curia": true,
+      "source": "Francis, m.p. Sedula Mater, 15 Aug 2016, effective 1 Sep 2016 (research curia_status: 'Dicastery since 2016'); PB Art. 2 (dicasteries make up the Curia)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Created 2016, not listed by PB. The research says only 'Dicastery'; reading 'dicastery' as 'in the Curia' (PB Art. 2) is editorial."
+    },
+    {
+      "body": "integral-human-development",
+      "regime": "pastor-bonus-1989",
+      "section": "not-listed",
+      "in_curia": true,
+      "source": "Francis, m.p. Humanam progressionem, 17 Aug 2016, effective 1 Jan 2017 (research curia_status: 'Dicastery since 2017'); PB Art. 2",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "As for Laity, Family and Life: 'dicastery' read as 'in the Curia' editorially."
+    },
+    {
+      "body": "council-economy",
+      "regime": "praedicate-evangelium-2022",
+      "section": "economic-body",
+      "in_curia": true,
+      "source": "Francis, Praedicate Evangelium, Arts. 205-211 (research curia_status); Part VII 'Instituta oeconomicis negotiis praeposita' (data/sections.json)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Economic body under PE (brief example). Research gives Arts. 205-211; their position under heading VII is from PE's structure and was not checked by the research. The kind default would be wrong ('office' -> Offices, or no section for secretariat/council)."
+    },
+    {
+      "body": "secretariat-economy",
+      "regime": "praedicate-evangelium-2022",
+      "section": "economic-body",
+      "in_curia": true,
+      "source": "Francis, Praedicate Evangelium, Arts. 212-218 (research curia_status); Part VII 'Instituta oeconomicis negotiis praeposita' (data/sections.json)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Economic body under PE (brief example). Research gives Arts. 212-218; their position under heading VII is from PE's structure and was not checked by the research. The kind default would be wrong ('office' -> Offices, or no section for secretariat/council)."
+    },
+    {
+      "body": "apsa",
+      "regime": "praedicate-evangelium-2022",
+      "section": "economic-body",
+      "in_curia": true,
+      "source": "Francis, Praedicate Evangelium, Arts. 219-221 (research curia_status); Part VII 'Instituta oeconomicis negotiis praeposita' (data/sections.json)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Economic body under PE (brief example). Research gives Arts. 219-221; their position under heading VII is from PE's structure and was not checked by the research. The kind default would be wrong ('office' -> Offices, or no section for secretariat/council)."
+    },
+    {
+      "body": "auditor-general",
+      "regime": "praedicate-evangelium-2022",
+      "section": "economic-body",
+      "in_curia": true,
+      "source": "Francis, Praedicate Evangelium, Arts. 222-224 (research curia_status); Part VII 'Instituta oeconomicis negotiis praeposita' (data/sections.json)",
+      "source_type": "inferred",
+      "verified": false,
+      "note": "Economic body under PE (brief example). Research gives Arts. 222-224; their position under heading VII is from PE's structure and was not checked by the research. The kind default would be wrong ('office' -> Offices, or no section for secretariat/council)."
+    }
+  ]
+}

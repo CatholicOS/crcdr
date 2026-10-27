@@ -74,8 +74,10 @@ Long form `curia-romana:`; the short form is canonical ([#13](https://github.com
 5. **Grammar** (to be added to the URI scheme's Appendix D under #20; this registry cites it and keeps no copy):
    ```abnf
    cr-key     = latin-slug HYPHEN year
-   latin-slug = 1*ALPHA *(HYPHEN 1*ALPHA)   ; no digits, so the year split is unambiguous
+   latin-slug = 1*lower *(HYPHEN 1*lower)   ; no digits, so the year split is unambiguous
+   lower      = %x61-7A                     ; a-z only (RFC 5234 ALPHA also admits A-Z)
    year       = 4DIGIT
+   HYPHEN     = %x2D                        ; "-"
    ```
 
 ## 5. Identity rules
